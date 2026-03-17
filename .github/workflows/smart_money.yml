@@ -37,12 +37,12 @@ jobs:
       - name: Run smart money analysis
         run: python main.py
 
-      - name: Commit state + dashboard
+      - name: Commit dashboard
         run: |
           git config user.email "bot@github.com"
           git config user.name  "HL Tracker Bot"
-          git add outputs/dashboard.html outputs/raw/ outputs/state/ || true
-          git diff --staged --quiet || git commit -m "chore: update smart money tracker [$(date -u '+%Y-%m-%d %H:%M UTC')] [skip ci]"
+          git add -f outputs/dashboard.html || true
+          git diff --staged --quiet || git commit -m "chore: update dashboard [$(date -u '+%Y-%m-%d %H:%M UTC')] [skip ci]"
           git push || true
 
       - name: Deploy to GitHub Pages
