@@ -1,5 +1,0 @@
-timestamp,portfolio_value,period_return_pct,cumulative_return_pct,active_positions,avg_funding_rate,btc_regime,eth_regime,sol_regime,doge_regime,xrp_regime,avax_regime,link_regime,aave_yield_earned
-2026-03-15T12:42:15.902901+00:00,1000.0,0.0,0.0,-1,,API_ERROR,API_ERROR,API_ERROR,API_ERROR,API_ERROR,API_ERROR,API_ERROR,0.0
-2026-03-15T12:43:15.473082+00:00,1000.0457,0.004566,0.0046,0,-6.289e-05,p_crisis,p_crisis,p_bear,p_crisis,p_crisis,p_crisis,p_crisis,0.045662
-2026-03-15T12:43:16.145697+00:00,1000.0913,0.004566,0.0091,0,-6.289e-05,p_crisis,p_crisis,p_bear,p_crisis,p_crisis,p_crisis,p_crisis,0.045664
-2026-03-15T12:43:16.749228+00:00,1000.137,0.004566,0.0137,0,-6.289e-05,p_crisis,p_crisis,p_bear,p_crisis,p_crisis,p_crisis,p_crisis,0.045666

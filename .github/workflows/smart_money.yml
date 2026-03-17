@@ -1,0 +1,64 @@
+name: HL Smart Money Tracker
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'   # Every 4 hours
+  workflow_dispatch:          # Manual trigger
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore cached data
+        uses: actions/cache@v4
+        with:
+          path: |
+            outputs/raw/fills
+            outputs/raw/candles
+            outputs/state
+          key: hl-data-${{ github.run_id }}
+          restore-keys: |
+            hl-data-
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run smart money analysis
+        run: python main.py
+
+      - name: Commit state + dashboard
+        run: |
+          git config user.email "bot@github.com"
+          git config user.name  "HL Tracker Bot"
+          git add outputs/dashboard.html outputs/raw/ outputs/state/ || true
+          git diff --staged --quiet || git commit -m "chore: update smart money tracker [$(date -u '+%Y-%m-%d %H:%M UTC')] [skip ci]"
+          git push || true
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: success()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir:    ./outputs
+          publish_branch: gh-pages
+          keep_files:     false
+
+      - name: Upload artifacts on failure
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: debug-logs-${{ github.run_number }}
+          path: |
+            outputs/
+          retention-days: 7

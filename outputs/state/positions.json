@@ -1,0 +1,984 @@
+{
+  "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36": {
+    "positions": {
+      "BTC": {
+        "size": 0.07795,
+        "side": "LONG",
+        "entry_price": 63622.0,
+        "unrealized_pnl": 800.0788,
+        "leverage": 10.0,
+        "abs_size": 0.07795
+      },
+      "ETH": {
+        "size": -248.9269,
+        "side": "SHORT",
+        "entry_price": 2027.53,
+        "unrealized_pnl": -74544.304628,
+        "leverage": 10.0,
+        "abs_size": 248.9269
+      },
+      "SOL": {
+        "size": 27851.95,
+        "side": "LONG",
+        "entry_price": 83.86,
+        "unrealized_pnl": 270302.110417,
+        "leverage": 10.0,
+        "abs_size": 27851.95
+      },
+      "DOGE": {
+        "size": -4.0,
+        "side": "SHORT",
+        "entry_price": 0.279959,
+        "unrealized_pnl": 0.718479,
+        "leverage": 10.0,
+        "abs_size": 4.0
+      },
+      "XRP": {
+        "size": 11459.0,
+        "side": "LONG",
+        "entry_price": 1.394549,
+        "unrealized_pnl": 1344.7225,
+        "leverage": 20.0,
+        "abs_size": 11459.0
+      },
+      "HYPE": {
+        "size": -113645.81,
+        "side": "SHORT",
+        "entry_price": 42.8073,
+        "unrealized_pnl": 171643.988625,
+        "leverage": 5.0,
+        "abs_size": 113645.81
+      },
+      "FARTCOIN": {
+        "size": -308509.4,
+        "side": "SHORT",
+        "entry_price": 0.73907,
+        "unrealized_pnl": 165435.704988,
+        "leverage": 10.0,
+        "abs_size": 308509.4
+      },
+      "PUMP": {
+        "size": -91444.0,
+        "side": "SHORT",
+        "entry_price": 0.005551,
+        "unrealized_pnl": 317.150316,
+        "leverage": 5.0,
+        "abs_size": 91444.0
+      },
+      "WLFI": {
+        "size": 14356.0,
+        "side": "LONG",
+        "entry_price": 0.164361,
+        "unrealized_pnl": -874.30292,
+        "leverage": 5.0,
+        "abs_size": 14356.0
+      },
+      "ASTER": {
+        "size": 3229.0,
+        "side": "LONG",
+        "entry_price": 1.092741,
+        "unrealized_pnl": -1160.150689,
+        "leverage": 3.0,
+        "abs_size": 3229.0
+      }
+    },
+    "smart_money_score": 1.4544,
+    "grade": "TIER_1",
+    "display_name": "None",
+    "ic_8h": 44.1743,
+    "ic_recent_8h": 105.2093,
+    "snapshot_time": "2026-03-17T11:21:37.246673+00:00"
+  },
+  "0x7fdafde5cfb5465924316eced2d3715494c517d1": {
+    "positions": {
+      "BTC": {
+        "size": 238.90589,
+        "side": "LONG",
+        "entry_price": 72038.2,
+        "unrealized_pnl": 441450.054609,
+        "leverage": 20.0,
+        "abs_size": 238.90589
+      },
+      "ETH": {
+        "size": -23411.0958,
+        "side": "SHORT",
+        "entry_price": 2044.46,
+        "unrealized_pnl": -6614358.769102,
+        "leverage": 15.0,
+        "abs_size": 23411.0958
+      },
+      "SOL": {
+        "size": 17359.51,
+        "side": "LONG",
+        "entry_price": 85.8346,
+        "unrealized_pnl": 134195.36664,
+        "leverage": 20.0,
+        "abs_size": 17359.51
+      },
+      "AVAX": {
+        "size": -213102.19,
+        "side": "SHORT",
+        "entry_price": 22.8759,
+        "unrealized_pnl": 2683368.510893,
+        "leverage": 10.0,
+        "abs_size": 213102.19
+      },
+      "BNB": {
+        "size": -1189.301,
+        "side": "SHORT",
+        "entry_price": 846.489,
+        "unrealized_pnl": 212134.548968,
+        "leverage": 10.0,
+        "abs_size": 1189.301
+      },
+      "LTC": {
+        "size": 13.43,
+        "side": "LONG",
+        "entry_price": 96.343,
+        "unrealized_pnl": -517.418741,
+        "leverage": 10.0,
+        "abs_size": 13.43
+      },
+      "DOGE": {
+        "size": -964214.0,
+        "side": "SHORT",
+        "entry_price": 0.138885,
+        "unrealized_pnl": 37166.059933,
+        "leverage": 10.0,
+        "abs_size": 964214.0
+      },
+      "kPEPE": {
+        "size": 106434.0,
+        "side": "LONG",
+        "entry_price": 0.003678,
+        "unrealized_pnl": 7.876116,
+        "leverage": 10.0,
+        "abs_size": 106434.0
+      },
+      "XRP": {
+        "size": 178705.0,
+        "side": "LONG",
+        "entry_price": 1.597805,
+        "unrealized_pnl": -15351.6793,
+        "leverage": 20.0,
+        "abs_size": 178705.0
+      },
+      "WLD": {
+        "size": -56580.3,
+        "side": "SHORT",
+        "entry_price": 0.98736,
+        "unrealized_pnl": 33694.632092,
+        "leverage": 10.0,
+        "abs_size": 56580.3
+      },
+      "ADA": {
+        "size": -26179.0,
+        "side": "SHORT",
+        "entry_price": 0.549523,
+        "unrealized_pnl": 6855.853904,
+        "leverage": 10.0,
+        "abs_size": 26179.0
+      },
+      "WIF": {
+        "size": -1226.0,
+        "side": "SHORT",
+        "entry_price": 0.784313,
+        "unrealized_pnl": 730.94586,
+        "leverage": 5.0,
+        "abs_size": 1226.0
+      },
+      "ENA": {
+        "size": 795368.0,
+        "side": "LONG",
+        "entry_price": 0.131656,
+        "unrealized_pnl": -11705.11214,
+        "leverage": 10.0,
+        "abs_size": 795368.0
+      },
+      "POPCAT": {
+        "size": -4674.0,
+        "side": "SHORT",
+        "entry_price": 0.215958,
+        "unrealized_pnl": 747.950111,
+        "leverage": 3.0,
+        "abs_size": 4674.0
+      },
+      "GOAT": {
+        "size": -327719.0,
+        "side": "SHORT",
+        "entry_price": 0.478596,
+        "unrealized_pnl": 150486.71863,
+        "leverage": 3.0,
+        "abs_size": 327719.0
+      },
+      "HYPE": {
+        "size": -89219.85,
+        "side": "SHORT",
+        "entry_price": 40.2819,
+        "unrealized_pnl": -90560.464272,
+        "leverage": 5.0,
+        "abs_size": 89219.85
+      },
+      "PENGU": {
+        "size": 129017.0,
+        "side": "LONG",
+        "entry_price": 0.028211,
+        "unrealized_pnl": -2626.78612,
+        "leverage": 5.0,
+        "abs_size": 129017.0
+      },
+      "FARTCOIN": {
+        "size": 2288799.3,
+        "side": "LONG",
+        "entry_price": 0.16611,
+        "unrealized_pnl": 84024.248794,
+        "leverage": 10.0,
+        "abs_size": 2288799.3
+      },
+      "PUMP": {
+        "size": -238270453.0,
+        "side": "SHORT",
+        "entry_price": 0.003389,
+        "unrealized_pnl": 311357.41678,
+        "leverage": 5.0,
+        "abs_size": 238270453.0
+      },
+      "XPL": {
+        "size": -979799.0,
+        "side": "SHORT",
+        "entry_price": 0.159184,
+        "unrealized_pnl": 43027.294277,
+        "leverage": 5.0,
+        "abs_size": 979799.0
+      },
+      "LINEA": {
+        "size": -126660.0,
+        "side": "SHORT",
+        "entry_price": 0.027679,
+        "unrealized_pnl": 3057.264039,
+        "leverage": 3.0,
+        "abs_size": 126660.0
+      },
+      "ASTER": {
+        "size": -1230190.0,
+        "side": "SHORT",
+        "entry_price": 0.69794,
+        "unrealized_pnl": -43683.715356,
+        "leverage": 3.0,
+        "abs_size": 1230190.0
+      },
+      "XMR": {
+        "size": -2515.698,
+        "side": "SHORT",
+        "entry_price": 301.873,
+        "unrealized_pnl": -179032.60718,
+        "leverage": 5.0,
+        "abs_size": 2515.698
+      }
+    },
+    "smart_money_score": 1.1654,
+    "grade": "TIER_1",
+    "display_name": "BobbyBigSize",
+    "ic_8h": 1.3085,
+    "ic_recent_8h": 1.4509,
+    "snapshot_time": "2026-03-17T11:21:37.654807+00:00"
+  },
+  "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": {
+    "positions": {
+      "BTC": {
+        "size": 63.87944,
+        "side": "LONG",
+        "entry_price": 74415.3,
+        "unrealized_pnl": -33813.167572,
+        "leverage": 20.0,
+        "abs_size": 63.87944
+      },
+      "ETH": {
+        "size": -6927.8224,
+        "side": "SHORT",
+        "entry_price": 2319.33,
+        "unrealized_pnl": -53102.080195,
+        "leverage": 15.0,
+        "abs_size": 6927.8224
+      },
+      "ATOM": {
+        "size": -15739.17,
+        "side": "SHORT",
+        "entry_price": 1.9481,
+        "unrealized_pnl": -37.001606,
+        "leverage": 5.0,
+        "abs_size": 15739.17
+      },
+      "SOL": {
+        "size": 14137.1,
+        "side": "LONG",
+        "entry_price": 94.2178,
+        "unrealized_pnl": -9229.669213,
+        "leverage": 20.0,
+        "abs_size": 14137.1
+      },
+      "AVAX": {
+        "size": -23851.14,
+        "side": "SHORT",
+        "entry_price": 9.6488,
+        "unrealized_pnl": -15147.974734,
+        "leverage": 10.0,
+        "abs_size": 23851.14
+      },
+      "BNB": {
+        "size": -385.138,
+        "side": "SHORT",
+        "entry_price": 671.349,
+        "unrealized_pnl": 1243.730644,
+        "leverage": 5.0,
+        "abs_size": 385.138
+      },
+      "LTC": {
+        "size": -2900.66,
+        "side": "SHORT",
+        "entry_price": 57.3281,
+        "unrealized_pnl": -1415.018423,
+        "leverage": 10.0,
+        "abs_size": 2900.66
+      },
+      "ARB": {
+        "size": 99815.2,
+        "side": "LONG",
+        "entry_price": 0.10815,
+        "unrealized_pnl": 82.785301,
+        "leverage": 10.0,
+        "abs_size": 99815.2
+      },
+      "DOGE": {
+        "size": -34905171.0,
+        "side": "SHORT",
+        "entry_price": 0.097928,
+        "unrealized_pnl": -84157.482658,
+        "leverage": 10.0,
+        "abs_size": 34905171.0
+      },
+      "INJ": {
+        "size": -0.4,
+        "side": "SHORT",
+        "entry_price": 7.83,
+        "unrealized_pnl": 1.8322,
+        "leverage": 10.0,
+        "abs_size": 0.4
+      },
+      "SUI": {
+        "size": -1844080.2,
+        "side": "SHORT",
+        "entry_price": 1.05593,
+        "unrealized_pnl": 54097.418017,
+        "leverage": 10.0,
+        "abs_size": 1844080.2
+      },
+      "kPEPE": {
+        "size": -123698357.0,
+        "side": "SHORT",
+        "entry_price": 0.003699,
+        "unrealized_pnl": -6522.978992,
+        "leverage": 10.0,
+        "abs_size": 123698357.0
+      },
+      "CRV": {
+        "size": -1981928.0,
+        "side": "SHORT",
+        "entry_price": 0.24482,
+        "unrealized_pnl": -19761.321394,
+        "leverage": 10.0,
+        "abs_size": 1981928.0
+      },
+      "LDO": {
+        "size": -2018716.3,
+        "side": "SHORT",
+        "entry_price": 0.30086,
+        "unrealized_pnl": -45283.919678,
+        "leverage": 5.0,
+        "abs_size": 2018716.3
+      },
+      "LINK": {
+        "size": -166180.4,
+        "side": "SHORT",
+        "entry_price": 11.2377,
+        "unrealized_pnl": 241744.229936,
+        "leverage": 10.0,
+        "abs_size": 166180.4
+      },
+      "STX": {
+        "size": -4.1,
+        "side": "SHORT",
+        "entry_price": 0.6031,
+        "unrealized_pnl": 1.38539,
+        "leverage": 5.0,
+        "abs_size": 4.1
+      },
+      "SNX": {
+        "size": 93897.3,
+        "side": "LONG",
+        "entry_price": 0.32176,
+        "unrealized_pnl": 970.24334,
+        "leverage": 3.0,
+        "abs_size": 93897.3
+      },
+      "XRP": {
+        "size": -1061447.0,
+        "side": "SHORT",
+        "entry_price": 1.492724,
+        "unrealized_pnl": -20353.400832,
+        "leverage": 10.0,
+        "abs_size": 1061447.0
+      },
+      "BCH": {
+        "size": -127.06,
+        "side": "SHORT",
+        "entry_price": 466.29,
+        "unrealized_pnl": -1125.709154,
+        "leverage": 10.0,
+        "abs_size": 127.06
+      },
+      "APT": {
+        "size": 944292.83,
+        "side": "LONG",
+        "entry_price": 0.9503,
+        "unrealized_pnl": 45873.168222,
+        "leverage": 10.0,
+        "abs_size": 944292.83
+      },
+      "AAVE": {
+        "size": -4066.35,
+        "side": "SHORT",
+        "entry_price": 112.4568,
+        "unrealized_pnl": -42099.400041,
+        "leverage": 10.0,
+        "abs_size": 4066.35
+      },
+      "WLD": {
+        "size": -1693336.3,
+        "side": "SHORT",
+        "entry_price": 0.39203,
+        "unrealized_pnl": 308.139438,
+        "leverage": 10.0,
+        "abs_size": 1693336.3
+      },
+      "TRX": {
+        "size": 1391057.0,
+        "side": "LONG",
+        "entry_price": 0.291911,
+        "unrealized_pnl": 14715.817552,
+        "leverage": 10.0,
+        "abs_size": 1391057.0
+      },
+      "kSHIB": {
+        "size": -584.0,
+        "side": "SHORT",
+        "entry_price": 0.014599,
+        "unrealized_pnl": 4.96108,
+        "leverage": 10.0,
+        "abs_size": 584.0
+      },
+      "UNI": {
+        "size": -99629.2,
+        "side": "SHORT",
+        "entry_price": 3.96857,
+        "unrealized_pnl": -6119.991736,
+        "leverage": 10.0,
+        "abs_size": 99629.2
+      },
+      "SEI": {
+        "size": -7736.0,
+        "side": "SHORT",
+        "entry_price": 0.068665,
+        "unrealized_pnl": -0.061892,
+        "leverage": 10.0,
+        "abs_size": 7736.0
+      },
+      "ZRO": {
+        "size": 8648.1,
+        "side": "LONG",
+        "entry_price": 1.913,
+        "unrealized_pnl": 3058.83297,
+        "leverage": 5.0,
+        "abs_size": 8648.1
+      },
+      "TIA": {
+        "size": -56655.9,
+        "side": "SHORT",
+        "entry_price": 0.37458,
+        "unrealized_pnl": 29.037361,
+        "leverage": 10.0,
+        "abs_size": 56655.9
+      },
+      "ADA": {
+        "size": -3176089.0,
+        "side": "SHORT",
+        "entry_price": 0.264645,
+        "unrealized_pnl": -73032.744885,
+        "leverage": 10.0,
+        "abs_size": 3176089.0
+      },
+      "TON": {
+        "size": -159686.2,
+        "side": "SHORT",
+        "entry_price": 1.31635,
+        "unrealized_pnl": -3808.116537,
+        "leverage": 10.0,
+        "abs_size": 159686.2
+      },
+      "NEAR": {
+        "size": -85424.4,
+        "side": "SHORT",
+        "entry_price": 1.40479,
+        "unrealized_pnl": -4408.335029,
+        "leverage": 10.0,
+        "abs_size": 85424.4
+      },
+      "PYTH": {
+        "size": -1028255.0,
+        "side": "SHORT",
+        "entry_price": 0.049308,
+        "unrealized_pnl": -532.379773,
+        "leverage": 5.0,
+        "abs_size": 1028255.0
+      },
+      "kBONK": {
+        "size": -67160965.0,
+        "side": "SHORT",
+        "entry_price": 0.006421,
+        "unrealized_pnl": -6905.102715,
+        "leverage": 10.0,
+        "abs_size": 67160965.0
+      },
+      "JUP": {
+        "size": 2886713.0,
+        "side": "LONG",
+        "entry_price": 0.168077,
+        "unrealized_pnl": -4293.890651,
+        "leverage": 5.0,
+        "abs_size": 2886713.0
+      },
+      "WIF": {
+        "size": -60187.0,
+        "side": "SHORT",
+        "entry_price": 0.185514,
+        "unrealized_pnl": -156.186612,
+        "leverage": 5.0,
+        "abs_size": 60187.0
+      },
+      "ONDO": {
+        "size": -1276804.0,
+        "side": "SHORT",
+        "entry_price": 0.264153,
+        "unrealized_pnl": -22544.09048,
+        "leverage": 10.0,
+        "abs_size": 1276804.0
+      },
+      "STRK": {
+        "size": 38.9,
+        "side": "LONG",
+        "entry_price": 0.18052,
+        "unrealized_pnl": -5.43822,
+        "leverage": 3.0,
+        "abs_size": 38.9
+      },
+      "TAO": {
+        "size": -870.237,
+        "side": "SHORT",
+        "entry_price": 281.366,
+        "unrealized_pnl": 2607.718966,
+        "leverage": 5.0,
+        "abs_size": 870.237
+      },
+      "kFLOKI": {
+        "size": 177435.0,
+        "side": "LONG",
+        "entry_price": 0.031475,
+        "unrealized_pnl": 2.527529,
+        "leverage": 5.0,
+        "abs_size": 177435.0
+      },
+      "ETHFI": {
+        "size": 9.0,
+        "side": "LONG",
+        "entry_price": 1.1562,
+        "unrealized_pnl": -5.2002,
+        "leverage": 5.0,
+        "abs_size": 9.0
+      },
+      "ENA": {
+        "size": -13745759.0,
+        "side": "SHORT",
+        "entry_price": 0.170941,
+        "unrealized_pnl": 742284.956178,
+        "leverage": 5.0,
+        "abs_size": 13745759.0
+      },
+      "POPCAT": {
+        "size": -4171058.0,
+        "side": "SHORT",
+        "entry_price": 0.055251,
+        "unrealized_pnl": -2852.072805,
+        "leverage": 3.0,
+        "abs_size": 4171058.0
+      },
+      "EIGEN": {
+        "size": -214988.21,
+        "side": "SHORT",
+        "entry_price": 0.2122,
+        "unrealized_pnl": -2784.75195,
+        "leverage": 5.0,
+        "abs_size": 214988.21
+      },
+      "TURBO": {
+        "size": 853.0,
+        "side": "LONG",
+        "entry_price": 0.002621,
+        "unrealized_pnl": -1.316179,
+        "leverage": 3.0,
+        "abs_size": 853.0
+      },
+      "BLAST": {
+        "size": 673.0,
+        "side": "LONG",
+        "entry_price": 0.008052,
+        "unrealized_pnl": -5.059292,
+        "leverage": 3.0,
+        "abs_size": 673.0
+      },
+      "GOAT": {
+        "size": 234.0,
+        "side": "LONG",
+        "entry_price": 0.046428,
+        "unrealized_pnl": -6.324084,
+        "leverage": 3.0,
+        "abs_size": 234.0
+      },
+      "MOODENG": {
+        "size": 245.0,
+        "side": "LONG",
+        "entry_price": 0.094647,
+        "unrealized_pnl": -9.65839,
+        "leverage": 3.0,
+        "abs_size": 245.0
+      },
+      "GRASS": {
+        "size": 3.0,
+        "side": "LONG",
+        "entry_price": 1.292,
+        "unrealized_pnl": -2.531613,
+        "leverage": 3.0,
+        "abs_size": 3.0
+      },
+      "PURR": {
+        "size": 121.0,
+        "side": "LONG",
+        "entry_price": 0.087038,
+        "unrealized_pnl": 1.524391,
+        "leverage": 3.0,
+        "abs_size": 121.0
+      },
+      "PNUT": {
+        "size": -50.1,
+        "side": "SHORT",
+        "entry_price": 0.17553,
+        "unrealized_pnl": 6.34266,
+        "leverage": 3.0,
+        "abs_size": 50.1
+      },
+      "XLM": {
+        "size": -3.0,
+        "side": "SHORT",
+        "entry_price": 0.30042,
+        "unrealized_pnl": 0.37752,
+        "leverage": 5.0,
+        "abs_size": 3.0
+      },
+      "CHILLGUY": {
+        "size": 647.0,
+        "side": "LONG",
+        "entry_price": 0.05289,
+        "unrealized_pnl": -27.689012,
+        "leverage": 3.0,
+        "abs_size": 647.0
+      },
+      "HYPE": {
+        "size": -160991.58,
+        "side": "SHORT",
+        "entry_price": 39.2213,
+        "unrealized_pnl": -334159.255735,
+        "leverage": 3.0,
+        "abs_size": 160991.58
+      },
+      "ME": {
+        "size": 2.1,
+        "side": "LONG",
+        "entry_price": 1.5,
+        "unrealized_pnl": -2.891805,
+        "leverage": 3.0,
+        "abs_size": 2.1
+      },
+      "VIRTUAL": {
+        "size": -969293.8,
+        "side": "SHORT",
+        "entry_price": 0.74934,
+        "unrealized_pnl": -40755.52797,
+        "leverage": 5.0,
+        "abs_size": 969293.8
+      },
+      "PENGU": {
+        "size": -28993037.0,
+        "side": "SHORT",
+        "entry_price": 0.007607,
+        "unrealized_pnl": -7053.339706,
+        "leverage": 5.0,
+        "abs_size": 28993037.0
+      },
+      "USUAL": {
+        "size": 17.7,
+        "side": "LONG",
+        "entry_price": 0.15174,
+        "unrealized_pnl": -2.422953,
+        "leverage": 3.0,
+        "abs_size": 17.7
+      },
+      "FARTCOIN": {
+        "size": -8294866.1,
+        "side": "SHORT",
+        "entry_price": 0.18912,
+        "unrealized_pnl": -113651.233942,
+        "leverage": 3.0,
+        "abs_size": 8294866.1
+      },
+      "AIXBT": {
+        "size": -416889.0,
+        "side": "SHORT",
+        "entry_price": 0.027515,
+        "unrealized_pnl": 110.217876,
+        "leverage": 3.0,
+        "abs_size": 416889.0
+      },
+      "GRIFFAIN": {
+        "size": -3535.0,
+        "side": "SHORT",
+        "entry_price": 0.007898,
+        "unrealized_pnl": -7.684061,
+        "leverage": 3.0,
+        "abs_size": 3535.0
+      },
+      "SPX": {
+        "size": -465007.5,
+        "side": "SHORT",
+        "entry_price": 0.34108,
+        "unrealized_pnl": -1255.748918,
+        "leverage": 5.0,
+        "abs_size": 465007.5
+      },
+      "MORPHO": {
+        "size": -13866.8,
+        "side": "SHORT",
+        "entry_price": 1.84049,
+        "unrealized_pnl": 1616.832802,
+        "leverage": 5.0,
+        "abs_size": 13866.8
+      },
+      "TRUMP": {
+        "size": 224676.2,
+        "side": "LONG",
+        "entry_price": 3.92048,
+        "unrealized_pnl": -45672.534425,
+        "leverage": 10.0,
+        "abs_size": 224676.2
+      },
+      "MELANIA": {
+        "size": 1569187.4,
+        "side": "LONG",
+        "entry_price": 0.1236,
+        "unrealized_pnl": -7224.2013,
+        "leverage": 3.0,
+        "abs_size": 1569187.4
+      },
+      "VVV": {
+        "size": -33269.04,
+        "side": "SHORT",
+        "entry_price": 6.0167,
+        "unrealized_pnl": 10256.761439,
+        "leverage": 3.0,
+        "abs_size": 33269.04
+      },
+      "BERA": {
+        "size": -274329.8,
+        "side": "SHORT",
+        "entry_price": 0.65413,
+        "unrealized_pnl": -1955.570081,
+        "leverage": 5.0,
+        "abs_size": 274329.8
+      },
+      "TST": {
+        "size": 41.0,
+        "side": "LONG",
+        "entry_price": 0.074235,
+        "unrealized_pnl": -2.621171,
+        "leverage": 3.0,
+        "abs_size": 41.0
+      },
+      "LAYER": {
+        "size": 6.0,
+        "side": "LONG",
+        "entry_price": 1.141,
+        "unrealized_pnl": -6.31332,
+        "leverage": 3.0,
+        "abs_size": 6.0
+      },
+      "IP": {
+        "size": -570918.7,
+        "side": "SHORT",
+        "entry_price": 0.8046,
+        "unrealized_pnl": -2259.255406,
+        "leverage": 3.0,
+        "abs_size": 570918.7
+      },
+      "KAITO": {
+        "size": 25.0,
+        "side": "LONG",
+        "entry_price": 0.34043,
+        "unrealized_pnl": 0.7165,
+        "leverage": 5.0,
+        "abs_size": 25.0
+      },
+      "PAXG": {
+        "size": -255.934,
+        "side": "SHORT",
+        "entry_price": 5042.631,
+        "unrealized_pnl": 11525.1683,
+        "leverage": 5.0,
+        "abs_size": 255.934
+      },
+      "ZORA": {
+        "size": 139.0,
+        "side": "LONG",
+        "entry_price": 0.026761,
+        "unrealized_pnl": -1.223799,
+        "leverage": 3.0,
+        "abs_size": 139.0
+      },
+      "SOPH": {
+        "size": 112.0,
+        "side": "LONG",
+        "entry_price": 0.053636,
+        "unrealized_pnl": -4.98051,
+        "leverage": 3.0,
+        "abs_size": 112.0
+      },
+      "PUMP": {
+        "size": -401288939.0,
+        "side": "SHORT",
+        "entry_price": 0.002018,
+        "unrealized_pnl": -25739.050458,
+        "leverage": 3.0,
+        "abs_size": 401288939.0
+      },
+      "YZY": {
+        "size": 2.0,
+        "side": "LONG",
+        "entry_price": 0.373138,
+        "unrealized_pnl": -0.095637,
+        "leverage": 3.0,
+        "abs_size": 2.0
+      },
+      "XPL": {
+        "size": -8939755.0,
+        "side": "SHORT",
+        "entry_price": 0.116334,
+        "unrealized_pnl": 9519.524732,
+        "leverage": 5.0,
+        "abs_size": 8939755.0
+      },
+      "WLFI": {
+        "size": -4253783.0,
+        "side": "SHORT",
+        "entry_price": 0.103889,
+        "unrealized_pnl": 1828.670823,
+        "leverage": 5.0,
+        "abs_size": 4253783.0
+      },
+      "ASTER": {
+        "size": -1332367.0,
+        "side": "SHORT",
+        "entry_price": 0.710032,
+        "unrealized_pnl": -31200.332632,
+        "leverage": 3.0,
+        "abs_size": 1332367.0
+      },
+      "AVNT": {
+        "size": -720492.0,
+        "side": "SHORT",
+        "entry_price": 0.163403,
+        "unrealized_pnl": 1075.891037,
+        "leverage": 5.0,
+        "abs_size": 720492.0
+      },
+      "STBL": {
+        "size": 493556.0,
+        "side": "LONG",
+        "entry_price": 0.038716,
+        "unrealized_pnl": -699.791326,
+        "leverage": 3.0,
+        "abs_size": 493556.0
+      },
+      "0G": {
+        "size": 3.0,
+        "side": "LONG",
+        "entry_price": 1.8125,
+        "unrealized_pnl": -3.67611,
+        "leverage": 3.0,
+        "abs_size": 3.0
+      },
+      "2Z": {
+        "size": -2295311.0,
+        "side": "SHORT",
+        "entry_price": 0.079914,
+        "unrealized_pnl": -5878.988181,
+        "leverage": 3.0,
+        "abs_size": 2295311.0
+      },
+      "ZEC": {
+        "size": -1636.73,
+        "side": "SHORT",
+        "entry_price": 258.6151,
+        "unrealized_pnl": -26048.326862,
+        "leverage": 5.0,
+        "abs_size": 1636.73
+      },
+      "MON": {
+        "size": 715104.0,
+        "side": "LONG",
+        "entry_price": 0.02386,
+        "unrealized_pnl": 129.254977,
+        "leverage": 3.0,
+        "abs_size": 715104.0
+      },
+      "MET": {
+        "size": -1201645.0,
+        "side": "SHORT",
+        "entry_price": 0.168099,
+        "unrealized_pnl": -469.716124,
+        "leverage": 3.0,
+        "abs_size": 1201645.0
+      },
+      "LIT": {
+        "size": -463779.0,
+        "side": "SHORT",
+        "entry_price": 1.134108,
+        "unrealized_pnl": -6860.106336,
+        "leverage": 3.0,
+        "abs_size": 463779.0
+      }
+    },
+    "smart_money_score": 0.9621,
+    "grade": "TIER_1",
+    "display_name": "None",
+    "ic_8h": 1.0031,
+    "ic_recent_8h": 1.1343,
+    "snapshot_time": "2026-03-17T11:21:38.220218+00:00"
+  }
+}

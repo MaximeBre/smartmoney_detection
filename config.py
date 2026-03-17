@@ -1,118 +1,84 @@
-"""
-config.py – Zentrale Konfiguration für das Crypto Quant System
-==============================================================
-Alle Parameter an einem Ort. Hier anpassen, nirgendwo sonst.
-"""
+# ─────────────────────────────────────────
+# Hyperliquid Wallet Tracker — Config
+# ─────────────────────────────────────────
 
-# ── Core Portfolio (7 Assets) ─────────────────────────────────────────────────
-SYMBOLS = [
-    "BTCUSDT", "ETHUSDT", "SOLUSDT",
-    "DOGEUSDT", "XRPUSDT", "AVAXUSDT", "LINKUSDT",
+# API Endpoints
+HL_INFO_URL   = "https://api.hyperliquid.xyz/info"
+HL_STATS_URL  = "https://stats-data.hyperliquid.xyz/Mainnet"
+
+# How many top wallets to pull from leaderboard
+TOP_N_WALLETS = 50
+
+# How many days of trade history to fetch per wallet
+HISTORY_DAYS = 90
+
+# Minimum trades to include a wallet in analysis
+MIN_TRADES = 20
+
+# Minimum absolute PnL (USD) to include wallet
+MIN_PNL_USD = 10_000
+
+# Output paths
+OUTPUT_DIR        = "outputs"
+RAW_DIR           = "outputs/raw"
+LEADERBOARD_CSV   = "outputs/raw/leaderboard.csv"
+FILLS_DIR         = "outputs/raw/fills"
+PROFILES_CSV      = "outputs/raw/trader_profiles.csv"
+PATTERNS_CSV      = "outputs/raw/patterns.csv"
+MARKET_JSON       = "outputs/raw/market_overview.json"
+DASHBOARD_HTML    = "outputs/dashboard.html"
+
+# Analysis
+TIMEFRAMES = {
+    "short":  7,    # days
+    "medium": 30,
+    "long":   90,
+}
+
+# Assets tracked on Hyperliquid (top by OI)
+TRACKED_ASSETS = [
+    "BTC", "ETH", "SOL", "DOGE", "XRP",
+    "AVAX", "LINK", "ARB", "OP", "SUI",
+    "WIF", "PEPE", "BONK", "JUP", "TIA",
+    "INJ", "BLUR", "APT", "SEI", "STRK",
 ]
 
-# Static capital weights (equal-risk baseline – ML optimiert in Phase 2)
-SYMBOL_WEIGHTS = {
-    "BTCUSDT":  0.25,   # BTC: Anker, stabile Persistenz
-    "ETHUSDT":  0.20,   # ETH: Mittleres Risiko/Return
-    "SOLUSDT":  0.15,   # SOL: Höchste Rates, schnellste Regime-Wechsel
-    "DOGEUSDT": 0.10,   # DOGE: Meme-Coin, höheres Threshold nötig
-    "XRPUSDT":  0.10,   # XRP: Liquid, regulatorisches Risiko beachten
-    "AVAXUSDT": 0.10,   # AVAX: Stabile Alt-Coin Rates
-    "LINKUSDT": 0.10,   # LINK: Oracle Token, moderate Rates
-}
+# ── Smart Money Detection ──────────────────────────────────
+# IC Analysis horizons (in hours)
+IC_HORIZONS = [1, 4, 8, 24]
 
-# Short keys for column naming: "BTCUSDT" → "btc"
-SYMBOL_SHORT = {
-    "BTCUSDT":  "btc",
-    "ETHUSDT":  "eth",
-    "SOLUSDT":  "sol",
-    "DOGEUSDT": "doge",
-    "XRPUSDT":  "xrp",
-    "AVAXUSDT": "avax",
-    "LINKUSDT": "link",
-    # Legacy/unused assets
-    "BNBUSDT":  "bnb",
-    "DOTUSDT":  "dot",
-    "MATICUSDT": "matic",
-    "LTCUSDT":  "ltc",
-    "ADAUSDT":  "ada",
-}
+# Minimum trades needed to compute IC
+IC_MIN_TRADES = 15
 
-# ── Asset-Spezifische Thresholds ───────────────────────────────────────────────
-# Kalibriert auf std(fundingRate) × 0.5 pro Asset
-# Kleinere Coins haben höhere Volatilität → höhere Mindestrate für profitablen Entry
-FUNDING_THRESHOLDS = {
-    "BTCUSDT":  0.0001,   # 0.01% – Standard (niedrige Volatilität)
-    "ETHUSDT":  0.0001,   # 0.01% – Standard
-    "SOLUSDT":  0.00015,  # 0.015% – höher, schnelle Regime-Wechsel
-    "DOGEUSDT": 0.0002,   # 0.02% – Meme-Coin Prämie
-    "XRPUSDT":  0.00018,  # 0.018% – leicht erhöht
-    "AVAXUSDT": 0.00015,  # 0.015% – moderate Volatilität
-    "LINKUSDT": 0.00015,  # 0.015% – moderate Volatilität
-}
+# Rolling window for IC (days)
+IC_ROLLING_DAYS = 30
 
-# ── Asset-Spezifische Bid/Ask-Spreads ─────────────────────────────────────────
-# Realistischer Market Impact pro Leg (BTC sehr liquid → enger Spread)
-BID_ASK_SPREADS = {
-    "BTCUSDT":  0.0001,   # 0.01% – tiefstes Orderbuch
-    "ETHUSDT":  0.00015,  # 0.015%
-    "SOLUSDT":  0.0003,   # 0.03%
-    "DOGEUSDT": 0.0004,   # 0.04% – größter Spread
-    "XRPUSDT":  0.0003,   # 0.03%
-    "AVAXUSDT": 0.0004,   # 0.04%
-    "LINKUSDT": 0.0004,   # 0.04%
-}
+# Smart Money Score threshold to be considered "smart"
+SMART_MONEY_THRESHOLD = 0.15
 
-# ── Portfolio-Constraints ──────────────────────────────────────────────────────
-MAX_ASSET_WEIGHT = 0.30   # Max 30% in einem einzelnen Asset (Korrelations-Diversifikation)
+# Score weights
+IC_WEIGHT_RECENT   = 0.40   # IC last 30 days
+IC_WEIGHT_ALLTIME  = 0.30   # IC all-time
+IC_WEIGHT_ICIR     = 0.20   # IC consistency (ICIR)
+IC_WEIGHT_TREND    = 0.10   # IC trend (improving?)
 
-# Legacy single-asset compat (stats/plots default)
-SYMBOL_BINANCE = "BTCUSDT"
-SYMBOL_BYBIT   = "BTCUSDT"
+# Live Monitor
+MONITOR_TOP_N      = 20     # Monitor top N smart money wallets
+POSITIONS_STATE    = "outputs/state/positions.json"
 
-# ── Daten-Parameter ────────────────────────────────────────────────────────────
-FUNDING_LIMIT     = 1000       # Einträge pro API-Request (Binance-Max)
-FUNDING_DAYS_FULL = 1095       # 3 Jahre für paginiertes Fetch (Walk-Forward braucht Volumen)
-OI_LIMIT          = 500        # Open Interest History Einträge
-KLINE_INTERVAL    = "8h"       # Basis-Granularität
+# Signal thresholds
+SIGNAL_MIN_SCORE       = 0.15   # Minimum smart money score to generate signal
+SIGNAL_CONSENSUS_MIN   = 2      # Minimum wallets agreeing for consensus signal
 
-# ── Strategie-Parameter ────────────────────────────────────────────────────────
-FUNDING_THRESHOLD = 0.0001     # 0.01% – Mindestrate um profitabel zu sein
+# Price data cache
+CANDLES_DIR  = "outputs/raw/candles"
+CANDLE_INTERVAL = "1h"
 
-# Delta-Neutral: 4 Legs pro Roundtrip (Spot Long + Futures Short, jeweils rein + raus)
-MAKER_FEE         = 0.0002     # 0.02% Binance Maker Fee (pro Leg)
-LEGS_PER_ROUNDTRIP = 4         # 2 Legs öffnen + 2 Legs schließen
-SLIPPAGE_BPS      = 5          # 5 Basispunkte = 0.05% Market Impact pro Leg (konservativ)
-SLIPPAGE          = SLIPPAGE_BPS / 10_000
+# GitHub Pages
+GITHUB_PAGES_URL = ""
 
-# Gesamtkosten pro Roundtrip (realistisch für Delta-Neutral):
-# (MAKER_FEE + SLIPPAGE) × 4 = ~0.1% für ein vollständiges Öffnen+Schließen
-COST_PER_ROUNDTRIP = (MAKER_FEE + SLIPPAGE) * LEGS_PER_ROUNDTRIP
-
-CAPITAL           = 10_000     # Startkapital in USD
-MARGIN_BUFFER     = 0.20       # 20% als Margin-Reserve halten (nie 100% als Collateral)
-EFFECTIVE_CAPITAL = CAPITAL * (1 - MARGIN_BUFFER)  # 8.000 USD effektiv einsetzbar
-
-# ── Feature Engineering ────────────────────────────────────────────────────────
-ROLLING_7D   = 21              # 7 Tage in 8h Perioden
-ROLLING_30D  = 90              # 30 Tage in 8h Perioden
-PERIODS_PER_YEAR = 3 * 365     # 1095 – für korrekte Annualisierung
-
-# ── ML Labels ──────────────────────────────────────────────────────────────────
-# Ordinale Label-Schwellen: 0=unter Threshold, 1=marginal, 2=gut, 3=excellent
-LABEL_THRESHOLDS = [
-    FUNDING_THRESHOLD,          # 0.01% → Label >= 1
-    FUNDING_THRESHOLD * 3,      # 0.03% → Label >= 2
-    FUNDING_THRESHOLD * 8,      # 0.08% → Label = 3 (Bull-Regime)
-]
-
-# ── Pfade ──────────────────────────────────────────────────────────────────────
-DATA_DIR    = "data/raw"
-OUTPUT_DIR  = "outputs"
-
-# ── API Endpoints ──────────────────────────────────────────────────────────────
-BINANCE_FUTURES_URL    = "https://fapi.binance.com"
-BINANCE_SPOT_URL       = "https://api.binance.com"
-BYBIT_URL              = "https://api.bybit.com"
-DEFILLAMA_URL          = "https://stablecoins.llama.fi"
-COINGECKO_DOMINANCE_URL = "https://api.coingecko.com/api/v3/global"
+# Output paths (add to existing)
+SMART_MONEY_CSV  = "outputs/raw/smart_money_scores.csv"
+SIGNALS_CSV      = "outputs/raw/signals.csv"
+SIGNALS_JSON     = "outputs/raw/signals.json"
+STATE_DIR        = "outputs/state"

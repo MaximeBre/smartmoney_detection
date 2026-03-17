@@ -1,374 +1,167 @@
 """
-main.py – Entry Point: Multi-Asset Funding Rate Arbitrage System
-=================================================================
-Phase 1 + 2 Pipeline:
+Hyperliquid Smart Money Tracker — Main Pipeline
 
-  1. Daten laden       – Paginierte 3-Jahres-Historie pro Asset
-  2. Features bauen    – Standard-Features pro Asset (mit Bugfixes)
-  3. Cross-Asset       – Proprietäre Multi-Asset Features (neu)
-  4. Statistiken       – Pro Asset + Cross-Asset Summary
-  5. Backtests         – Pro Asset (korrigiertes Fee-Modell)
-  6. Portfolio         – Gewichtetes Portfolio über alle Assets
-  7. Plots             – Pro Asset + Portfolio-Übersicht
-  8. Export            – CSV pro Asset
-
-Ausführen:
-    cd crypto_quant
-    python main.py
+Steps:
+  1. Fetch leaderboard + top wallets
+  2. Fetch trade histories (cached)
+  3. Build trader profiles
+  4. Smart Money IC Scoring
+  5. Live position monitor + signal generation
+  6. Pattern analysis
+  7. Market overview
+  8. Generate dashboard
 """
-
 import os
 import sys
+import logging
 import pandas as pd
+from config import OUTPUT_DIR, RAW_DIR, FILLS_DIR, STATE_DIR, CANDLES_DIR
 
-sys.path.insert(0, os.path.dirname(__file__))
+logging.basicConfig(
+    level   = logging.INFO,
+    format  = "%(asctime)s  %(levelname)-8s %(message)s",
+    datefmt = "%H:%M:%S",
+)
+logger = logging.getLogger(__name__)
 
-from config import (
-    SYMBOLS, SYMBOL_WEIGHTS, SYMBOL_SHORT,
-    FUNDING_DAYS_FULL, OUTPUT_DIR, DATA_DIR,
-    COST_PER_ROUNDTRIP, FUNDING_THRESHOLDS,
-)
-from data import (
-    get_funding_rates_paginated,
-    get_funding_rates,
-    get_basis_history,
-    get_bybit_funding_rates,
-    get_predicted_funding_rate_history,
-    get_btc_dominance_history,
-)
-from data.okx import get_okx_funding_rates
-from data.stablecoins import get_combined_stablecoin_supply
-from features import build_all_features
-from features.engineering import build_cross_asset_features, build_labels
-from analysis import print_stats
-from analysis.stats import print_cross_asset_summary
-from analysis.plots import plot_portfolio, plot_single_asset, plot_ic_heatmap
-from analysis.ic_analysis import run_ic_report
-from backtest import run_backtest
-from backtest.portfolio import run_portfolio_backtest
-from generate_dashboard import generate_dashboard
+
+def print_section(title: str):
+    print(f"\n{'─'*60}")
+    print(f"  {title}")
+    print(f"{'─'*60}")
 
 
 def main():
-    print("\n" + "=" * 65)
-    print("  CRYPTO QUANT SYSTEM – Multi-Asset Funding Rate Arbitrage")
-    print("=" * 65)
-    print(f"  Assets:    {', '.join(SYMBOLS)}")
-    print(f"  Gewichte:  {', '.join([f'{SYMBOL_SHORT[s].upper()} {v*100:.0f}%' for s, v in SYMBOL_WEIGHTS.items()])}")
+    for d in [OUTPUT_DIR, RAW_DIR, FILLS_DIR, STATE_DIR, CANDLES_DIR]:
+        os.makedirs(d, exist_ok=True)
 
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    os.makedirs(DATA_DIR,   exist_ok=True)
+    # ── STEP 1: Leaderboard ──────────────────────────────────────────────────
+    print_section("STEP 1 — Fetching Leaderboard")
+    from data.leaderboard import run_leaderboard_fetch
+    leaderboard_df = run_leaderboard_fetch()
 
-    # ══════════════════════════════════════════════════════════════════════════
-    # SCHRITT 1: Daten laden (alle Assets)
-    # ══════════════════════════════════════════════════════════════════════════
-    print(f"\n{'─'*65}")
-    print("  SCHRITT 1: Daten laden")
-    print(f"{'─'*65}")
+    if leaderboard_df.empty:
+        logger.error("Leaderboard empty. Aborting.")
+        sys.exit(1)
 
-    dfs_rates     = {}
-    dfs_bybit     = {}
-    dfs_basis     = {}
-    dfs_predicted = {}
-    dfs_okx       = {}
+    if "address_short" not in leaderboard_df.columns:
+        leaderboard_df["address_short"] = leaderboard_df["address"].str[:8] + "…"
 
-    for symbol in SYMBOLS:
-        key = SYMBOL_SHORT[symbol].upper()
-        print(f"\n  [{key}] Lade Daten...")
+    print(f"\n  Top 10 Wallets by All-Time PnL:")
+    display = leaderboard_df.head(10)[["rank", "address_short", "pnl_alltime", "pnl_month", "roi_alltime"]].copy()
+    display["pnl_alltime"] = display["pnl_alltime"].map("${:,.0f}".format)
+    display["pnl_month"]   = display["pnl_month"].map("${:,.0f}".format)
+    display["roi_alltime"] = display["roi_alltime"].map("{:.1%}".format)
+    print(display.to_string(index=False))
 
-        try:
-            dfs_rates[symbol] = get_funding_rates_paginated(symbol, days=FUNDING_DAYS_FULL)
-        except Exception as e:
-            print(f"  Paginated fetch fehlgeschlagen ({e}), Fallback auf 1000 Einträge")
-            dfs_rates[symbol] = get_funding_rates(symbol, limit=1000)
+    # ── STEP 2: Wallet Histories ─────────────────────────────────────────────
+    print_section("STEP 2 — Fetching Wallet Trade Histories")
+    from data.wallet_history import fetch_all_wallets
+    addresses   = leaderboard_df["address"].tolist()
+    wallet_data = fetch_all_wallets(addresses)
+    n_with_data = sum(1 for d in wallet_data.values() if not d["fills"].empty)
+    print(f"\n  {n_with_data}/{len(addresses)} wallets had trade data")
 
-        try:
-            dfs_bybit[symbol] = get_bybit_funding_rates(symbol, limit=200)
-        except Exception as e:
-            print(f"  Bybit nicht verfügbar: {e}")
+    # ── STEP 3: Trader Profiles ──────────────────────────────────────────────
+    print_section("STEP 3 — Building Trader Profiles")
+    from analysis.trader_profile import build_all_profiles
+    profiles_df = build_all_profiles(leaderboard_df, wallet_data)
+    valid = profiles_df[profiles_df.get("sufficient_data", pd.Series([False]*len(profiles_df))) == True]
+    print(f"\n  {len(valid)}/{len(profiles_df)} wallets had sufficient data")
 
-        try:
-            dfs_basis[symbol] = get_basis_history(symbol, interval="8h", limit=500)
-        except Exception as e:
-            print(f"  Basis History nicht verfügbar: {e}")
+    # ── STEP 4: Smart Money Scoring ──────────────────────────────────────────
+    print_section("STEP 4 — Smart Money IC Analysis")
+    from analysis.smart_money import run_smart_money_scoring
+    smart_money_df = run_smart_money_scoring(leaderboard_df, wallet_data)
 
-        try:
-            dfs_predicted[symbol] = get_predicted_funding_rate_history(symbol, limit=500)
-        except Exception as e:
-            print(f"  Predicted Funding nicht verfügbar: {e}")
+    tier1 = smart_money_df[smart_money_df["grade"] == "TIER_1"]
+    tier2 = smart_money_df[smart_money_df["grade"] == "TIER_2"]
+    tier3 = smart_money_df[smart_money_df["grade"] == "TIER_3"]
 
-        try:
-            dfs_okx[symbol] = get_okx_funding_rates(symbol, limit=500)
-        except Exception as e:
-            print(f"  OKX nicht verfügbar: {e}")
+    print(f"\n  Smart Money Tiers:")
+    print(f"    TIER_1 (score >0.40):  {len(tier1)} wallets")
+    print(f"    TIER_2 (score >0.25):  {len(tier2)} wallets")
+    print(f"    TIER_3 (score >0.15):  {len(tier3)} wallets")
 
-    df_stable = None
-    try:
-        df_stable = get_combined_stablecoin_supply()
-    except Exception as e:
-        print(f"\n  Stablecoin Daten nicht verfügbar: {e}")
+    if not smart_money_df.empty:
+        print(f"\n  Top 10 Smart Money Wallets:")
+        cols = ["smart_money_rank", "address", "display_name", "grade",
+                "smart_money_score", "ic_8h", "ic_recent_8h", "icir_8h",
+                "ic_trend_direction", "pnl_alltime"]
+        show = [c for c in cols if c in smart_money_df.columns]
+        top10 = smart_money_df.head(10)[show].copy()
+        top10["address"] = top10["address"].str[:8]
+        if "pnl_alltime" in top10:
+            top10["pnl_alltime"] = top10["pnl_alltime"].map("${:,.0f}".format)
+        print(top10.to_string(index=False))
 
-    df_dominance = None
-    try:
-        df_dominance = get_btc_dominance_history(symbols=SYMBOLS)
-    except Exception as e:
-        print(f"\n  BTC OI Dominanz nicht verfügbar: {e}")
+    # ── STEP 5: Live Monitor + Signals ───────────────────────────────────────
+    print_section("STEP 5 — Live Position Monitor + Signal Generation")
+    from analysis.live_monitor import run_live_monitor
+    from analysis.signals import run_signal_pipeline
 
-    # ══════════════════════════════════════════════════════════════════════════
-    # SCHRITT 2: Standard-Features pro Asset
-    # ══════════════════════════════════════════════════════════════════════════
-    print(f"\n{'─'*65}")
-    print("  SCHRITT 2: Feature Engineering (Single-Asset)")
-    print(f"{'─'*65}")
+    events, current_state = run_live_monitor(smart_money_df)
+    signal_output = run_signal_pipeline(events, current_state)
 
-    dfs_features = {}
-    for symbol in SYMBOLS:
-        key = SYMBOL_SHORT[symbol].upper()
-        print(f"\n  [{key}]")
-        dfs_features[symbol] = build_all_features(
-            df_rates     = dfs_rates[symbol],
-            df_bybit     = dfs_bybit.get(symbol),
-            df_basis     = dfs_basis.get(symbol),
-            df_stable    = df_stable,
-            df_predicted = dfs_predicted.get(symbol),
-            df_dominance = df_dominance,
-            df_okx       = dfs_okx.get(symbol),
-            add_labels   = False,   # Labels erst nach Cross-Asset Features
-        )
+    signals   = signal_output["signals"]
+    consensus = signal_output["consensus"]
 
-    # ══════════════════════════════════════════════════════════════════════════
-    # SCHRITT 3: Cross-Asset Features
-    # ══════════════════════════════════════════════════════════════════════════
-    print(f"\n{'─'*65}")
-    print("  SCHRITT 3: Cross-Asset Feature Engineering")
-    print(f"{'─'*65}")
+    if signals:
+        print(f"\n  {len(signals)} NEW SIGNALS:")
+        for s in signals:
+            print(f"    [{s['signal_strength']}] {s['direction']} {s['coin']} "
+                  f"@ ${s['entry_price']:,.2f} "
+                  f"— {s['consensus_wallets']} wallets, confidence {s['consensus_confidence']:.2f}")
+    else:
+        print(f"\n  No new signals this run")
 
-    try:
-        dfs_features = build_cross_asset_features(
-            dfs     = dfs_features,
-            symbols = SYMBOLS,
-            weights = SYMBOL_WEIGHTS,
-        )
-        sample_cols = dfs_features[SYMBOLS[0]].columns
-        n_cross = sum(1 for c in sample_cols if any(
-            c.startswith(p) for p in [
-                "btc_eth_spread", "btc_sol_spread", "eth_sol_spread",
-                "hierarchy_", "all_above_zscore", "sync_score",
-                "btc_falling_", "rotation_direction", "portfolio_rate_",
-                "rel_score_",
-            ]
-        ))
-        print(f"  + {n_cross} Cross-Asset Features hinzugefügt")
-    except Exception as e:
-        print(f"  Cross-Asset Features fehlgeschlagen: {e}")
+    strong_consensus = [c for c in consensus if c["is_consensus"]]
+    if strong_consensus:
+        print(f"\n  Current Smart Money Consensus ({len(strong_consensus)} positions):")
+        for c in strong_consensus[:10]:
+            wallets_str = ", ".join(c["wallets"][:3])
+            print(f"    [{c['consensus_strength']}] {c['direction']} {c['coin']} "
+                  f"— {c['n_wallets']} wallets ({wallets_str})")
 
-    for symbol in SYMBOLS:
-        threshold = FUNDING_THRESHOLDS.get(symbol, 0.0001)
-        dfs_features[symbol] = build_labels(dfs_features[symbol],
-                                            threshold=threshold)
+    # ── STEP 6: Pattern Analysis ─────────────────────────────────────────────
+    print_section("STEP 6 — Pattern Analysis")
+    from analysis.pattern_analysis import run_pattern_analysis
+    patterns = run_pattern_analysis(profiles_df, wallet_data)
 
-    # ══════════════════════════════════════════════════════════════════════════
-    # SCHRITT 4: Statistiken
-    # ══════════════════════════════════════════════════════════════════════════
-    print(f"\n{'─'*65}")
-    print("  SCHRITT 4: Statistiken")
-    print(f"{'─'*65}")
+    if patterns["key_findings"]:
+        print("\n  Key Findings:")
+        for f in patterns["key_findings"]:
+            print(f"  → {f}")
 
-    for symbol in SYMBOLS:
-        print_stats(dfs_features[symbol], symbol=symbol)
+    # ── STEP 7: Market Overview ──────────────────────────────────────────────
+    print_section("STEP 7 — Market Overview")
+    from analysis.market_overview import run_market_overview
+    market = run_market_overview()
 
-    try:
-        print_cross_asset_summary(dfs_features, SYMBOLS)
-    except Exception as e:
-        print(f"  Cross-Asset Summary fehlgeschlagen: {e}")
+    sentiment = market.get("sentiment", {})
+    if sentiment:
+        print(f"""
+  Regime:               {sentiment.get('market_regime', 'N/A')}
+  OI-Weighted Funding:  {sentiment.get('oi_weighted_funding', 0):.4%}/8h
+  Annual Equivalent:    {sentiment.get('funding_annual_pct', 0):.1f}%
+  Total HL OI:         ${sentiment.get('total_oi_usd', 0):,.0f}""")
 
-    # ══════════════════════════════════════════════════════════════════════════
-    # SCHRITT 4.5: IC-Analyse (Feature Quality & Stability)
-    # ══════════════════════════════════════════════════════════════════════════
-    print(f"\n{'─'*65}")
-    print("  SCHRITT 4.5: IC-Analyse – Feature Quality & Stability")
-    print(f"{'─'*65}")
-
-    ic_reports = {}
-    for symbol in SYMBOLS:
-        try:
-            ic_reports[symbol] = run_ic_report(
-                symbol      = symbol,
-                features_df = dfs_features[symbol],
-                target_col  = "target_next_rate",
-            )
-        except Exception as e:
-            print(f"  [{SYMBOL_SHORT[symbol].upper()}] IC-Analyse fehlgeschlagen: {e}")
-            ic_reports[symbol] = {}
-
-    # ══════════════════════════════════════════════════════════════════════════
-    # SCHRITT 5: Single-Asset Backtests
-    # ══════════════════════════════════════════════════════════════════════════
-    print(f"\n{'─'*65}")
-    print("  SCHRITT 5: Backtests – Pro Asset")
-    print("  [4 Legs × (Maker + Slippage) pro Roundtrip]")
-    print(f"{'─'*65}")
-
-    backtest_results = {}
-    for symbol in SYMBOLS:
-        backtest_results[symbol] = run_backtest(
-            df     = dfs_features[symbol],
-            label  = "Rule-based (Rate > 0.01%)",
-            symbol = symbol,
-        )
-
-    # ══════════════════════════════════════════════════════════════════════════
-    # SCHRITT 6: Portfolio-Backtest
-    # ══════════════════════════════════════════════════════════════════════════
-    print(f"\n{'─'*65}")
-    print("  SCHRITT 6: Portfolio-Backtest (Multi-Asset)")
-    print(f"{'─'*65}")
-
-    portfolio_result = None
-    try:
-        portfolio_result = run_portfolio_backtest(
-            dfs     = dfs_features,
-            symbols = SYMBOLS,
-            weights = SYMBOL_WEIGHTS,
-        )
-    except Exception as e:
-        print(f"  Portfolio-Backtest fehlgeschlagen: {e}")
-
-    # ══════════════════════════════════════════════════════════════════════════
-    # SCHRITT 7: Plots
-    # ══════════════════════════════════════════════════════════════════════════
-    print(f"\n{'─'*65}")
-    print("  SCHRITT 7: Visualisierungen")
-    print(f"{'─'*65}")
-
-    for symbol in SYMBOLS:
-        plot_single_asset(dfs_features[symbol], symbol=symbol, save=True)
-
-    if portfolio_result is not None:
-        try:
-            plot_portfolio(
-                dfs              = dfs_features,
-                portfolio_result = portfolio_result,
-                symbols          = SYMBOLS,
-                save             = True,
-            )
-        except Exception as e:
-            print(f"  Portfolio-Plot fehlgeschlagen: {e}")
-
-    # IC-Heatmaps (nutzt gespeicherte ic_report CSVs)
-    for symbol in SYMBOLS:
-        try:
-            ic_series = ic_reports.get(symbol, {}).get("ic_series")
-            plot_ic_heatmap(symbol, ic_df=ic_series, save=True)
-        except Exception as e:
-            print(f"  IC-Heatmap [{SYMBOL_SHORT[symbol].upper()}] fehlgeschlagen: {e}")
-
-    # ══════════════════════════════════════════════════════════════════════════
-    # SCHRITT 8: Export
-    # ══════════════════════════════════════════════════════════════════════════
-    print(f"\n{'─'*65}")
-    print("  SCHRITT 8: Export")
-    print(f"{'─'*65}")
-
-    for symbol in SYMBOLS:
-        key  = SYMBOL_SHORT[symbol]
-        path = os.path.join(DATA_DIR, f"{symbol}_features.csv")
-        dfs_features[symbol].to_csv(path, index=False)
-        n = len(dfs_features[symbol])
-        f = len([c for c in dfs_features[symbol].columns
-                 if c not in {"fundingTime", "target_next_positive",
-                               "target_next_3", "target_next_rate",
-                               "target_label_ordinal", "rate_annualized_pct"}])
-        print(f"  {key.upper()}: {path}  ({n} Zeilen, {f} Features)")
-
-    # ── backtest_results.csv (inkl. total_fees_paid, avg_cost_per_trade) ──────
-    skip_raw = {"_full_returns", "_equity", "_in_signal"}
-    bt_rows  = []
-    for symbol, res in backtest_results.items():
-        row = {k: v for k, v in res.items() if k not in skip_raw}
-        bt_rows.append(row)
-
-    if bt_rows:
-        bt_csv_path = os.path.join(OUTPUT_DIR, "backtest_results.csv")
-        pd.DataFrame(bt_rows).to_csv(bt_csv_path, index=False)
-        print(f"  backtest_results.csv: {bt_csv_path}")
-
-    # ══════════════════════════════════════════════════════════════════════════
-    # SCHRITT 9: ABSCHLIESSENDE VALIDIERUNG
-    # ══════════════════════════════════════════════════════════════════════════
-    print(f"\n{'═'*65}")
-    print("  ABSCHLIESSENDE VALIDIERUNG")
-    print(f"{'═'*65}")
-
-    # ── 9a. Trade Count & Statistische Validität ───────────────────────────
-    print("\n  Trade Count Validität:")
-    for symbol, res in backtest_results.items():
-        key    = SYMBOL_SHORT[symbol].upper()
-        n_tr   = res.get("num_trades", 0)
-        valid  = res.get("statistically_valid", False)
-        marker = "✓" if valid else "⚠"
-        print(f"    {marker} {key}: {n_tr} Trades  "
-              f"({'statistisch valid' if valid else 'zu wenig – Ergebnis unsicher'})")
-
-    # ── 9b. Effektive Gesamtkosten pro Trade ──────────────────────────────
-    print(f"\n  Effektive Kosten pro Trade (4-Leg Delta-Neutral):")
-    print(f"    COST_PER_ROUNDTRIP = {COST_PER_ROUNDTRIP*100:.4f}%")
-    for symbol, res in backtest_results.items():
-        key = SYMBOL_SHORT[symbol].upper()
-        print(f"    {key}: Ø {res.get('avg_cost_per_trade_pct', 0):.4f}%  "
-              f"= {res.get('avg_cost_per_trade_usd', 0):.2f} USD  |  "
-              f"Total: {res.get('total_fees_paid_usd', 0):.2f} USD "
-              f"({res.get('total_fees_paid_pct', 0):.3f}% des Kapitals)")
-
-    # ── 9c. Top-3 Features nach ICIR ──────────────────────────────────────
-    print(f"\n  Top-3 Features nach ICIR:")
-    for symbol in SYMBOLS:
-        key     = SYMBOL_SHORT[symbol].upper()
-        report  = ic_reports.get(symbol, {})
-        icir_df = report.get("icir_df", pd.DataFrame())
-        if len(icir_df) == 0:
-            print(f"    {key}: IC-Report nicht verfügbar")
-            continue
-        top3 = icir_df[icir_df["icir"].notna()].head(3)
-        print(f"    {key}:")
-        for _, row in top3.iterrows():
-            hl_str = (f"  HL={row['decay_halflife_hours']:.0f}h"
-                      if pd.notna(row.get("decay_halflife_hours")) else "")
-            print(f"      {row['feature']:<32}  ICIR={row['icir']:+.3f}  "
-                  f"[{row.get('quality', '?')}]{hl_str}")
-
-    # ── 9d. Output-Dateien prüfen ─────────────────────────────────────────
-    print(f"\n  Output-Dateien:")
-    check_files = (
-        [os.path.join(OUTPUT_DIR, "backtest_results.csv")]
-        + [os.path.join(OUTPUT_DIR, f"ic_summary_{s}.csv") for s in SYMBOLS]
-        + [os.path.join(OUTPUT_DIR, f"ic_heatmap_{SYMBOL_SHORT[s]}.png") for s in SYMBOLS]
+    # ── STEP 8: Dashboard ────────────────────────────────────────────────────
+    print_section("STEP 8 — Generating Dashboard")
+    from generate_dashboard import generate
+    generate(
+        leaderboard_df = leaderboard_df,
+        profiles_df    = profiles_df,
+        smart_money_df = smart_money_df,
+        signals        = signal_output,
+        current_state  = current_state,
+        patterns       = patterns,
+        market         = market,
     )
-    for fpath in check_files:
-        exists = os.path.exists(fpath)
-        print(f"    {'✓' if exists else '✗'} {os.path.basename(fpath)}")
-
-    # ── SCHRITT 10: Dashboard generieren ──────────────────────────────────────
-    print(f"\n{'─'*65}")
-    print("  SCHRITT 10: Dashboard")
-    print(f"{'─'*65}")
-    try:
-        generate_dashboard()
-    except Exception as e:
-        print(f"  Dashboard fehlgeschlagen: {e}")
-
-    print(f"\n{'═'*65}")
-    print("  PIPELINE ABGESCHLOSSEN")
-    print(f"{'═'*65}")
-    print()
-    print("  Nächste Schritte (Phase 2):")
-    print("    python models/train.py           ← XGBoost Walk-Forward Training")
-    print("    python models/regime.py          ← GMM Regime Classifier")
-    print("    python models/alpha.py           ← 3-Modell Alpha Ensemble")
-    print("    python models/portfolio_constructor.py  ← Layer 4 + Optuna")
-    print("    python execution/scenarios.py   ← Pre-Live Scenario Tests")
-    print("    python execution/paper_trading.py ← Paper Trading starten")
-    print()
+    print(f"\n  Dashboard: outputs/dashboard.html")
+    print(f"\n{'═'*60}")
+    print(f"  Done.")
+    print(f"{'═'*60}\n")
 
 
 if __name__ == "__main__":

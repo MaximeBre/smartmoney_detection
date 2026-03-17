@@ -1,685 +1,725 @@
 """
-generate_dashboard.py – Lokales HTML-Dashboard
-===============================================
-Liest alle CSVs aus outputs/ und generiert ein standalone HTML-Dashboard.
-
-Features:
-  - Kein Server nötig – öffne outputs/dashboard.html direkt im Browser
-  - Dark Theme, 3-Spalten Layout
-  - Chart.js von cdnjs (einzige externe Abhängigkeit)
-  - Daten inline als JavaScript Arrays (kein fetch() nötig)
-
-Sektionen:
-  0. Live Status Bar (Portfolio Value, Return, nächster Run)
-  1. P&L Chart (Paper Trading vs Aave Benchmark)
-  2. Aktuelle Positionen
-  3. Trade History (letzte 20 Trades)
-  4. Asset Performance Table (Backtest Metriken)
-  5. IC-Analyse (Top Features ICIR)
-  6. FSI Bar Chart
-  7. Go-Live Readiness Score
-
-Ausführen:
-    cd crypto_quant
-    python generate_dashboard.py
+Generate self-contained HTML dashboard for Hyperliquid Smart Money Tracker.
 """
-
 import os
-import sys
-import json
-import math
-import numpy as np
 import pandas as pd
-from datetime import datetime, timezone
-
-sys.path.insert(0, os.path.dirname(__file__))
-from config import SYMBOLS, SYMBOL_SHORT, OUTPUT_DIR
-
-PAPER_CAPITAL = 1_000.0
-AAVE_APR      = 0.05
-PERIODS_PER_YEAR = 3 * 365
+import numpy as np
+from datetime import datetime
+from config import DASHBOARD_HTML
 
 
-# ── Daten laden ────────────────────────────────────────────────────────────────
+# ── Formatting helpers ──────────────────────────────────────────────────────
 
-def _load_csv(filename: str) -> pd.DataFrame:
-    path = os.path.join(OUTPUT_DIR, filename)
-    if os.path.exists(path):
-        return pd.read_csv(path)
-    return pd.DataFrame()
-
-
-def _load_json(filename: str) -> dict:
-    path = os.path.join(OUTPUT_DIR, filename)
-    if os.path.exists(path):
-        try:
-            with open(path) as f:
-                return json.load(f)
-        except Exception:
-            pass
-    return {}
+def _fmt_usd(v):
+    if v is None or (isinstance(v, float) and np.isnan(v)):
+        return "—"
+    try:
+        v = float(v)
+        if abs(v) >= 1_000_000:
+            return f"${v/1_000_000:.2f}M"
+        if abs(v) >= 1_000:
+            return f"${v:,.0f}"
+        return f"${v:.2f}"
+    except Exception:
+        return "—"
 
 
-def _to_js(values) -> str:
-    def _fmt(v):
-        if v is None or (isinstance(v, float) and (math.isnan(v) or math.isinf(v))):
-            return "null"
-        if isinstance(v, bool):
-            return "true" if v else "false"
-        if isinstance(v, (int, float, np.integer, np.floating)):
-            return str(round(float(v), 8))
-        return json.dumps(str(v))
-    return "[" + ", ".join(_fmt(v) for v in values) + "]"
+def _fmt_pct(v, decimals=2):
+    if v is None or (isinstance(v, float) and np.isnan(v)):
+        return "—"
+    try:
+        return f"{float(v)*100:.{decimals}f}%"
+    except Exception:
+        return "—"
 
 
-def _minutes_to_next_run() -> int:
-    now = datetime.now(timezone.utc)
-    slots = [
-        now.replace(hour=23, minute=20, second=0, microsecond=0),
-        now.replace(hour= 7, minute=20, second=0, microsecond=0),
-        now.replace(hour=15, minute=20, second=0, microsecond=0),
-    ]
-    for t in sorted(slots):
-        if t > now:
-            return int((t - now).total_seconds() / 60)
-    # Nächster Slot morgen
-    import datetime as dt_mod
-    nxt = now.replace(hour=7, minute=20, second=0, microsecond=0) + dt_mod.timedelta(days=1)
-    return int((nxt - now).total_seconds() / 60)
+def _fmt(v, decimals=2):
+    if v is None or (isinstance(v, float) and np.isnan(v)):
+        return "—"
+    try:
+        return f"{float(v):.{decimals}f}"
+    except Exception:
+        return str(v)
 
 
-def compute_golive_score(df_perf: pd.DataFrame, df_trades: pd.DataFrame) -> tuple:
-    """Berechnet Go-Live Readiness Score (0–100)."""
-    checks = {}
+def _color_pnl(v):
+    """Return CSS class for positive/negative value."""
+    try:
+        return "pos" if float(v) >= 0 else "neg"
+    except Exception:
+        return ""
 
-    n_runs = len(df_perf)
-    checks["30+ Tage gelaufen"] = n_runs >= 90
 
-    if n_runs >= 2:
-        returns = df_perf["period_return_pct"].dropna() / 100
-        sharpe  = (returns.mean() / returns.std() * math.sqrt(PERIODS_PER_YEAR)
-                   if returns.std() > 0 else 0)
-        checks["Sharpe > 1.0"] = sharpe > 1.0
+def _color_ic(v):
+    """Return CSS class for IC values."""
+    try:
+        fv = float(v)
+        if fv > 0.1:
+            return "pos"
+        if fv < -0.1:
+            return "neg"
+        return "muted"
+    except Exception:
+        return ""
 
-        peak  = df_perf["portfolio_value"].cummax()
-        dd    = ((df_perf["portfolio_value"] - peak) / peak).min()
-        checks["Max Drawdown < 15%"] = abs(dd) < 0.15
 
-        # vs Aave Benchmark
-        n_days    = n_runs / 3
-        aave_ret  = (1 + AAVE_APR) ** (n_days / 365) - 1
-        paper_ret = (df_perf["portfolio_value"].iloc[-1] / PAPER_CAPITAL) - 1
-        checks["Paper > Aave Yield"] = paper_ret > aave_ret
+def _grade_badge(grade: str) -> str:
+    css_map = {
+        "TIER_1":            "badge-tier1",
+        "TIER_2":            "badge-tier2",
+        "TIER_3":            "badge-tier3",
+        "MARGINAL":          "badge-marginal",
+        "NO_EDGE":           "badge-noedge",
+        "INSUFFICIENT_DATA": "badge-noedge",
+        "UNKNOWN":           "badge-noedge",
+    }
+    css = css_map.get(grade, "badge-noedge")
+    label = grade.replace("_", " ")
+    return f'<span class="badge {css}">{label}</span>'
+
+
+def _strength_badge(strength: str) -> str:
+    css_map = {
+        "STRONG":   "badge-strong",
+        "MODERATE": "badge-moderate",
+        "WEAK":     "badge-weak",
+    }
+    css = css_map.get(strength, "badge-weak")
+    return f'<span class="badge {css}">{strength}</span>'
+
+
+def _consensus_badge(strength: str) -> str:
+    css_map = {
+        "STRONG":   "badge-strong",
+        "MODERATE": "badge-consensus-mod",
+        "WEAK":     "badge-weak",
+    }
+    css = css_map.get(strength, "badge-weak")
+    return f'<span class="badge {css}">{strength}</span>'
+
+
+# ── Section builders ────────────────────────────────────────────────────────
+
+def build_signals_section(signals: list,
+                            consensus: list,
+                            current_state: dict) -> str:
+    """Build the LIVE SIGNALS section — most prominent."""
+    n_monitored = len(current_state)
+
+    # New signals panel
+    if signals:
+        sig_rows = ""
+        for s in signals:
+            direction_css = "pos" if s["direction"] == "LONG" else "neg"
+            sig_rows += f"""
+        <tr>
+          <td>{_strength_badge(s['signal_strength'])}</td>
+          <td><strong class="{direction_css}">{s['direction']}</strong></td>
+          <td><strong>{s['coin']}</strong></td>
+          <td>{_fmt_usd(s.get('entry_price', 0))}</td>
+          <td>{s.get('primary_wallet_name', '')[:12]}</td>
+          <td>{_fmt(s.get('primary_score'))}</td>
+          <td>{s.get('consensus_wallets', 1)}</td>
+          <td>{_fmt(s.get('consensus_confidence'))}</td>
+          <td>{_grade_badge(s.get('grade',''))}</td>
+          <td class="muted" style="font-size:11px">{s.get('leverage','1')}x lev</td>
+        </tr>"""
+        signals_html = f"""
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Strength</th><th>Dir</th><th>Coin</th><th>Entry Price</th>
+          <th>Wallet</th><th>SM Score</th><th>Wallets</th>
+          <th>Confidence</th><th>Grade</th><th>Note</th>
+        </tr>
+      </thead>
+      <tbody>{sig_rows}</tbody>
+    </table>"""
     else:
-        for k in ["Sharpe > 1.0", "Max Drawdown < 15%", "Paper > Aave Yield"]:
-            checks[k] = False
+        signals_html = f'<div class="no-signal">No new signals this run — monitoring {n_monitored} smart money wallets</div>'
 
-    exits = df_trades[df_trades["action"] == "EXIT"] if not df_trades.empty else pd.DataFrame()
-    checks["20+ Trades"] = len(exits) >= 20
-
-    if len(exits) > 0:
-        wr = (pd.to_numeric(exits["net_pnl_pct"], errors="coerce") > 0).mean()
-        checks["Win Rate > 45%"] = float(wr) > 0.45
+    # Consensus table
+    if consensus:
+        con_rows = ""
+        for c in consensus:
+            direction_css = "pos" if c["direction"] == "LONG" else "neg"
+            wallets_str   = ", ".join(c["wallets"][:4])
+            con_rows += f"""
+        <tr>
+          <td><strong>{c['coin']}</strong></td>
+          <td><strong class="{direction_css}">{c['direction']}</strong></td>
+          <td>{c['n_wallets']}</td>
+          <td>{_fmt(c.get('avg_score'))}</td>
+          <td>{_fmt(c.get('max_score'))}</td>
+          <td>{_consensus_badge(c.get('consensus_strength','WEAK'))}</td>
+          <td class="muted" style="font-size:11px;max-width:200px;overflow:hidden;text-overflow:ellipsis">{wallets_str}</td>
+        </tr>"""
+        consensus_html = f"""
+    <h3 style="margin:20px 0 10px;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px">
+      Current Smart Money Positions ({len(consensus)} coins tracked)
+    </h3>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Coin</th><th>Direction</th><th># Wallets</th>
+          <th>Avg Score</th><th>Max Score</th><th>Strength</th><th>Wallets</th>
+        </tr>
+      </thead>
+      <tbody>{con_rows}</tbody>
+    </table>"""
     else:
-        checks["Win Rate > 45%"] = False
+        consensus_html = '<div class="no-signal muted">No smart money consensus positions found</div>'
 
-    if os.path.exists(os.path.join(OUTPUT_DIR, "paper_trading_errors.log")):
-        try:
-            with open(os.path.join(OUTPUT_DIR, "paper_trading_errors.log")) as f:
-                n_errors = sum(1 for line in f if "ERROR" in line)
-            checks["Error Rate < 5%"] = (n_errors / max(n_runs, 1)) < 0.05
-        except Exception:
-            checks["Error Rate < 5%"] = True
-    else:
-        checks["Error Rate < 5%"] = True
-
-    score = sum(checks.values()) / len(checks) * 100
-    return round(score, 1), checks
+    return signals_html + consensus_html
 
 
-def load_dashboard_data() -> dict:
-    data = {}
+def build_smart_money_table(smart_money_df: pd.DataFrame,
+                             current_state: dict) -> str:
+    """Smart Money Leaderboard ranked by IC score."""
+    if smart_money_df is None or smart_money_df.empty:
+        return "<p class='muted'>No smart money data yet</p>"
 
-    # ── State ─────────────────────────────────────────────────────────────────
-    state = _load_json("paper_trading_state.json")
-    data["state"]          = state
-    data["current_value"]  = state.get("current_value", PAPER_CAPITAL)
-    data["start_date"]     = state.get("start_date", "")
-    data["last_run"]       = state.get("last_run", "")
-    data["total_trades"]   = state.get("total_trades", 0)
-    data["total_runs"]     = state.get("total_runs", 0)
+    # Build position lookup from current_state
+    pos_lookup = {}
+    for addr, state in current_state.items():
+        positions = state.get("positions", {})
+        if positions:
+            coins = list(positions.keys())
+            sides = [positions[c]["side"][0] for c in coins]  # L or S
+            pos_lookup[addr] = " ".join(f"{c}({s})" for c, s in zip(coins[:4], sides[:4]))
+        else:
+            pos_lookup[addr] = "—"
 
-    cum_ret = (data["current_value"] / PAPER_CAPITAL - 1) * 100
-    data["cum_return_pct"] = round(cum_ret, 3)
+    rows = ""
+    for _, r in smart_money_df.head(50).iterrows():
+        addr        = r.get("address", "")
+        addr_short  = addr[:6] + "…" + addr[-4:] if len(addr) > 10 else addr
+        display     = r.get("display_name", "") or addr_short
+        hl_link     = f"https://app.hyperliquid.xyz/explorer/address/{addr}"
+        grade       = r.get("grade", "UNKNOWN")
+        score       = r.get("smart_money_score", 0)
+        ic_8h       = r.get("ic_8h", 0)
+        ic_rec      = r.get("ic_recent_8h", 0)
+        icir        = r.get("icir_8h", 0)
+        trend_dir   = r.get("ic_trend_direction", "")
+        pnl_all     = r.get("pnl_alltime", 0)
+        sm_rank     = int(r.get("smart_money_rank", 0))
+        open_pos    = pos_lookup.get(addr, "—")
 
-    # Running days
-    if data["start_date"]:
-        try:
-            start = datetime.strptime(data["start_date"], "%Y-%m-%d").replace(
-                tzinfo=timezone.utc
-            )
-            data["running_days"] = (datetime.now(timezone.utc) - start).days
-        except Exception:
-            data["running_days"] = 0
-    else:
-        data["running_days"] = 0
-
-    data["minutes_to_next_run"] = _minutes_to_next_run()
-
-    # ── Performance Log ────────────────────────────────────────────────────────
-    df_perf = _load_csv("paper_trading_performance.csv")
-    if not df_perf.empty and "period_return_pct" in df_perf.columns:
-        df_perf = df_perf[df_perf["period_return_pct"].notna()]
-        data["perf_timestamps"]  = list(df_perf.get("timestamp", pd.Series()).astype(str))
-        data["perf_values"]      = list(df_perf.get("portfolio_value", pd.Series()).fillna(PAPER_CAPITAL))
-        # Aave Benchmark: linear growth at 5% APR
-        n = len(df_perf)
-        data["aave_values"]      = [
-            round(PAPER_CAPITAL * (1 + AAVE_APR) ** (i / PERIODS_PER_YEAR), 4)
-            for i in range(n)
-        ]
-        data["n_perf_rows"] = n
-    else:
-        data["perf_timestamps"]  = []
-        data["perf_values"]      = []
-        data["aave_values"]      = []
-        data["n_perf_rows"]      = 0
-        df_perf = pd.DataFrame()
-
-    # ── Trade Log ─────────────────────────────────────────────────────────────
-    df_trades = _load_csv("paper_trading_trades.csv")
-    if not df_trades.empty:
-        data["recent_trades"] = (
-            df_trades.tail(20)
-            .fillna("")
-            .to_dict(orient="records")
+        trend_html = (
+            '<span class="pos" style="font-size:14px">&#9650;</span>'
+            if trend_dir == "IMPROVING" else
+            '<span class="neg" style="font-size:14px">&#9660;</span>'
         )
+
+        rows += f"""
+        <tr>
+          <td class="muted">{sm_rank}</td>
+          <td><a href="{hl_link}" target="_blank" class="addr">{display}</a></td>
+          <td>{_grade_badge(grade)}</td>
+          <td class="{_color_ic(score)}" style="font-weight:700">{_fmt(score, 3)}</td>
+          <td class="{_color_ic(ic_8h)}">{_fmt(ic_8h, 3)}</td>
+          <td class="{_color_ic(ic_rec)}">{_fmt(ic_rec, 3)}</td>
+          <td class="{_color_ic(icir)}">{_fmt(icir, 3)}</td>
+          <td style="text-align:center">{trend_html}</td>
+          <td class="{_color_pnl(pnl_all)}">{_fmt_usd(pnl_all)}</td>
+          <td class="muted" style="font-size:11px;max-width:180px;overflow:hidden;text-overflow:ellipsis">{open_pos}</td>
+        </tr>"""
+
+    return f"""
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>#</th><th>Wallet</th><th>Grade</th>
+          <th>SM Score</th><th>IC 8h</th><th>IC Recent</th>
+          <th>ICIR</th><th>Trend</th><th>PnL All-Time</th><th>Open Positions</th>
+        </tr>
+      </thead>
+      <tbody>{rows}</tbody>
+    </table>"""
+
+
+def build_leaderboard_table(leaderboard_df: pd.DataFrame) -> str:
+    if leaderboard_df is None or leaderboard_df.empty:
+        return "<p>No data</p>"
+
+    rows = ""
+    for _, r in leaderboard_df.head(50).iterrows():
+        addr       = r.get("address", "")
+        addr_short = addr[:6] + "…" + addr[-4:] if len(addr) > 10 else addr
+        display    = r.get("display_name", "") or addr_short
+        hl_link    = f"https://app.hyperliquid.xyz/explorer/address/{addr}"
+
+        pnl_all = r.get("pnl_alltime", 0)
+        pnl_mo  = r.get("pnl_month",   0)
+        pnl_wk  = r.get("pnl_week",    0)
+        roi_all = r.get("roi_alltime",  0)
+        n_pos   = r.get("n_open_positions", 0)
+        open_ass = r.get("open_assets", "") or ""
+
+        rows += f"""
+        <tr>
+          <td>{int(r.get('rank', 0))}</td>
+          <td><a href="{hl_link}" target="_blank" class="addr">{display}</a></td>
+          <td class="{_color_pnl(pnl_all)}">{_fmt_usd(pnl_all)}</td>
+          <td class="{_color_pnl(pnl_mo)}">{_fmt_usd(pnl_mo)}</td>
+          <td class="{_color_pnl(pnl_wk)}">{_fmt_usd(pnl_wk)}</td>
+          <td class="{_color_pnl(roi_all)}">{_fmt_pct(roi_all)}</td>
+          <td>{int(n_pos) if n_pos == n_pos else 0}</td>
+          <td class="assets">{str(open_ass)[:40]}</td>
+        </tr>"""
+
+    return f"""
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>#</th><th>Address</th><th>PnL All-Time</th>
+          <th>PnL Month</th><th>PnL Week</th><th>ROI All-Time</th>
+          <th>Open Pos</th><th>Open Assets</th>
+        </tr>
+      </thead>
+      <tbody>{rows}</tbody>
+    </table>"""
+
+
+def build_profiles_table(profiles_df: pd.DataFrame) -> str:
+    if profiles_df is None or profiles_df.empty:
+        return "<p>No profiles</p>"
+
+    valid = profiles_df[
+        profiles_df.get("sufficient_data", pd.Series([False]*len(profiles_df))) == True
+    ].copy()
+    if valid.empty:
+        return "<p>Insufficient data for profiling</p>"
+
+    if "pnl_alltime" in valid.columns:
+        valid = valid.sort_values("pnl_alltime", ascending=False)
+
+    rows = ""
+    for _, r in valid.iterrows():
+        addr       = r.get("address", "")
+        addr_short = addr[:6] + "…" + addr[-4:] if len(addr) > 10 else addr
+        hl_link    = f"https://app.hyperliquid.xyz/explorer/address/{addr}"
+
+        hold_style = r.get("hold_style", "")
+        bias       = r.get("bias", "")
+        top_asset  = r.get("top_asset_1", "")
+
+        style_badge = f'<span class="badge badge-{hold_style.lower()}">{hold_style}</span>' if hold_style else ""
+        bias_badge  = f'<span class="badge badge-{bias.lower()}">{bias}</span>' if bias else ""
+
+        rows += f"""
+        <tr>
+          <td><a href="{hl_link}" target="_blank" class="addr">{addr_short}</a></td>
+          <td class="{_color_pnl(r.get('pnl_alltime',0))}">{_fmt_usd(r.get('pnl_alltime'))}</td>
+          <td>{_fmt_pct(r.get('win_rate'))}</td>
+          <td>{_fmt(r.get('sharpe'))}</td>
+          <td>{_fmt_pct(abs(r.get('max_drawdown', 0)))}</td>
+          <td>{_fmt(r.get('avg_hold_hours'))}h</td>
+          <td>{_fmt(r.get('trades_per_day'))}/d</td>
+          <td>{style_badge}</td>
+          <td>{bias_badge}</td>
+          <td>{top_asset}</td>
+          <td>{_fmt(r.get('profit_factor'))}</td>
+          <td class="neg">{int(r.get('n_liquidations', 0))}</td>
+        </tr>"""
+
+    return f"""
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Address</th><th>PnL</th><th>Win Rate</th><th>Sharpe</th>
+          <th>Max DD</th><th>Avg Hold</th><th>Freq</th>
+          <th>Style</th><th>Bias</th><th>Top Asset</th>
+          <th>Profit Factor</th><th>Liq.</th>
+        </tr>
+      </thead>
+      <tbody>{rows}</tbody>
+    </table>"""
+
+
+def build_market_table(market: dict) -> str:
+    if not market:
+        return "<p>No market data</p>"
+    snapshot = market.get("snapshot", [])
+    if not snapshot:
+        return "<p>No market data</p>"
+
+    rows = ""
+    for a in snapshot[:30]:
+        coin = a.get("coin", "")
+        fr   = a.get("funding_rate_8h", 0)
+        fa   = a.get("funding_annual", 0)
+        oi   = a.get("oi_usd", 0)
+        px   = a.get("mid_price", 0)
+        sent = a.get("funding_sentiment", "")
+
+        sent_class = {
+            "VERY_BULLISH": "very-bullish",
+            "BULLISH":      "bullish",
+            "NEUTRAL":      "neutral",
+            "BEARISH":      "bearish",
+            "VERY_BEARISH": "very-bearish",
+        }.get(sent, "neutral")
+
+        rows += f"""
+        <tr>
+          <td><strong>{coin}</strong></td>
+          <td>{_fmt_usd(px)}</td>
+          <td class="{_color_pnl(fr)}">{fr*100:.4f}%</td>
+          <td class="{_color_pnl(fa)}">{fa*100:.1f}%</td>
+          <td>{_fmt_usd(oi)}</td>
+          <td><span class="badge badge-{sent_class}">{sent.replace('_',' ')}</span></td>
+        </tr>"""
+
+    return f"""
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Asset</th><th>Price</th><th>Funding 8h</th>
+          <th>Funding Ann.</th><th>OI (USD)</th><th>Sentiment</th>
+        </tr>
+      </thead>
+      <tbody>{rows}</tbody>
+    </table>"""
+
+
+def build_patterns_section(patterns: dict) -> str:
+    if not patterns:
+        return "<p class='muted'>No pattern data</p>"
+
+    findings     = patterns.get("key_findings", [])
+    tier_cmp     = patterns.get("tier_comparison", pd.DataFrame())
+
+    findings_html = ""
+    if findings:
+        for f in findings:
+            findings_html += f'<div class="finding">&#8594; {f}</div>'
     else:
-        data["recent_trades"] = []
+        findings_html = '<div class="finding muted">Not enough data for statistical significance yet.</div>'
 
-    # ── Current Positions ─────────────────────────────────────────────────────
-    positions = state.get("positions", {})
-    pos_list  = []
-    for sym in SYMBOLS:
-        p   = positions.get(sym, {})
-        key = SYMBOL_SHORT[sym].upper()
-        pos_list.append({
-            "symbol":     key,
-            "state":      p.get("state", "FLAT"),
-            "size":       p.get("size", 0.0),
-            "entry_time": p.get("entry_time", ""),
-            "entry_rate": p.get("entry_funding_rate", None),
-            "holding":    p.get("holding_periods", 0),
-        })
-    data["positions"] = pos_list
+    table_html = ""
+    if isinstance(tier_cmp, pd.DataFrame) and not tier_cmp.empty:
+        rows = ""
+        for _, r in tier_cmp.head(15).iterrows():
+            sig = "&#10003;" if r.get("significant") else ""
+            rows += f"""
+            <tr class="{'sig-row' if r.get('significant') else ''}">
+              <td>{r.get('metric','')}</td>
+              <td>{_fmt(r.get('top_tier_mean'))}</td>
+              <td>{_fmt(r.get('bottom_tier_mean'))}</td>
+              <td class="{_color_pnl(r.get('difference',0))}">{_fmt(r.get('pct_difference'))}%</td>
+              <td>{_fmt(r.get('p_value'), 3)}</td>
+              <td>{sig}</td>
+            </tr>"""
+        table_html = f"""
+        <table class="data-table">
+          <thead><tr>
+            <th>Metric</th><th>Top Tier</th><th>Bottom Tier</th>
+            <th>&#916; %</th><th>p-value</th><th>Sig.</th>
+          </tr></thead>
+          <tbody>{rows}</tbody>
+        </table>"""
 
-    # ── Backtest Results ───────────────────────────────────────────────────────
-    df_bt = _load_csv("backtest_results.csv")
-    data["backtest"] = df_bt.to_dict(orient="records") if not df_bt.empty else []
-
-    # ── IC Summaries ───────────────────────────────────────────────────────────
-    ic_summaries = {}
-    for sym in SYMBOLS:
-        key    = SYMBOL_SHORT[sym]
-        df_ic  = _load_csv(f"ic_summary_{sym}.csv")
-        if not df_ic.empty:
-            ic_summaries[key] = df_ic.head(15).to_dict(orient="records")
-    data["ic_summaries"] = ic_summaries
-
-    # ── FSI ────────────────────────────────────────────────────────────────────
-    fsi_data = {}
-    for sym in SYMBOLS:
-        key   = SYMBOL_SHORT[sym]
-        df_f  = _load_csv(f"fsi_report_{sym}.csv")
-        if not df_f.empty:
-            fsi_data[key] = df_f.head(10).to_dict(orient="records")
-    data["fsi"] = fsi_data
-
-    # ── Go-Live Score ──────────────────────────────────────────────────────────
-    score, checks = compute_golive_score(df_perf, df_trades)
-    data["golive_score"]  = score
-    data["golive_checks"] = [
-        {"label": k, "ok": bool(v)} for k, v in checks.items()
-    ]
-
-    data["generated_at"] = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
-    data["assets"]        = [SYMBOL_SHORT[s].upper() for s in SYMBOLS]
-
-    return data
+    return f"""
+    <div class="findings-box">{findings_html}</div>
+    {table_html}"""
 
 
-# ── HTML Template ──────────────────────────────────────────────────────────────
+# ── Main generate() ─────────────────────────────────────────────────────────
 
-def generate_html(data: dict) -> str:
-    assets_js    = json.dumps(data["assets"])
-    backtest_js  = json.dumps(data["backtest"])
-    ic_js        = json.dumps(data["ic_summaries"])
-    fsi_js       = json.dumps(data["fsi"])
-    perf_ts_js   = _to_js(data["perf_timestamps"])
-    perf_val_js  = _to_js(data["perf_values"])
-    aave_val_js  = _to_js(data["aave_values"])
-    trades_js    = json.dumps(data["recent_trades"])
-    positions_js = json.dumps(data["positions"])
-    checks_js    = json.dumps(data["golive_checks"])
+def generate(leaderboard_df: pd.DataFrame,
+             profiles_df: pd.DataFrame,
+             smart_money_df: pd.DataFrame,
+             signals: dict,
+             current_state: dict,
+             patterns: dict,
+             market: dict) -> None:
+    """
+    Generate the complete self-contained HTML dashboard.
+    """
+    # Defensive defaults
+    if smart_money_df is None:
+        smart_money_df = pd.DataFrame()
+    if leaderboard_df is None:
+        leaderboard_df = pd.DataFrame()
+    if profiles_df is None:
+        profiles_df = pd.DataFrame()
+    if signals is None:
+        signals = {"signals": [], "consensus": []}
+    if current_state is None:
+        current_state = {}
+    if patterns is None:
+        patterns = {"key_findings": [], "tier_comparison": pd.DataFrame()}
+    if market is None:
+        market = {}
 
-    cur_val       = data["current_value"]
-    cum_ret       = data["cum_return_pct"]
-    running_days  = data["running_days"]
-    total_runs    = data["total_runs"]
-    total_trades  = data["total_trades"]
-    score         = data["golive_score"]
-    next_run_min  = data["minutes_to_next_run"]
-    generated_at  = data["generated_at"]
-    last_run      = data["last_run"][:16].replace("T", " ") if data["last_run"] else "—"
+    sentiment    = market.get("sentiment", {})
+    regime       = sentiment.get("market_regime", "N/A")
+    regime_color = {
+        "RISK_ON":  "#00c853",
+        "BULLISH":  "#69f0ae",
+        "NEUTRAL":  "#ffd740",
+        "BEARISH":  "#ff6d00",
+        "RISK_OFF": "#ff1744",
+    }.get(regime, "#888888")
 
-    # Score colour
-    if score >= 85:
-        score_color = "#3fb950"
-        score_label = "Go-Live möglich"
-    elif score >= 70:
-        score_color = "#d29922"
-        score_label = "Fast bereit"
-    else:
-        score_color = "#f85149"
-        score_label = "Noch nicht bereit"
+    now         = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+    n_wallets   = len(leaderboard_df)
+    total_oi    = _fmt_usd(sentiment.get("total_oi_usd", 0))
+    oi_funding  = f"{sentiment.get('oi_weighted_funding', 0)*100:.4f}%"
+    annual_f    = f"{sentiment.get('funding_annual_pct', 0):.1f}%"
+    pct_bull    = f"{sentiment.get('pct_positive_funding', 0)*100:.0f}%"
 
-    return f"""<!DOCTYPE html>
-<html lang="de">
+    sig_list  = signals.get("signals", [])
+    con_list  = signals.get("consensus", [])
+    n_signals = len(sig_list)
+    n_sm      = int(
+        (smart_money_df["smart_money_score"] >= 0.15).sum()
+        if not smart_money_df.empty and "smart_money_score" in smart_money_df.columns
+        else 0
+    )
+
+    oi_funding_class = "pos" if sentiment.get("oi_weighted_funding", 0) >= 0 else "neg"
+
+    # Build section HTML
+    signals_html      = build_signals_section(sig_list, con_list, current_state)
+    smart_money_html  = build_smart_money_table(smart_money_df, current_state)
+    leaderboard_html  = build_leaderboard_table(leaderboard_df)
+    profiles_html     = build_profiles_table(profiles_df)
+    market_html       = build_market_table(market)
+    patterns_html     = build_patterns_section(patterns)
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crypto Quant – Paper Trading Dashboard</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<title>Hyperliquid Smart Money Tracker</title>
 <style>
   :root {{
-    --bg:#0d1117; --bg2:#161b22; --bg3:#21262d;
-    --border:#30363d; --text:#e6edf3; --text2:#8b949e;
-    --green:#3fb950; --red:#f85149; --blue:#58a6ff;
-    --yellow:#d29922; --purple:#bc8cff; --orange:#ffa657;
+    --bg:     #0d0f14;
+    --card:   #151820;
+    --border: #252830;
+    --text:   #e2e8f0;
+    --muted:  #64748b;
+    --accent: #6366f1;
+    --pos:    #10b981;
+    --neg:    #ef4444;
+    --warn:   #f59e0b;
+    --gold:   #f59e0b;
+    --silver: #94a3b8;
+    --bronze: #b45309;
   }}
-  * {{ box-sizing:border-box; margin:0; padding:0; }}
-  body {{ background:var(--bg); color:var(--text);
-          font-family:-apple-system,'Segoe UI',sans-serif; font-size:13px; }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{ background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; font-size: 13px; }}
 
-  /* Status bar */
-  .status-bar {{ background:var(--bg2); border-bottom:1px solid var(--border);
-                 padding:10px 24px; display:flex; gap:32px; align-items:center;
-                 flex-wrap:wrap; }}
-  .status-bar .brand {{ font-size:14px; font-weight:700; color:var(--blue); margin-right:8px; }}
-  .stat {{ display:flex; flex-direction:column; }}
-  .stat .lbl {{ color:var(--text2); font-size:10px; text-transform:uppercase; letter-spacing:.5px; }}
-  .stat .val {{ font-size:16px; font-weight:700; }}
-  .stat .val.pos {{ color:var(--green); }}
-  .stat .val.neg {{ color:var(--red); }}
-  .status-bar .ts {{ margin-left:auto; color:var(--text2); font-size:11px; }}
+  /* Header */
+  .header {{ background: var(--card); border-bottom: 1px solid var(--border); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }}
+  .header h1 {{ font-size: 18px; font-weight: 700; letter-spacing: -0.5px; }}
+  .header .subtitle {{ color: var(--muted); font-size: 12px; margin-top: 2px; }}
 
-  /* Grid */
-  .grid {{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; padding:14px; }}
-  .card {{ background:var(--bg2); border:1px solid var(--border); border-radius:8px; padding:14px; }}
-  .card.wide {{ grid-column:span 2; }}
-  .card.full {{ grid-column:span 3; }}
-  .card h2 {{ font-size:11px; font-weight:600; color:var(--text2);
-              text-transform:uppercase; letter-spacing:.5px; margin-bottom:10px; }}
-  canvas {{ max-height:240px; }}
+  /* Stats bar */
+  .stats-bar {{ display: flex; gap: 1px; background: var(--border); border-bottom: 1px solid var(--border); }}
+  .stat-block {{ background: var(--card); padding: 14px 24px; flex: 1; min-width: 120px; }}
+  .stat-block .label {{ color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }}
+  .stat-block .value {{ font-size: 20px; font-weight: 700; }}
+
+  /* Layout */
+  .main {{ padding: 20px 24px; display: flex; flex-direction: column; gap: 20px; }}
+
+  /* Cards */
+  .card {{ background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }}
+  .card-header {{ padding: 14px 18px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }}
+  .card-header h2 {{ font-size: 14px; font-weight: 600; }}
+  .card-body {{ padding: 16px 18px; overflow-x: auto; }}
+
+  /* Signals highlight */
+  .card-signals {{ background: #0f1420; border: 1px solid #1e3a5f; border-radius: 8px; overflow: hidden; }}
+  .card-signals .card-header {{ background: #0d1f35; border-bottom: 1px solid #1e3a5f; }}
+  .card-signals .card-header h2 {{ color: #60a5fa; }}
 
   /* Tables */
-  table {{ width:100%; border-collapse:collapse; font-size:12px; }}
-  th {{ color:var(--text2); font-weight:500; text-align:left;
-        padding:5px 8px; border-bottom:1px solid var(--border); }}
-  td {{ padding:4px 8px; border-bottom:1px solid var(--bg3); }}
-  tr:last-child td {{ border-bottom:none; }}
-  .pos {{ color:var(--green); }} .neg {{ color:var(--red); }}
-  .badge {{ display:inline-block; padding:2px 6px; border-radius:4px;
-            font-size:10px; font-weight:600; }}
-  .badge-g {{ background:rgba(63,185,80,.15); color:var(--green); }}
-  .badge-r {{ background:rgba(248,81,73,.15); color:var(--red); }}
-  .badge-b {{ background:rgba(88,166,255,.15); color:var(--blue); }}
-  .badge-y {{ background:rgba(210,153,34,.15); color:var(--yellow); }}
+  .data-table {{ width: 100%; border-collapse: collapse; }}
+  .data-table th {{ color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }}
+  .data-table td {{ padding: 8px 10px; border-bottom: 1px solid #1a1d24; white-space: nowrap; }}
+  .data-table tr:hover td {{ background: #1a1d24; }}
+  .data-table tr:last-child td {{ border-bottom: none; }}
 
-  /* Score circle */
-  .score-wrap {{ display:flex; align-items:center; gap:24px; }}
-  .score-circle {{ position:relative; width:100px; height:100px; flex-shrink:0; }}
-  .score-circle svg {{ transform:rotate(-90deg); }}
-  .score-text {{ position:absolute; inset:0; display:flex; flex-direction:column;
-                 align-items:center; justify-content:center; }}
-  .score-text .num {{ font-size:22px; font-weight:700; }}
-  .score-text .sub {{ font-size:10px; color:var(--text2); }}
-  .checklist {{ flex:1; }}
-  .check-item {{ display:flex; align-items:center; gap:8px; padding:3px 0;
-                 font-size:12px; }}
-  .check-item .icon {{ font-size:14px; }}
+  /* Colors */
+  .pos   {{ color: var(--pos); }}
+  .neg   {{ color: var(--neg); }}
+  .muted {{ color: var(--muted); }}
 
-  /* Tabs */
-  .tab-bar {{ display:flex; gap:6px; margin-bottom:10px; flex-wrap:wrap; }}
-  .tab {{ padding:3px 10px; border-radius:4px; cursor:pointer; font-size:11px;
-          border:1px solid var(--border); color:var(--text2); background:var(--bg3); }}
-  .tab.active {{ background:var(--blue); color:#fff; border-color:var(--blue); }}
-  .tab-panel {{ display:none; }}
-  .tab-panel.active {{ display:block; }}
-  .empty {{ color:var(--text2); font-style:italic; padding:16px 0;
-            text-align:center; font-size:12px; }}
+  a.addr {{ color: var(--accent); text-decoration: none; font-family: monospace; font-size: 12px; }}
+  a.addr:hover {{ text-decoration: underline; }}
+
+  /* Badges */
+  .badge {{ display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; white-space: nowrap; }}
+
+  /* Grade badges */
+  .badge-tier1    {{ background: #2d1f00; color: var(--gold); border: 1px solid #78500a; }}
+  .badge-tier2    {{ background: #1e2028; color: var(--silver); border: 1px solid #475569; }}
+  .badge-tier3    {{ background: #1c1208; color: var(--bronze); border: 1px solid #78350f; }}
+  .badge-marginal {{ background: #1a1a1a; color: #94a3b8; border: 1px solid #334155; }}
+  .badge-noedge   {{ background: #0f0f0f; color: #475569; border: 1px solid #1e293b; }}
+
+  /* Signal strength badges */
+  .badge-strong   {{ background: #052e16; color: #4ade80; border: 1px solid #166534; }}
+  .badge-moderate {{ background: #2d2000; color: #fbbf24; border: 1px solid #92400e; }}
+  .badge-weak     {{ background: #1a1a1a; color: #94a3b8; border: 1px solid #334155; }}
+  .badge-consensus-mod {{ background: #0c1a3a; color: #60a5fa; border: 1px solid #1e40af; }}
+
+  /* Trading style badges */
+  .badge-scalper   {{ background: #1e1b4b; color: #818cf8; }}
+  .badge-intraday  {{ background: #1c3461; color: #60a5fa; }}
+  .badge-swing     {{ background: #1a3320; color: #4ade80; }}
+  .badge-position  {{ background: #2d1b10; color: #fb923c; }}
+  .badge-long      {{ background: #0f2a1e; color: #10b981; }}
+  .badge-short     {{ background: #2a0f0f; color: #ef4444; }}
+  .badge-neutral   {{ background: #1e1e1e; color: #94a3b8; }}
+
+  /* Market sentiment badges */
+  .badge-bullish      {{ background: #0f2a1e; color: #10b981; }}
+  .badge-very-bullish {{ background: #064e3b; color: #6ee7b7; }}
+  .badge-bearish      {{ background: #2a0f0f; color: #ef4444; }}
+  .badge-very-bearish {{ background: #4c0519; color: #fca5a5; }}
+  .badge-neutral-sent {{ background: #1e1e2e; color: #94a3b8; }}
+
+  /* Live pulse dot */
+  .live-dot {{
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+    margin-right: 8px;
+    animation: pulse 1.5s infinite;
+    vertical-align: middle;
+  }}
+  @keyframes pulse {{
+    0%,100% {{ opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(74,222,128,0.4); }}
+    50%      {{ opacity: 0.8; transform: scale(1.15); box-shadow: 0 0 0 6px rgba(74,222,128,0); }}
+  }}
+
+  /* No-signal message */
+  .no-signal {{ padding: 16px; color: var(--muted); font-style: italic; background: #0f1218; border-radius: 4px; border: 1px solid var(--border); }}
+
+  /* Patterns */
+  .finding {{ padding: 8px 12px; margin-bottom: 6px; background: #0f172a; border-left: 3px solid var(--accent); border-radius: 0 4px 4px 0; line-height: 1.5; }}
+  .finding.muted {{ border-left-color: var(--muted); color: var(--muted); }}
+  .findings-box {{ margin-bottom: 16px; }}
+  .sig-row td {{ font-weight: 600; }}
+
+  /* Regime indicator */
+  .regime-dot {{ width: 10px; height: 10px; border-radius: 50%; background: {regime_color}; display: inline-block; margin-right: 6px; vertical-align: middle; }}
+
+  .assets {{ color: var(--muted); font-size: 11px; max-width: 200px; overflow: hidden; text-overflow: ellipsis; }}
+
+  .two-col {{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }}
+  @media (max-width: 900px) {{ .two-col {{ grid-template-columns: 1fr; }} }}
 </style>
 </head>
 <body>
 
-<!-- ── Status Bar ──────────────────────────────────────────────────────────── -->
-<div class="status-bar">
-  <span class="brand">Crypto Quant</span>
-  <div class="stat">
-    <span class="lbl">Portfolio</span>
-    <span class="val">{cur_val:.2f} €</span>
+<!-- Header -->
+<div class="header">
+  <div>
+    <h1>&#x2B21; Hyperliquid Smart Money Tracker</h1>
+    <div class="subtitle">Top {n_wallets} traders &middot; {n_sm} smart money wallets &middot; Updated {now}</div>
   </div>
-  <div class="stat">
-    <span class="lbl">Return</span>
-    <span class="val {'pos' if cum_ret >= 0 else 'neg'}">{'+' if cum_ret >= 0 else ''}{cum_ret:.3f}%</span>
+  <div style="text-align:right">
+    <span class="regime-dot"></span>
+    <span style="font-weight:700">{regime}</span>
   </div>
-  <div class="stat">
-    <span class="lbl">Laufzeit</span>
-    <span class="val">{running_days} Tage</span>
-  </div>
-  <div class="stat">
-    <span class="lbl">Runs / Trades</span>
-    <span class="val">{total_runs} / {total_trades}</span>
-  </div>
-  <div class="stat">
-    <span class="lbl">Nächster Run</span>
-    <span class="val">in {next_run_min // 60}h {next_run_min % 60}min</span>
-  </div>
-  <div class="stat">
-    <span class="lbl">Letzter Run</span>
-    <span class="val" style="font-size:13px">{last_run}</span>
-  </div>
-  <span class="ts">Generiert: {generated_at}</span>
 </div>
 
-<div class="grid" id="dashboard"></div>
+<!-- Stats bar -->
+<div class="stats-bar">
+  <div class="stat-block">
+    <div class="label">Wallets Tracked</div>
+    <div class="value">{n_wallets}</div>
+  </div>
+  <div class="stat-block">
+    <div class="label">Smart Money</div>
+    <div class="value pos">{n_sm}</div>
+  </div>
+  <div class="stat-block">
+    <div class="label">New Signals</div>
+    <div class="value {'pos' if n_signals > 0 else ''}">{n_signals}</div>
+  </div>
+  <div class="stat-block">
+    <div class="label">Total HL OI</div>
+    <div class="value">{total_oi}</div>
+  </div>
+  <div class="stat-block">
+    <div class="label">OI-Weighted Funding (8h)</div>
+    <div class="value {oi_funding_class}">{oi_funding}</div>
+  </div>
+  <div class="stat-block">
+    <div class="label">Annualised Funding</div>
+    <div class="value">{annual_f}</div>
+  </div>
+  <div class="stat-block">
+    <div class="label">% Bullish Funding</div>
+    <div class="value">{pct_bull}</div>
+  </div>
+</div>
 
-<script>
-const ASSETS     = {assets_js};
-const BACKTEST   = {backtest_js};
-const IC_DATA    = {ic_js};
-const FSI_DATA   = {fsi_js};
-const PERF_TS    = {perf_ts_js};
-const PERF_VAL   = {perf_val_js};
-const AAVE_VAL   = {aave_val_js};
-const TRADES     = {trades_js};
-const POSITIONS  = {positions_js};
-const CHECKS     = {checks_js};
-const SCORE      = {score};
-const SCORE_COLOR= "{score_color}";
-const SCORE_LABEL= "{score_label}";
-const PAPER_CAP  = 1000.0;
+<div class="main">
 
-Chart.defaults.color = '#8b949e';
-Chart.defaults.borderColor = '#30363d';
-Chart.defaults.font.family = "-apple-system,'Segoe UI',sans-serif";
-Chart.defaults.font.size = 11;
-
-function fmt(v,d=2) {{
-  if (v===null||v===undefined||isNaN(v)) return '—';
-  return Number(v).toFixed(d);
-}}
-function pct(v,d=3) {{
-  if (v===null||v===undefined||isNaN(v)) return '—';
-  return (Number(v)>=0?'+':'')+Number(v).toFixed(d)+'%';
-}}
-function colorCls(v) {{ return Number(v)>=0?'pos':'neg'; }}
-
-// ── 0. P&L Chart ──────────────────────────────────────────────────────────────
-function renderPnLChart(canvasId) {{
-  const ctx = document.getElementById(canvasId);
-  if (!ctx || !PERF_VAL.length) return;
-  // Trim timestamps to HH:MM
-  const labels = PERF_TS.map(t => t ? t.substring(11,16) : '');
-  new Chart(ctx, {{
-    type:'line',
-    data:{{
-      labels,
-      datasets:[
-        {{label:'Paper Trading',data:PERF_VAL,
-          borderColor:'#58a6ff',backgroundColor:'rgba(88,166,255,.08)',
-          borderWidth:1.5,pointRadius:0,tension:.2}},
-        {{label:'Aave 5% APR',data:AAVE_VAL,
-          borderColor:'#3fb950',backgroundColor:'transparent',
-          borderWidth:1,pointRadius:0,borderDash:[4,3],tension:.2}},
-      ]
-    }},
-    options:{{
-      responsive:true,
-      plugins:{{
-        legend:{{position:'top',labels:{{font:{{size:11}},boxWidth:12}}}},
-        tooltip:{{callbacks:{{label:ctx=>` ${{ctx.dataset.label}}: ${{fmt(ctx.raw,2)}} €`}}}}
-      }},
-      scales:{{
-        x:{{ticks:{{maxTicksLimit:8}}}},
-        y:{{ticks:{{callback:v=>v+' €'}}}}
-      }}
-    }}
-  }});
-}}
-
-// ── 1. Current Positions ───────────────────────────────────────────────────────
-function renderPositions() {{
-  if (!POSITIONS.length) return '<p class="empty">Kein State geladen.</p>';
-  let html = '<table><thead><tr><th>Asset</th><th>Status</th><th>Size</th><th>Entry Rate</th><th>Hold (×8h)</th></tr></thead><tbody>';
-  for (const p of POSITIONS) {{
-    const isLong = p.state === 'LONG';
-    const badge  = isLong
-      ? '<span class="badge badge-b">LONG</span>'
-      : '<span class="badge badge-y">FLAT → Aave</span>';
-    const rate   = p.entry_rate != null ? (Number(p.entry_rate)*100).toFixed(4)+'%' : '—';
-    html += `<tr>
-      <td><strong>${{p.symbol}}</strong></td>
-      <td>${{badge}}</td>
-      <td>${{fmt(p.size,3)}}</td>
-      <td>${{rate}}</td>
-      <td>${{p.holding}}</td>
-    </tr>`;
-  }}
-  return html + '</tbody></table>';
-}}
-
-// ── 2. Trade History ───────────────────────────────────────────────────────────
-function renderTrades() {{
-  const exits = TRADES.filter(t => t.action === 'EXIT').slice(-20).reverse();
-  if (!exits.length) return '<p class="empty">Noch keine abgeschlossenen Trades.</p>';
-  let html = '<table><thead><tr><th>Zeit</th><th>Symbol</th><th>Aktion</th><th>Rate (Entry)</th><th>Perioden</th><th>Net P&L %</th><th>Net P&L €</th><th>Regime</th></tr></thead><tbody>';
-  for (const t of exits) {{
-    const pnl  = Number(t.net_pnl_pct||0);
-    const cls  = colorCls(pnl);
-    const time = (t.timestamp||'').substring(0,16).replace('T',' ');
-    const sym  = (t.symbol||'').replace('USDT','');
-    const rate = t.funding_rate_at_entry != null ? (Number(t.funding_rate_at_entry||0)*100).toFixed(4)+'%' : '—';
-    html += `<tr>
-      <td style="font-size:11px;color:var(--text2)">${{time}}</td>
-      <td><strong>${{sym}}</strong></td>
-      <td><span class="badge badge-b">EXIT</span></td>
-      <td>${{rate}}</td>
-      <td>${{t.holding_periods||'—'}}</td>
-      <td class="${{cls}}">${{pct(pnl)}}</td>
-      <td class="${{cls}}">${{fmt(t.net_eur||t.net_pnl_eur,3)}}</td>
-      <td style="font-size:11px">${{t.regime_at_entry||'—'}}</td>
-    </tr>`;
-  }}
-  return html + '</tbody></table>';
-}}
-
-// ── 3. Backtest Table ──────────────────────────────────────────────────────────
-function renderPerformanceTable() {{
-  if (!BACKTEST.length) return '<p class="empty">Keine Backtest-Daten.</p>';
-  let html = '<table><thead><tr><th>Asset</th><th>Trades</th><th>Sharpe</th><th>CAGR</th><th>Max DD</th><th>Kosten</th><th>Valid</th></tr></thead><tbody>';
-  for (const r of BACKTEST) {{
-    const sym   = (r.symbol||'').replace('USDT','');
-    const valid = r.statistically_valid;
-    const badge = valid ? '<span class="badge badge-g">✓</span>' : '<span class="badge badge-r">⚠</span>';
-    html += `<tr>
-      <td><strong>${{sym}}</strong></td>
-      <td>${{r.num_trades||'—'}}</td>
-      <td class="${{colorCls(r.sharpe_ratio)}}">${{fmt(r.sharpe_ratio)}}</td>
-      <td class="${{colorCls(r.cagr_pct)}}">${{fmt(r.cagr_pct)}}%</td>
-      <td class="neg">${{fmt(r.max_drawdown_pct)}}%</td>
-      <td>${{fmt(r.avg_cost_per_trade_pct,4)}}%</td>
-      <td>${{badge}}</td>
-    </tr>`;
-  }}
-  return html + '</tbody></table>';
-}}
-
-// ── 4. Tabbed IC/FSI Charts ────────────────────────────────────────────────────
-function makeChartConfig(asset, dataMap, color1, color2) {{
-  const rows = dataMap[asset.toLowerCase()] || [];
-  if (!rows.length) return null;
-  const labels  = rows.map(r => r.feature || r.Feature || '');
-  const values  = rows.map(r => r.icir || r.fsi || 0);
-  return {{
-    type:'bar',
-    data:{{
-      labels,
-      datasets:[{{ label:'',data:values,borderWidth:0,
-        backgroundColor:values.map(v=>v>=0?color1:color2) }}]
-    }},
-    options:{{
-      indexAxis:'y',responsive:true,
-      plugins:{{legend:{{display:false}},
-        tooltip:{{callbacks:{{label:ctx=>` ${{ctx.raw.toFixed(3)}}`}}}}}},
-      scales:{{x:{{grid:{{color:'#30363d'}}}},y:{{ticks:{{font:{{size:10}}}}}}}}
-    }}
-  }};
-}}
-
-function renderTabbedSection(prefix, dataFn) {{
-  const tabs   = ASSETS.map((a,i) => `<span class="tab ${{i===0?'active':''}}" onclick="switchTab('${{prefix}}','${{a}}',this)">${{a}}</span>`).join('');
-  const panels = ASSETS.map((a,i) => `
-    <div class="tab-panel ${{i===0?'active':''}}" id="${{prefix}}-${{a}}">
-      <canvas id="${{prefix}}-canvas-${{a}}"></canvas>
-    </div>`).join('');
-  return `<div class="tab-bar">${{tabs}}</div>${{panels}}`;
-}}
-
-function switchTab(prefix, asset, el) {{
-  document.querySelectorAll(`#${{prefix}}-tab-wrap .tab-panel`).forEach(p => p.classList.remove('active'));
-  el.closest('.tab-bar').querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(`${{prefix}}-${{asset}}`).classList.add('active');
-  el.classList.add('active');
-}}
-
-// ── 5. Go-Live Score ───────────────────────────────────────────────────────────
-function renderGoLive() {{
-  const r      = 40, cx = 50, cy = 50;
-  const circ   = 2 * Math.PI * r;
-  const filled = circ * SCORE / 100;
-  const svgCirc = `<svg width="100" height="100" viewBox="0 0 100 100">
-    <circle cx="${{cx}}" cy="${{cy}}" r="${{r}}" fill="none" stroke="#21262d" stroke-width="10"/>
-    <circle cx="${{cx}}" cy="${{cy}}" r="${{r}}" fill="none" stroke="${{SCORE_COLOR}}"
-            stroke-width="10" stroke-dasharray="${{filled}} ${{circ}}" stroke-linecap="round"/>
-  </svg>`;
-
-  const checks = CHECKS.map(c =>
-    `<div class="check-item">
-       <span class="icon">${{c.ok ? '✅' : '❌'}}</span>
-       <span style="color:${{c.ok?'var(--text)':'var(--text2)'}}">${{c.label}}</span>
-     </div>`
-  ).join('');
-
-  return `<div class="score-wrap">
-    <div class="score-circle">
-      ${{svgCirc}}
-      <div class="score-text">
-        <span class="num" style="color:${{SCORE_COLOR}}">${{SCORE}}%</span>
-        <span class="sub">Score</span>
-      </div>
+  <!-- LIVE SIGNALS (most prominent) -->
+  <div class="card-signals">
+    <div class="card-header">
+      <span class="live-dot"></span>
+      <h2>LIVE SIGNALS &amp; SMART MONEY CONSENSUS</h2>
     </div>
-    <div>
-      <div style="font-size:14px;font-weight:700;color:${{SCORE_COLOR}};margin-bottom:8px">
-        ${{SCORE_LABEL}}
-      </div>
-      <div class="checklist">${{checks}}</div>
+    <div class="card-body">{signals_html}</div>
+  </div>
+
+  <!-- Smart Money Leaderboard -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Smart Money Leaderboard &mdash; Ranked by IC Score</h2>
     </div>
-  </div>`;
-}}
+    <div class="card-body">{smart_money_html}</div>
+  </div>
 
-// ── Build Dashboard ────────────────────────────────────────────────────────────
-const dash = document.getElementById('dashboard');
+  <!-- Market Overview -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Market Overview &mdash; Funding Rates &amp; Open Interest</h2>
+    </div>
+    <div class="card-body">{market_html}</div>
+  </div>
 
-function card(cls, title, content) {{
-  const el = document.createElement('div');
-  el.className = `card ${{cls}}`;
-  el.innerHTML = `<h2>${{title}}</h2>${{content}}`;
-  return el;
-}}
+  <!-- Trader Profiles -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Trader Profiles &mdash; Deep Statistics</h2>
+    </div>
+    <div class="card-body">{profiles_html}</div>
+  </div>
 
-// Row 1: P&L Chart (wide) + Go-Live Score (narrow)
-const c_pnl = document.createElement('div');
-c_pnl.className = 'card wide';
-c_pnl.innerHTML = '<h2>Portfolio P&L – Paper Trading vs Aave 5% APR</h2>'
-  + (PERF_VAL.length
-     ? '<canvas id="pnl-chart"></canvas>'
-     : '<p class="empty">Noch keine Performance-Daten. Führe erst --run-once aus.</p>');
-dash.appendChild(c_pnl);
+  <!-- Pattern Analysis -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Pattern Analysis &mdash; What do top traders do differently?</h2>
+    </div>
+    <div class="card-body">{patterns_html}</div>
+  </div>
 
-const c_golive = card('', 'Go-Live Readiness Score', renderGoLive());
-dash.appendChild(c_golive);
+  <!-- Leaderboard (by PnL) -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Leaderboard &mdash; Top {n_wallets} Traders by PnL</h2>
+    </div>
+    <div class="card-body">{leaderboard_html}</div>
+  </div>
 
-// Row 2: Positionen (narrow) + Trade History (wide)
-dash.appendChild(card('', 'Aktuelle Positionen', renderPositions()));
-dash.appendChild(card('wide', 'Trade History (letzte 20 Exits)', renderTrades()));
-
-// Row 3: Asset Performance (full)
-dash.appendChild(card('full', 'Asset Performance – Backtest', renderPerformanceTable()));
-
-// Row 4: IC (full)
-const c_ic = document.createElement('div');
-c_ic.className = 'card full';
-c_ic.id = 'ic-tab-wrap';
-c_ic.innerHTML = '<h2>IC-Analyse – Top Features (ICIR)</h2>' + renderTabbedSection('ic');
-dash.appendChild(c_ic);
-
-// Row 5: FSI (full)
-const c_fsi = document.createElement('div');
-c_fsi.className = 'card full';
-c_fsi.id = 'fsi-tab-wrap';
-c_fsi.innerHTML = '<h2>Feature Stability Index (FSI – Warnung wenn > 2)</h2>' + renderTabbedSection('fsi');
-dash.appendChild(c_fsi);
-
-// Init charts
-requestAnimationFrame(() => {{
-  if (PERF_VAL.length) renderPnLChart('pnl-chart');
-
-  for (const asset of ASSETS) {{
-    const icCfg = makeChartConfig(asset, IC_DATA, 'rgba(63,185,80,.7)', 'rgba(248,81,73,.7)');
-    const icEl  = document.getElementById(`ic-canvas-${{asset}}`);
-    if (icCfg && icEl) new Chart(icEl, icCfg);
-
-    const fsiCfg = makeChartConfig(asset, FSI_DATA, 'rgba(88,166,255,.7)', 'rgba(248,81,73,.7)');
-    const fsiEl  = document.getElementById(`fsi-canvas-${{asset}}`);
-    if (fsiCfg && fsiEl) new Chart(fsiEl, fsiCfg);
-  }}
-}});
-</script>
+</div>
 </body>
 </html>"""
 
-
-# ── Entry Point ────────────────────────────────────────────────────────────────
-
-def generate_dashboard():
-    print("\n  [Dashboard] Generiere outputs/dashboard.html...")
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-    data = load_dashboard_data()
-    html = generate_html(data)
-
-    out_path = os.path.join(OUTPUT_DIR, "dashboard.html")
-    with open(out_path, "w", encoding="utf-8") as f:
+    os.makedirs(os.path.dirname(DASHBOARD_HTML), exist_ok=True)
+    with open(DASHBOARD_HTML, "w", encoding="utf-8") as f:
         f.write(html)
-
-    print(f"  ✓ Dashboard: {out_path}")
-    print(f"    Assets: {len(data['assets'])}  |  "
-          f"Perf Rows: {data['n_perf_rows']}  |  "
-          f"Trades: {len(data['recent_trades'])}  |  "
-          f"Go-Live: {data['golive_score']}%")
-    print(f"    file://{os.path.abspath(out_path)}")
-
-
-if __name__ == "__main__":
-    generate_dashboard()

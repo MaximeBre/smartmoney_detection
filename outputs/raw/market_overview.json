@@ -1,0 +1,2335 @@
+{
+  "sentiment": {
+    "timestamp": "2026-03-17T11:21:42.684604",
+    "n_assets": 18,
+    "n_positive_funding": 12,
+    "n_negative_funding": 6,
+    "pct_positive_funding": 0.6666666666666666,
+    "avg_funding_8h": -1.998116666666667e-06,
+    "oi_weighted_funding": 9.909367243706348e-06,
+    "funding_annual_pct": 1.085075713185845,
+    "market_regime": "NEUTRAL",
+    "top_positive_funding": [
+      {
+        "coin": "BTC",
+        "funding_rate_8h": 1.25e-05
+      },
+      {
+        "coin": "AVAX",
+        "funding_rate_8h": 1.25e-05
+      },
+      {
+        "coin": "SUI",
+        "funding_rate_8h": 1.25e-05
+      }
+    ],
+    "top_negative_funding": [
+      {
+        "coin": "STRK",
+        "funding_rate_8h": -6.1216e-05
+      },
+      {
+        "coin": "BLUR",
+        "funding_rate_8h": -4.75281e-05
+      },
+      {
+        "coin": "TIA",
+        "funding_rate_8h": -2.9224e-05
+      }
+    ],
+    "total_oi_usd": 3729375643.441284
+  },
+  "snapshot": [
+    {
+      "coin": "BTC",
+      "mid_price": 73885.5,
+      "mark_price": 73885.0,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 25689.17014,
+      "oi_usd": 1898044335.7938998,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ETH",
+      "mid_price": 2327.05,
+      "mark_price": 2327.0,
+      "funding_rate_8h": 1.12587e-05,
+      "funding_annual": 0.012328276499999999,
+      "open_interest": 549646.4234000002,
+      "oi_usd": 1279027227.2518005,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "HYPE",
+      "mid_price": 41.2975,
+      "mark_price": 41.298,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 18993839.340000004,
+      "oi_usd": 784407577.0633202,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "SOL",
+      "mid_price": 93.5725,
+      "mark_price": 93.565,
+      "funding_rate_8h": -6.4266e-06,
+      "funding_annual": -0.007037126999999999,
+      "open_interest": 3335687.3200000003,
+      "oi_usd": 312103584.09580004,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "XRP",
+      "mid_price": 1.51195,
+      "mark_price": 1.5119,
+      "funding_rate_8h": -4.2944e-06,
+      "funding_annual": -0.004702367999999999,
+      "open_interest": 54627690.0,
+      "oi_usd": 82591604.511,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ZEC",
+      "mid_price": 274.585,
+      "mark_price": 274.56,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 261595.1599999999,
+      "oi_usd": 71823567.12959997,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ASTER",
+      "mid_price": 0.733435,
+      "mark_price": 0.73343,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 89473976.0,
+      "oi_usd": 65622898.21768,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "PAXG",
+      "mid_price": 4997.55,
+      "mark_price": 4997.6,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 11345.404,
+      "oi_usd": 56699791.03040001,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ZRO",
+      "mid_price": 2.2681,
+      "mark_price": 2.2667,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 20338225.4,
+      "oi_usd": 46100655.51418,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "TAO",
+      "mid_price": 278.345,
+      "mark_price": 278.37,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 165591.682,
+      "oi_usd": 46095756.51834,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "FARTCOIN",
+      "mid_price": 0.2029,
+      "mark_price": 0.2029,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 211632005.60000002,
+      "oi_usd": 42940133.93624,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "AVAX",
+      "mid_price": 10.2835,
+      "mark_price": 10.284,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 3693626.24,
+      "oi_usd": 37985252.252160005,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "LIT",
+      "mid_price": 1.1488,
+      "mark_price": 1.1489,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 32633434.0,
+      "oi_usd": 37492552.3226,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "SUI",
+      "mid_price": 1.02685,
+      "mark_price": 1.0266,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 34543806.99999999,
+      "oi_usd": 35462672.26619999,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "XPL",
+      "mid_price": 0.115285,
+      "mark_price": 0.11527,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 297500192.0,
+      "oi_usd": 34292847.13184,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "PUMP",
+      "mid_price": 0.002084,
+      "mark_price": 0.002083,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 16450780120.0,
+      "oi_usd": 34266974.98996,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "XMR",
+      "mid_price": 373.08,
+      "mark_price": 373.04,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 89320.808,
+      "oi_usd": 33320234.216320004,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MON",
+      "mid_price": 0.024044,
+      "mark_price": 0.024041,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 1305994556.0,
+      "oi_usd": 31397415.120796,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "BNB",
+      "mid_price": 668.115,
+      "mark_price": 668.12,
+      "funding_rate_8h": -1.04489e-05,
+      "funding_annual": -0.011441545499999999,
+      "open_interest": 42622.554,
+      "oi_usd": 28476980.778479997,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "LINK",
+      "mid_price": 9.7832,
+      "mark_price": 9.7835,
+      "funding_rate_8h": 1.18868e-05,
+      "funding_annual": 0.013016045999999998,
+      "open_interest": 2455194.4,
+      "oi_usd": 24020394.4124,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ADA",
+      "mid_price": 0.28766,
+      "mark_price": 0.28764,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 81478376.0,
+      "oi_usd": 23436440.07264,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "DOGE",
+      "mid_price": 0.10034,
+      "mark_price": 0.10034,
+      "funding_rate_8h": 1.17188e-05,
+      "funding_annual": 0.012832086000000001,
+      "open_interest": 231623358.0,
+      "oi_usd": 23241087.74172,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "AAVE",
+      "mid_price": 122.81,
+      "mark_price": 122.81,
+      "funding_rate_8h": 9.7614e-06,
+      "funding_annual": 0.010688733,
+      "open_interest": 179337.2,
+      "oi_usd": 22024401.532,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "WLFI",
+      "mid_price": 0.103455,
+      "mark_price": 0.10346,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 210822958.0,
+      "oi_usd": 21811743.23468,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "WLD",
+      "mid_price": 0.39194,
+      "mark_price": 0.39185,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 50509906.6,
+      "oi_usd": 19792306.90121,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ENA",
+      "mid_price": 0.11695,
+      "mark_price": 0.11694,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 144601058.0,
+      "oi_usd": 16909647.72252,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "VIRTUAL",
+      "mid_price": 0.79145,
+      "mark_price": 0.79139,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 21173221.799999997,
+      "oi_usd": 16756276.000301998,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "LTC",
+      "mid_price": 57.8225,
+      "mark_price": 57.816,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 280172.04,
+      "oi_usd": 16198426.66464,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "BCH",
+      "mid_price": 475.155,
+      "mark_price": 475.13,
+      "funding_rate_8h": 8.4512e-06,
+      "funding_annual": 0.009254064000000001,
+      "open_interest": 33976.97,
+      "oi_usd": 16143477.7561,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "kPEPE",
+      "mid_price": 0.003753,
+      "mark_price": 0.003752,
+      "funding_rate_8h": 1.6518e-06,
+      "funding_annual": 0.0018087210000000001,
+      "open_interest": 4110034760.0,
+      "oi_usd": 15420850.41952,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "TRUMP",
+      "mid_price": 3.71665,
+      "mark_price": 3.7172,
+      "funding_rate_8h": -4.94249e-05,
+      "funding_annual": -0.05412026550000001,
+      "open_interest": 3951342.4,
+      "oi_usd": 14687929.96928,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "NEAR",
+      "mid_price": 1.45665,
+      "mark_price": 1.4565,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 9152999.0,
+      "oi_usd": 13331343.043499999,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "UNI",
+      "mid_price": 4.03005,
+      "mark_price": 4.03,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 2779323.4,
+      "oi_usd": 11200673.302000001,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "TRX",
+      "mid_price": 0.302355,
+      "mark_price": 0.30249,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 34720166.0,
+      "oi_usd": 10502503.01334,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "TON",
+      "mid_price": 1.3403,
+      "mark_price": 1.3402,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 7691952.2,
+      "oi_usd": 10308754.338440001,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "DOT",
+      "mid_price": 1.6088,
+      "mark_price": 1.6086,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 5896031.2,
+      "oi_usd": 9484355.788320001,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "VVV",
+      "mid_price": 5.7101,
+      "mark_price": 5.7084,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 1657109.2400000002,
+      "oi_usd": 9459442.385616,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "APT",
+      "mid_price": 0.999,
+      "mark_price": 0.999,
+      "funding_rate_8h": -1.79653e-05,
+      "funding_annual": -0.019672003499999997,
+      "open_interest": 7204710.16,
+      "oi_usd": 7197505.44984,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "CRV",
+      "mid_price": 0.25489,
+      "mark_price": 0.2548,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 26557848.6,
+      "oi_usd": 6766939.823280001,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "LDO",
+      "mid_price": 0.32326,
+      "mark_price": 0.32329,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 18653941.4,
+      "oi_usd": 6030632.715206,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "CC",
+      "mid_price": 0.15263,
+      "mark_price": 0.15255,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 38435754.0,
+      "oi_usd": 5863374.2727,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MORPHO",
+      "mid_price": 1.72365,
+      "mark_price": 1.7239,
+      "funding_rate_8h": -0.0002747814,
+      "funding_annual": -0.300885633,
+      "open_interest": 3126994.4,
+      "oi_usd": 5390625.64616,
+      "funding_sentiment": "BEARISH"
+    },
+    {
+      "coin": "kBONK",
+      "mid_price": 0.006524,
+      "mark_price": 0.006524,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 804812438.0,
+      "oi_usd": 5250596.345512,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "WIF",
+      "mid_price": 0.18812,
+      "mark_price": 0.18811,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 27616466.0,
+      "oi_usd": 5194933.41926,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "JUP",
+      "mid_price": 0.166555,
+      "mark_price": 0.16658,
+      "funding_rate_8h": 8.1029e-06,
+      "funding_annual": 0.0088726755,
+      "open_interest": 30683924.0,
+      "oi_usd": 5111328.05992,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ETHFI",
+      "mid_price": 0.5785,
+      "mark_price": 0.57841,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 8485204.0,
+      "oi_usd": 4907926.84564,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "BERA",
+      "mid_price": 0.66137,
+      "mark_price": 0.66127,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 7282417.000000001,
+      "oi_usd": 4815643.889590001,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "IP",
+      "mid_price": 0.80872,
+      "mark_price": 0.80856,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 5928664.8,
+      "oi_usd": 4793681.210688,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "PENDLE",
+      "mid_price": 1.3533,
+      "mark_price": 1.353,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 3432168.0,
+      "oi_usd": 4643723.304,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "PURR",
+      "mid_price": 0.099688,
+      "mark_price": 0.099637,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 46499982.0,
+      "oi_usd": 4633118.706534,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "STRK",
+      "mid_price": 0.04072,
+      "mark_price": 0.04072,
+      "funding_rate_8h": -6.1216e-05,
+      "funding_annual": -0.06703152000000001,
+      "open_interest": 110816861.8,
+      "oi_usd": 4512462.612496,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MNT",
+      "mid_price": 0.84516,
+      "mark_price": 0.84502,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 5100271.8,
+      "oi_usd": 4309831.676436,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MEGA",
+      "mid_price": 0.142725,
+      "mark_price": 0.14273,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 29402334.0,
+      "oi_usd": 4196595.13182,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "HBAR",
+      "mid_price": 0.099123,
+      "mark_price": 0.099118,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 41997958.0,
+      "oi_usd": 4162753.601044,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "GRASS",
+      "mid_price": 0.44804,
+      "mark_price": 0.44795,
+      "funding_rate_8h": 3.546e-06,
+      "funding_annual": 0.00388287,
+      "open_interest": 9100428.0,
+      "oi_usd": 4076536.7226,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ZK",
+      "mid_price": 0.020768,
+      "mark_price": 0.020761,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 195318210.0,
+      "oi_usd": 4055001.3578100004,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ARB",
+      "mid_price": 0.10899,
+      "mark_price": 0.10898,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 37128381.199999996,
+      "oi_usd": 4046250.9831759995,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "OP",
+      "mid_price": 0.13596,
+      "mark_price": 0.13593,
+      "funding_rate_8h": 4.228e-06,
+      "funding_annual": 0.00462966,
+      "open_interest": 28318944.6,
+      "oi_usd": 3849394.139478,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "STABLE",
+      "mid_price": 0.028222,
+      "mark_price": 0.028226,
+      "funding_rate_8h": -0.0001034288,
+      "funding_annual": -0.11325453600000002,
+      "open_interest": 129731184.0,
+      "oi_usd": 3661792.399584,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "PENGU",
+      "mid_price": 0.007852,
+      "mark_price": 0.007851,
+      "funding_rate_8h": 6.374e-06,
+      "funding_annual": 0.00697953,
+      "open_interest": 464686006.0,
+      "oi_usd": 3648249.833106,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "RENDER",
+      "mid_price": 1.8776,
+      "mark_price": 1.8775,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 1891299.5999999999,
+      "oi_usd": 3550914.999,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "STBL",
+      "mid_price": 0.037288,
+      "mark_price": 0.037294,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 93180610.0,
+      "oi_usd": 3475077.66934,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ONDO",
+      "mid_price": 0.281845,
+      "mark_price": 0.28182,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 12044432.0,
+      "oi_usd": 3394361.8262400003,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "FET",
+      "mid_price": 0.23946,
+      "mark_price": 0.23944,
+      "funding_rate_8h": -5.64627e-05,
+      "funding_annual": -0.0618266565,
+      "open_interest": 12846942.0,
+      "oi_usd": 3076071.79248,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "AERO",
+      "mid_price": 0.352235,
+      "mark_price": 0.35208,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 8580608.0,
+      "oi_usd": 3021060.46464,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "RESOLV",
+      "mid_price": 0.066073,
+      "mark_price": 0.06606,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 45562970.0,
+      "oi_usd": 3009889.7981999996,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "XLM",
+      "mid_price": 0.174595,
+      "mark_price": 0.17458,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 17190512.0,
+      "oi_usd": 3001119.58496,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "EIGEN",
+      "mid_price": 0.2252,
+      "mark_price": 0.2252,
+      "funding_rate_8h": -3.42214e-05,
+      "funding_annual": -0.037472433,
+      "open_interest": 13112007.78,
+      "oi_usd": 2952824.152056,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "SKY",
+      "mid_price": 0.076138,
+      "mark_price": 0.07613,
+      "funding_rate_8h": -0.0001096702,
+      "funding_annual": -0.120088869,
+      "open_interest": 37936020.0,
+      "oi_usd": 2888069.2026,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "AXS",
+      "mid_price": 1.24225,
+      "mark_price": 1.2424,
+      "funding_rate_8h": -7.66111e-05,
+      "funding_annual": -0.0838891545,
+      "open_interest": 2241132.2,
+      "oi_usd": 2784382.6452800003,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "SPX",
+      "mid_price": 0.3438,
+      "mark_price": 0.34379,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 7663238.8,
+      "oi_usd": 2634544.867052,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "POL",
+      "mid_price": 0.100685,
+      "mark_price": 0.10071,
+      "funding_rate_8h": -6.03645e-05,
+      "funding_annual": -0.06609912750000001,
+      "open_interest": 24237238.0,
+      "oi_usd": 2440932.23898,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ATOM",
+      "mid_price": 1.9508,
+      "mark_price": 1.9508,
+      "funding_rate_8h": -1.12508e-05,
+      "funding_annual": -0.012319626,
+      "open_interest": 1235093.72,
+      "oi_usd": 2409420.828976,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "FIL",
+      "mid_price": 0.9819,
+      "mark_price": 0.98225,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 2429842.2,
+      "oi_usd": 2386712.5009500002,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "SEI",
+      "mid_price": 0.068684,
+      "mark_price": 0.068674,
+      "funding_rate_8h": 8.4931e-06,
+      "funding_annual": 0.009299944499999999,
+      "open_interest": 33328148.0,
+      "oi_usd": 2288777.235752,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "TIA",
+      "mid_price": 0.3741,
+      "mark_price": 0.37407,
+      "funding_rate_8h": -2.9224e-05,
+      "funding_annual": -0.03200028,
+      "open_interest": 5851504.6,
+      "oi_usd": 2188872.325722,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ENS",
+      "mid_price": 6.6922,
+      "mark_price": 6.6921,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 322249.52,
+      "oi_usd": 2156526.012792,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "DYDX",
+      "mid_price": 0.09246,
+      "mark_price": 0.09247,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 22028789.2,
+      "oi_usd": 2037002.1373239998,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "POPCAT",
+      "mid_price": 0.055918,
+      "mark_price": 0.05593,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 35870088.0,
+      "oi_usd": 2006214.02184,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "APEX",
+      "mid_price": 0.287995,
+      "mark_price": 0.28792,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 6823484.0,
+      "oi_usd": 1964617.51328,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "GRIFFAIN",
+      "mid_price": 0.010064,
+      "mark_price": 0.01007,
+      "funding_rate_8h": 1.48008e-05,
+      "funding_annual": 0.016206876,
+      "open_interest": 187567800.0,
+      "oi_usd": 1888807.746,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MAVIA",
+      "mid_price": 0.0351,
+      "mark_price": 0.03506,
+      "funding_rate_8h": 0.000317683,
+      "funding_annual": 0.34786288499999996,
+      "open_interest": 53806529.6,
+      "oi_usd": 1886456.927776,
+      "funding_sentiment": "BULLISH"
+    },
+    {
+      "coin": "INJ",
+      "mid_price": 3.25005,
+      "mark_price": 3.2495,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 567179.8,
+      "oi_usd": 1843050.7601,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "KAITO",
+      "mid_price": 0.369105,
+      "mark_price": 0.36909,
+      "funding_rate_8h": 9.126e-07,
+      "funding_annual": 0.000999297,
+      "open_interest": 4964170.0,
+      "oi_usd": 1832225.5052999998,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "2Z",
+      "mid_price": 0.082488,
+      "mark_price": 0.082476,
+      "funding_rate_8h": -1.01798e-05,
+      "funding_annual": -0.011146881,
+      "open_interest": 21575158.0,
+      "oi_usd": 1779432.7312079999,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "DASH",
+      "mid_price": 35.283,
+      "mark_price": 35.277,
+      "funding_rate_8h": -7.60342e-05,
+      "funding_annual": -0.083257449,
+      "open_interest": 50352.14,
+      "oi_usd": 1776272.44278,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MELANIA",
+      "mid_price": 0.11896,
+      "mark_price": 0.119,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 14767317.799999999,
+      "oi_usd": 1757310.8181999999,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MET",
+      "mid_price": 0.168465,
+      "mark_price": 0.16849,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 10399670.0,
+      "oi_usd": 1752240.3983,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "HEMI",
+      "mid_price": 0.008145,
+      "mark_price": 0.008143,
+      "funding_rate_8h": 1.29615e-05,
+      "funding_annual": 0.014192842499999999,
+      "open_interest": 213275014.0,
+      "oi_usd": 1736698.4390019998,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ICP",
+      "mid_price": 2.72745,
+      "mark_price": 2.7271,
+      "funding_rate_8h": -1.81334e-05,
+      "funding_annual": -0.019856073000000002,
+      "open_interest": 612936.8,
+      "oi_usd": 1671539.9472800002,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "LINEA",
+      "mid_price": 0.003542,
+      "mark_price": 0.003541,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 468896950.0,
+      "oi_usd": 1660364.09995,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "kSHIB",
+      "mid_price": 0.006103,
+      "mark_price": 0.006103,
+      "funding_rate_8h": -6.9806e-06,
+      "funding_annual": -0.007643757,
+      "open_interest": 259480322.0,
+      "oi_usd": 1583608.405166,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "STX",
+      "mid_price": 0.26526,
+      "mark_price": 0.26529,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 5479507.599999999,
+      "oi_usd": 1453658.5712039997,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "AZTEC",
+      "mid_price": 0.02481,
+      "mark_price": 0.024813,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 56866484.0,
+      "oi_usd": 1411028.067492,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "S",
+      "mid_price": 0.048672,
+      "mark_price": 0.048652,
+      "funding_rate_8h": 5.8512e-06,
+      "funding_annual": 0.0064070640000000005,
+      "open_interest": 28855010.0,
+      "oi_usd": 1403853.94652,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ETC",
+      "mid_price": 8.8789,
+      "mark_price": 8.8794,
+      "funding_rate_8h": 7.7804e-06,
+      "funding_annual": 0.008519538,
+      "open_interest": 156491.58,
+      "oi_usd": 1389551.335452,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "SYRUP",
+      "mid_price": 0.265395,
+      "mark_price": 0.2653,
+      "funding_rate_8h": -9.7634e-06,
+      "funding_annual": -0.010690923,
+      "open_interest": 5229068.0,
+      "oi_usd": 1387271.7404,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "CFX",
+      "mid_price": 0.065189,
+      "mark_price": 0.06519,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 21088612.0,
+      "oi_usd": 1374766.61628,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "SAGA",
+      "mid_price": 0.03536,
+      "mark_price": 0.03537,
+      "funding_rate_8h": 3.6384e-05,
+      "funding_annual": 0.03984048,
+      "open_interest": 37927509.8,
+      "oi_usd": 1341496.0216259998,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "NXPC",
+      "mid_price": 0.29347,
+      "mark_price": 0.29329,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 4568182.0,
+      "oi_usd": 1339802.09878,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "PROMPT",
+      "mid_price": 0.043895,
+      "mark_price": 0.043878,
+      "funding_rate_8h": 0.0001489857,
+      "funding_annual": 0.16313934149999998,
+      "open_interest": 29461892.0,
+      "oi_usd": 1292728.897176,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "KAS",
+      "mid_price": 0.035563,
+      "mark_price": 0.035563,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 35649822.0,
+      "oi_usd": 1267814.6197859999,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "HMSTR",
+      "mid_price": 0.000168,
+      "mark_price": 0.000168,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 7345976738.0,
+      "oi_usd": 1234124.0919839998,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "RUNE",
+      "mid_price": 0.45017,
+      "mark_price": 0.45024,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 2715425.1999999997,
+      "oi_usd": 1222593.0420479998,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "AVNT",
+      "mid_price": 0.16189,
+      "mark_price": 0.16191,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 7240240.0,
+      "oi_usd": 1172267.2584,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ZORA",
+      "mid_price": 0.017949,
+      "mark_price": 0.017957,
+      "funding_rate_8h": -6.29968e-05,
+      "funding_annual": -0.068981496,
+      "open_interest": 65223770.0,
+      "oi_usd": 1171223.23789,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ANIME",
+      "mid_price": 0.006134,
+      "mark_price": 0.006139,
+      "funding_rate_8h": -0.0020285689,
+      "funding_annual": -2.2212829455,
+      "open_interest": 189285550.0,
+      "oi_usd": 1162023.99145,
+      "funding_sentiment": "VERY_BEARISH"
+    },
+    {
+      "coin": "AIXBT",
+      "mid_price": 0.027266,
+      "mark_price": 0.027251,
+      "funding_rate_8h": -7.34625e-05,
+      "funding_annual": -0.0804414375,
+      "open_interest": 39407098.0,
+      "oi_usd": 1073882.827598,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ZEN",
+      "mid_price": 6.7935,
+      "mark_price": 6.7946,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 149982.36,
+      "oi_usd": 1019070.1432559999,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "CAKE",
+      "mid_price": 1.4815,
+      "mark_price": 1.4815,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 686688.0,
+      "oi_usd": 1017328.272,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "IMX",
+      "mid_price": 0.17987,
+      "mark_price": 0.1798,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 5626750.2,
+      "oi_usd": 1011689.6859599999,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MOODENG",
+      "mid_price": 0.055241,
+      "mark_price": 0.055225,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 18082468.0,
+      "oi_usd": 998604.2953000001,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "BLAST",
+      "mid_price": 0.000535,
+      "mark_price": 0.000535,
+      "funding_rate_8h": -0.0002992673,
+      "funding_annual": -0.3276976935,
+      "open_interest": 1844460736.0,
+      "oi_usd": 986786.49376,
+      "funding_sentiment": "BEARISH"
+    },
+    {
+      "coin": "PYTH",
+      "mid_price": 0.049823,
+      "mark_price": 0.049825,
+      "funding_rate_8h": -6.7589e-06,
+      "funding_annual": -0.007400995499999999,
+      "open_interest": 19449032.0,
+      "oi_usd": 969048.0194,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "JTO",
+      "mid_price": 0.2939,
+      "mark_price": 0.29397,
+      "funding_rate_8h": -6.97487e-05,
+      "funding_annual": -0.0763748265,
+      "open_interest": 3164256.0,
+      "oi_usd": 930196.33632,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "COMP",
+      "mid_price": 19.368,
+      "mark_price": 19.363,
+      "funding_rate_8h": -5.4292e-06,
+      "funding_annual": -0.005944974,
+      "open_interest": 45725.98,
+      "oi_usd": 885392.1507400001,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "XAI",
+      "mid_price": 0.01081,
+      "mark_price": 0.01081,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 78367476.6,
+      "oi_usd": 847152.4220459999,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "BSV",
+      "mid_price": 15.5,
+      "mark_price": 15.507,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 54435.54,
+      "oi_usd": 844131.91878,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ALGO",
+      "mid_price": 0.095888,
+      "mark_price": 0.095877,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 8481228.0,
+      "oi_usd": 813154.696956,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "FOGO",
+      "mid_price": 0.022985,
+      "mark_price": 0.022976,
+      "funding_rate_8h": -1.24439e-05,
+      "funding_annual": -0.0136260705,
+      "open_interest": 34692416.0,
+      "oi_usd": 797092.950016,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "APE",
+      "mid_price": 0.10336,
+      "mark_price": 0.10333,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 7648214.8,
+      "oi_usd": 790290.035284,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "W",
+      "mid_price": 0.01783,
+      "mark_price": 0.01784,
+      "funding_rate_8h": -6.53701e-05,
+      "funding_annual": -0.07158025949999999,
+      "open_interest": 44102859.2,
+      "oi_usd": 786795.0081280001,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MEME",
+      "mid_price": 0.000622,
+      "mark_price": 0.000623,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 1178521118.0,
+      "oi_usd": 734218.6565139999,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ZETA",
+      "mid_price": 0.0551,
+      "mark_price": 0.0551,
+      "funding_rate_8h": -0.0001275483,
+      "funding_annual": -0.1396653885,
+      "open_interest": 12545378.799999999,
+      "oi_usd": 691250.37188,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "DOOD",
+      "mid_price": 0.003394,
+      "mark_price": 0.003395,
+      "funding_rate_8h": -7.715e-07,
+      "funding_annual": -0.0008447925,
+      "open_interest": 197920074.0,
+      "oi_usd": 671938.65123,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "POLYX",
+      "mid_price": 0.053226,
+      "mark_price": 0.053186,
+      "funding_rate_8h": -0.0044621959,
+      "funding_annual": -4.8861045105,
+      "open_interest": 12616856.0,
+      "oi_usd": 671040.103216,
+      "funding_sentiment": "VERY_BEARISH"
+    },
+    {
+      "coin": "BLUR",
+      "mid_price": 0.020734,
+      "mark_price": 0.02074,
+      "funding_rate_8h": -4.75281e-05,
+      "funding_annual": -0.0520432695,
+      "open_interest": 32155744.0,
+      "oi_usd": 666910.1305600001,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "SKR",
+      "mid_price": 0.023151,
+      "mark_price": 0.02315,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 26845142.0,
+      "oi_usd": 621465.0373,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ZEREBRO",
+      "mid_price": 0.00807,
+      "mark_price": 0.008072,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 76116314.0,
+      "oi_usd": 614410.8866079999,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MERL",
+      "mid_price": 0.036679,
+      "mark_price": 0.03668,
+      "funding_rate_8h": -8.02322e-05,
+      "funding_annual": -0.087854259,
+      "open_interest": 16388594.0,
+      "oi_usd": 601133.62792,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "LAYER",
+      "mid_price": 0.088783,
+      "mark_price": 0.08878,
+      "funding_rate_8h": -0.0001228445,
+      "funding_annual": -0.1345147275,
+      "open_interest": 6735928.0,
+      "oi_usd": 598015.68784,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ALT",
+      "mid_price": 0.008155,
+      "mark_price": 0.008155,
+      "funding_rate_8h": 1.0658e-06,
+      "funding_annual": 0.0011670510000000001,
+      "open_interest": 70958882.0,
+      "oi_usd": 578669.6827100001,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "INIT",
+      "mid_price": 0.093608,
+      "mark_price": 0.09363,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 5942362.0,
+      "oi_usd": 556383.35406,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "GMX",
+      "mid_price": 6.9827,
+      "mark_price": 6.9805,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 78753.38,
+      "oi_usd": 549737.96909,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "CELO",
+      "mid_price": 0.080711,
+      "mark_price": 0.080701,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 6787248.0,
+      "oi_usd": 547737.700848,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "SOPH",
+      "mid_price": 0.009168,
+      "mark_price": 0.009168,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 58737688.0,
+      "oi_usd": 538507.123584,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "BABY",
+      "mid_price": 0.013558,
+      "mark_price": 0.01356,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 39479298.0,
+      "oi_usd": 535339.28088,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "0G",
+      "mid_price": 0.58721,
+      "mark_price": 0.58713,
+      "funding_rate_8h": 1.03417e-05,
+      "funding_annual": 0.0113241615,
+      "open_interest": 902724.0,
+      "oi_usd": 530016.34212,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "YZY",
+      "mid_price": 0.32526,
+      "mark_price": 0.32545,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 1605504.0,
+      "oi_usd": 522511.27680000005,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "NEO",
+      "mid_price": 2.8152,
+      "mark_price": 2.8147,
+      "funding_rate_8h": -3.95312e-05,
+      "funding_annual": -0.043286663999999996,
+      "open_interest": 184185.72,
+      "oi_usd": 518427.54608400003,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "BIO",
+      "mid_price": 0.022876,
+      "mark_price": 0.022874,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 22573476.0,
+      "oi_usd": 516345.69002399995,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "HYPER",
+      "mid_price": 0.107115,
+      "mark_price": 0.10711,
+      "funding_rate_8h": -0.000119338,
+      "funding_annual": -0.13067511,
+      "open_interest": 4774846.0,
+      "oi_usd": 511433.75506,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "PNUT",
+      "mid_price": 0.04893,
+      "mark_price": 0.04893,
+      "funding_rate_8h": -1.13136e-05,
+      "funding_annual": -0.012388392,
+      "open_interest": 10278684.4,
+      "oi_usd": 502936.02769200003,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "CHILLGUY",
+      "mid_price": 0.010085,
+      "mark_price": 0.010094,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 49515628.0,
+      "oi_usd": 499810.749032,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "VINE",
+      "mid_price": 0.017682,
+      "mark_price": 0.017685,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 27769094.0,
+      "oi_usd": 491096.42738999997,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "TRB",
+      "mid_price": 16.9465,
+      "mark_price": 16.954,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 28480.36,
+      "oi_usd": 482856.02344,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MOVE",
+      "mid_price": 0.022677,
+      "mark_price": 0.02269,
+      "funding_rate_8h": -1.6677e-06,
+      "funding_annual": -0.0018261314999999999,
+      "open_interest": 20936566.0,
+      "oi_usd": 475050.68253999995,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ACE",
+      "mid_price": 0.1509,
+      "mark_price": 0.1509,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 2982812.72,
+      "oi_usd": 450106.43944800005,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "AR",
+      "mid_price": 1.9056,
+      "mark_price": 1.906,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 235997.74,
+      "oi_usd": 449811.69243999996,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "SUSHI",
+      "mid_price": 0.22235,
+      "mark_price": 0.22239,
+      "funding_rate_8h": 2.3477e-06,
+      "funding_annual": 0.0025707315000000003,
+      "open_interest": 2005350.0,
+      "oi_usd": 445969.7865,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "BRETT",
+      "mid_price": 0.008123,
+      "mark_price": 0.008123,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 53841324.0,
+      "oi_usd": 437353.074852,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "DYM",
+      "mid_price": 0.03744,
+      "mark_price": 0.03744,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 11597888.8,
+      "oi_usd": 434224.95667200006,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "YGG",
+      "mid_price": 0.041735,
+      "mark_price": 0.041744,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 10000782.0,
+      "oi_usd": 417472.643808,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "REZ",
+      "mid_price": 0.00359,
+      "mark_price": 0.003592,
+      "funding_rate_8h": -3.74615e-05,
+      "funding_annual": -0.0410203425,
+      "open_interest": 115916568.0,
+      "oi_usd": 416372.312256,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "SNX",
+      "mid_price": 0.33213,
+      "mark_price": 0.3321,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 1168381.4,
+      "oi_usd": 388019.46294,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "TURBO",
+      "mid_price": 0.001079,
+      "mark_price": 0.001078,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 352976856.0,
+      "oi_usd": 380509.050768,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "kFLOKI",
+      "mid_price": 0.031492,
+      "mark_price": 0.03149,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 12041096.0,
+      "oi_usd": 379174.11303999997,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "GOAT",
+      "mid_price": 0.019396,
+      "mark_price": 0.019402,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 19057104.0,
+      "oi_usd": 369745.93180799996,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MINA",
+      "mid_price": 0.062212,
+      "mark_price": 0.062223,
+      "funding_rate_8h": 8.4956e-06,
+      "funding_annual": 0.009302682000000001,
+      "open_interest": 5922982.0,
+      "oi_usd": 368545.708986,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "GALA",
+      "mid_price": 0.003624,
+      "mark_price": 0.003624,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 100841888.0,
+      "oi_usd": 365451.002112,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "PROVE",
+      "mid_price": 0.281065,
+      "mark_price": 0.28103,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 1256412.0,
+      "oi_usd": 353089.46436,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MANTA",
+      "mid_price": 0.0734,
+      "mark_price": 0.07339,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 4799515.2,
+      "oi_usd": 352236.420528,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "BIGTIME",
+      "mid_price": 0.014487,
+      "mark_price": 0.01449,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 22416846.0,
+      "oi_usd": 324820.09854,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "SUPER",
+      "mid_price": 0.124935,
+      "mark_price": 0.12499,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 2560638.0,
+      "oi_usd": 320054.14362,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "WCT",
+      "mid_price": 0.062282,
+      "mark_price": 0.062264,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 4993070.0,
+      "oi_usd": 310888.51048,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "NIL",
+      "mid_price": 0.054795,
+      "mark_price": 0.054818,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 5618248.0,
+      "oi_usd": 307981.118864,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "SAND",
+      "mid_price": 0.088847,
+      "mark_price": 0.088854,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 3197990.0,
+      "oi_usd": 284154.20346,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "IOTA",
+      "mid_price": 0.067042,
+      "mark_price": 0.067048,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 4211712.0,
+      "oi_usd": 282386.866176,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "kNEIRO",
+      "mid_price": 0.07473,
+      "mark_price": 0.07472,
+      "funding_rate_8h": -3.08006e-05,
+      "funding_annual": -0.03372665699999999,
+      "open_interest": 3771096.0,
+      "oi_usd": 281776.29312,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "GMT",
+      "mid_price": 0.011943,
+      "mark_price": 0.011945,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 23523018.0,
+      "oi_usd": 280982.45001000003,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "USUAL",
+      "mid_price": 0.01486,
+      "mark_price": 0.01485,
+      "funding_rate_8h": -2.09497e-05,
+      "funding_annual": -0.022939921500000002,
+      "open_interest": 18845501.799999997,
+      "oi_usd": 279855.70173,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "UMA",
+      "mid_price": 0.45434,
+      "mark_price": 0.45454,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 604230.4,
+      "oi_usd": 274646.886016,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "kLUNC",
+      "mid_price": 0.042347,
+      "mark_price": 0.04235,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 6394544.0,
+      "oi_usd": 270808.9384,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "IO",
+      "mid_price": 0.12028,
+      "mark_price": 0.12032,
+      "funding_rate_8h": -2.00008e-05,
+      "funding_annual": -0.021900876,
+      "open_interest": 1945792.8,
+      "oi_usd": 234117.789696,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "SCR",
+      "mid_price": 0.0483,
+      "mark_price": 0.0483,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 4825828.4,
+      "oi_usd": 233087.51172000004,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ME",
+      "mid_price": 0.12296,
+      "mark_price": 0.12295,
+      "funding_rate_8h": -0.000273532,
+      "funding_annual": -0.29951754,
+      "open_interest": 1789112.2,
+      "oi_usd": 219971.34499,
+      "funding_sentiment": "BEARISH"
+    },
+    {
+      "coin": "ORDI",
+      "mid_price": 2.7263,
+      "mark_price": 2.726,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 72390.04,
+      "oi_usd": 197335.24904,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "USTC",
+      "mid_price": 0.005101,
+      "mark_price": 0.005102,
+      "funding_rate_8h": 1.585e-06,
+      "funding_annual": 0.001735575,
+      "open_interest": 35571942.0,
+      "oi_usd": 181488.04808399998,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "RSR",
+      "mid_price": 0.001797,
+      "mark_price": 0.001797,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 95026918.0,
+      "oi_usd": 170763.37164599999,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "BANANA",
+      "mid_price": 4.09685,
+      "mark_price": 4.0995,
+      "funding_rate_8h": -0.0002127692,
+      "funding_annual": -0.23298227400000002,
+      "open_interest": 41089.2,
+      "oi_usd": 168445.17539999998,
+      "funding_sentiment": "BEARISH"
+    },
+    {
+      "coin": "NOT",
+      "mid_price": 0.000419,
+      "mark_price": 0.000419,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 394018782.0,
+      "oi_usd": 165093.869658,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "TST",
+      "mid_price": 0.010303,
+      "mark_price": 0.010304,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 15809228.0,
+      "oi_usd": 162898.28531200002,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "BOME",
+      "mid_price": 0.000468,
+      "mark_price": 0.000469,
+      "funding_rate_8h": -9.8573e-06,
+      "funding_annual": -0.0107937435,
+      "open_interest": 313562494.0,
+      "oi_usd": 147060.809686,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "TNSR",
+      "mid_price": 0.04784,
+      "mark_price": 0.04784,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 3022128.4,
+      "oi_usd": 144578.622656,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ARK",
+      "mid_price": 0.187855,
+      "mark_price": 0.18783,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 755160.0,
+      "oi_usd": 141841.7028,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MAV",
+      "mid_price": 0.015003,
+      "mark_price": 0.015008,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 9181578.0,
+      "oi_usd": 137797.122624,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "PEOPLE",
+      "mid_price": 0.007385,
+      "mark_price": 0.007391,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 15596548.0,
+      "oi_usd": 115274.086268,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "GAS",
+      "mid_price": 1.64155,
+      "mark_price": 1.6417,
+      "funding_rate_8h": -2.50366e-05,
+      "funding_annual": -0.027415077000000003,
+      "open_interest": 70062.2,
+      "oi_usd": 115021.11373999999,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MEW",
+      "mid_price": 0.00066,
+      "mark_price": 0.00066,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 147441710.0,
+      "oi_usd": 97311.5286,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "FTT",
+      "mid_price": 0.29028,
+      "mark_price": 0.29059,
+      "funding_rate_8h": 1.25e-05,
+      "funding_annual": 0.013687500000000002,
+      "open_interest": 324681.8,
+      "oi_usd": 94349.284262,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "RNDR",
+      "mid_price": 6.8952,
+      "mark_price": 6.8952,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MATIC",
+      "mid_price": 0.37621,
+      "mark_price": 0.37621,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MKR",
+      "mid_price": 1831.5,
+      "mark_price": 1831.5,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "FXS",
+      "mid_price": 0.65538,
+      "mark_price": 0.65538,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "HPOS",
+      "mid_price": 0.041873,
+      "mark_price": 0.041873,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "RLB",
+      "mid_price": 0.071,
+      "mark_price": 0.071,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "UNIBOT",
+      "mid_price": 7.636,
+      "mark_price": 7.636,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "NTRN",
+      "mid_price": 0.1238,
+      "mark_price": 0.1238,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "NFTI",
+      "mid_price": 6.5609,
+      "mark_price": 6.5609,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "BADGER",
+      "mid_price": 0.88823,
+      "mark_price": 0.88823,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ILV",
+      "mid_price": 12.118,
+      "mark_price": 12.118,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "STRAX",
+      "mid_price": 1.5829,
+      "mark_price": 1.5829,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "STG",
+      "mid_price": 0.15387,
+      "mark_price": 0.15387,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "CYBER",
+      "mid_price": 1.0415,
+      "mark_price": 1.0415,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "SHIA",
+      "mid_price": 0.000621,
+      "mark_price": 0.000621,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "LOOM",
+      "mid_price": 0.071161,
+      "mark_price": 0.071161,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "BLZ",
+      "mid_price": 0.070043,
+      "mark_price": 0.070043,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "CANTO",
+      "mid_price": 0.066,
+      "mark_price": 0.066,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "BNT",
+      "mid_price": 0.38287,
+      "mark_price": 0.38287,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "OGN",
+      "mid_price": 0.055683,
+      "mark_price": 0.055683,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "REQ",
+      "mid_price": 0.15473,
+      "mark_price": 0.15473,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "RDNT",
+      "mid_price": 0.018328,
+      "mark_price": 0.018328,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "ORBS",
+      "mid_price": 0.01939,
+      "mark_price": 0.01939,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "FRIEND",
+      "mid_price": 4.72,
+      "mark_price": 4.72,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "OX",
+      "mid_price": 0.007459,
+      "mark_price": 0.007459,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "FTM",
+      "mid_price": 0.71688,
+      "mark_price": 0.71688,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "LISTA",
+      "mid_price": 0.12466,
+      "mark_price": 0.12466,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "AI",
+      "mid_price": 0.12555,
+      "mark_price": 0.12555,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "PIXEL",
+      "mid_price": 0.024027,
+      "mark_price": 0.024027,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "MYRO",
+      "mid_price": 0.015813,
+      "mark_price": 0.015813,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "OMNI",
+      "mid_price": 4.1915,
+      "mark_price": 4.1915,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "PANDORA",
+      "mid_price": 3026.3,
+      "mark_price": 3026.3,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "kDOGS",
+      "mid_price": 0.13659,
+      "mark_price": 0.13659,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "CATI",
+      "mid_price": 0.082821,
+      "mark_price": 0.082821,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "NEIROETH",
+      "mid_price": 0.01808,
+      "mark_price": 0.01808,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "LAUNCHCOIN",
+      "mid_price": 0.060367,
+      "mark_price": 0.060367,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "OM",
+      "mid_price": 0.06527,
+      "mark_price": 0.06527,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "AI16Z",
+      "mid_price": 0.06157,
+      "mark_price": 0.06157,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    },
+    {
+      "coin": "JELLY",
+      "mid_price": 0.037555,
+      "mark_price": 0.037555,
+      "funding_rate_8h": 0.0,
+      "funding_annual": 0.0,
+      "open_interest": 0.0,
+      "oi_usd": 0.0,
+      "funding_sentiment": "NEUTRAL"
+    }
+  ],
+  "large_trades": []
+}
