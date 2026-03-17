@@ -7,7 +7,7 @@ HL_INFO_URL   = "https://api.hyperliquid.xyz/info"
 HL_STATS_URL  = "https://stats-data.hyperliquid.xyz/Mainnet"
 
 # How many top wallets to pull from leaderboard
-TOP_N_WALLETS = 50
+TOP_N_WALLETS = 200
 
 # How many days of trade history to fetch per wallet
 HISTORY_DAYS = 90
@@ -16,7 +16,19 @@ HISTORY_DAYS = 90
 MIN_TRADES = 20
 
 # Minimum absolute PnL (USD) to include wallet
-MIN_PNL_USD = 10_000
+MIN_PNL_USD = 50_000
+
+# Wallet quality filter: exclude market makers
+# volume_month / pnl_alltime > this → likely market maker (earns from spreads, not direction)
+MAX_VOL_PNL_RATIO = 1000
+
+# ROI cap for quality score (avoid tiny-account survivor bias)
+ROI_CAP_FOR_SCORING = 5.0  # = 500% all-time
+
+# Rate limiting between API calls (seconds)
+API_SLEEP_BETWEEN    = 0.12   # between individual wallet requests
+API_SLEEP_BATCH      = 2.0    # extra pause every N wallets
+API_SLEEP_BATCH_SIZE = 50     # pause every 50 wallets
 
 # Output paths
 OUTPUT_DIR        = "outputs"

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Raw data / cache — too large for git
+outputs/raw/fills/
+outputs/raw/candles/
+outputs/raw/*.csv
+outputs/state/
+
+# Keep dashboard and signals JSON (small, needed for gh-pages)
+!outputs/dashboard.html
+!outputs/raw/signals.json
+
+# macOS
+.DS_Store

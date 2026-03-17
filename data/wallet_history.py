@@ -5,15 +5,13 @@ import os
 import time
 import logging
 import pandas as pd
-import numpy as np
 from datetime import datetime, timedelta
 from tqdm import tqdm
-from data.hl_client import (
-    get_user_fills_by_time,
-    get_user_funding_history,
-    get_user_non_funding_ledger,
+from data.hl_client import get_user_fills_by_time, get_user_funding_history
+from config import (
+    HISTORY_DAYS, FILLS_DIR,
+    API_SLEEP_BETWEEN, API_SLEEP_BATCH, API_SLEEP_BATCH_SIZE,
 )
-from config import HISTORY_DAYS, RAW_DIR, FILLS_DIR
 
 logger = logging.getLogger(__name__)
 
@@ -141,6 +139,7 @@ def fetch_all_wallets(addresses: list) -> dict:
     os.makedirs(FILLS_DIR, exist_ok=True)
     results = {}
 
+    api_calls = 0
     for addr in tqdm(addresses, desc="Fetching wallet histories"):
         fills_path   = f"{FILLS_DIR}/{addr[:10]}_fills.csv"
         funding_path = f"{FILLS_DIR}/{addr[:10]}_funding.csv"
@@ -158,7 +157,11 @@ def fetch_all_wallets(addresses: list) -> dict:
             if not funding_df.empty:
                 funding_df.to_csv(funding_path, index=False)
 
-            time.sleep(0.1)  # rate limit
+            api_calls += 1
+            time.sleep(API_SLEEP_BETWEEN)
+            if api_calls % API_SLEEP_BATCH_SIZE == 0:
+                logger.info(f"  Batch pause after {api_calls} API calls…")
+                time.sleep(API_SLEEP_BATCH)
 
         results[addr] = {
             "fills":   fills_df,
