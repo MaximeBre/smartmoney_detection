@@ -82,7 +82,9 @@ def load_candles_cached(coin: str,
     Cache is per coin+interval, refreshed if >1h old.
     """
     os.makedirs(CANDLES_DIR, exist_ok=True)
-    cache_path = f"{CANDLES_DIR}/{coin}_{interval}.csv"
+    # Sanitize coin name for filename (replace : with _)
+    safe_coin = coin.replace(":", "_")
+    cache_path = f"{CANDLES_DIR}/{safe_coin}_{interval}.csv"
 
     # Check cache freshness
     if os.path.exists(cache_path):

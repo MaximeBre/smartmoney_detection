@@ -9,6 +9,11 @@ jobs:
   track:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    permissions:
+      contents: write
+
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - uses: actions/checkout@v4
@@ -39,14 +44,14 @@ jobs:
 
       - name: Commit dashboard
         run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.email "bot@github.com"
           git config user.name  "HL Tracker Bot"
           git add -f outputs/dashboard.html || true
-          git diff --staged --quiet || git commit -m "chore: update dashboard [$(date -u '+%Y-%m-%d %H:%M UTC')] [skip ci]"
-          git push || true
+          git diff --staged --quiet || (git commit -m "chore: update dashboard [$(date -u '+%Y-%m-%d %H:%M UTC')] [skip ci]" && git push)
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         if: success()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

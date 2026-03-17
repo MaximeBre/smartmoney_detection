@@ -1,1922 +1,498 @@
 {
-  "generated_at": "2026-03-17T11:21:38.289120+00:00",
+  "generated_at": "2026-03-17T11:53:42.108572+00:00",
   "new_signals": [
     {
-      "timestamp": "2026-03-17T11:21:38.283807+00:00",
-      "coin": "WLFI",
-      "direction": "LONG",
-      "primary_wallet": "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
-      "primary_wallet_name": "None",
-      "primary_score": 1.4544,
+      "timestamp": "2026-03-17T11:53:42.107510+00:00",
+      "coin": "SOL",
+      "direction": "SHORT",
+      "primary_wallet": "0xa6e2dc44418f5ad213c86db4dbb203a59d13c49f",
+      "primary_wallet_name": "neet to $1",
+      "primary_score": 1.3821,
       "consensus_wallets": 1,
-      "consensus_confidence": 1.4544,
+      "consensus_confidence": 1.3821,
       "signal_strength": "MODERATE",
-      "entry_price": 0.164361,
-      "leverage": 5.0,
+      "entry_price": 93.7804,
+      "leverage": 20.0,
       "grade": "TIER_1",
-      "action": "LONG WLFI",
-      "note": "1 smart money wallets LONG WLFI (avg score: 1.45)"
+      "action": "SHORT SOL",
+      "note": "1 smart money wallets SHORT SOL (avg score: 1.38)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.283834+00:00",
-      "coin": "ASTER",
-      "direction": "LONG",
-      "primary_wallet": "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
-      "primary_wallet_name": "None",
-      "primary_score": 1.4544,
-      "consensus_wallets": 1,
-      "consensus_confidence": 1.4544,
-      "signal_strength": "MODERATE",
-      "entry_price": 1.092741,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG ASTER",
-      "note": "1 smart money wallets LONG ASTER (avg score: 1.45)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.283951+00:00",
+      "timestamp": "2026-03-17T11:53:42.107646+00:00",
       "coin": "XRP",
       "direction": "LONG",
-      "primary_wallet": "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
+      "primary_wallet": "0x3c363e96d22c056d748f199fb728fc80d70e461a",
       "primary_wallet_name": "None",
-      "primary_score": 1.4544,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.3099,
+      "primary_score": 1.1358,
+      "consensus_wallets": 1,
+      "consensus_confidence": 1.1358,
       "signal_strength": "MODERATE",
-      "entry_price": 1.394549,
-      "leverage": 20.0,
+      "entry_price": 1.357512,
+      "leverage": 11.0,
       "grade": "TIER_1",
       "action": "LONG XRP",
-      "note": "2 smart money wallets LONG XRP (avg score: 1.31)"
+      "note": "1 smart money wallets LONG XRP (avg score: 1.14)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.284430+00:00",
-      "coin": "XRP",
-      "direction": "LONG",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.3099,
-      "signal_strength": "MODERATE",
-      "entry_price": 1.597805,
-      "leverage": 20.0,
-      "grade": "TIER_1",
-      "action": "LONG XRP",
-      "note": "2 smart money wallets LONG XRP (avg score: 1.31)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.283776+00:00",
-      "coin": "FARTCOIN",
-      "direction": "SHORT",
-      "primary_wallet": "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
-      "primary_wallet_name": "None",
-      "primary_score": 1.4544,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.2083,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.73907,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT FARTCOIN",
-      "note": "2 smart money wallets SHORT FARTCOIN (avg score: 1.21)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284821+00:00",
-      "coin": "FARTCOIN",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.2083,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.18912,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "SHORT FARTCOIN",
-      "note": "2 smart money wallets SHORT FARTCOIN (avg score: 1.21)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.283566+00:00",
+      "timestamp": "2026-03-17T11:53:42.107620+00:00",
       "coin": "ETH",
       "direction": "SHORT",
-      "primary_wallet": "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
-      "primary_wallet_name": "None",
-      "primary_score": 1.4544,
+      "primary_wallet": "0xa6e2dc44418f5ad213c86db4dbb203a59d13c49f",
+      "primary_wallet_name": "neet to $1",
+      "primary_score": 1.3821,
       "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
+      "consensus_confidence": 0.8933,
       "signal_strength": "STRONG",
-      "entry_price": 2027.53,
-      "leverage": 10.0,
+      "entry_price": 2310.61,
+      "leverage": 25.0,
       "grade": "TIER_1",
       "action": "SHORT ETH",
-      "note": "3 smart money wallets SHORT ETH (avg score: 1.19)"
+      "note": "3 smart money wallets SHORT ETH (avg score: 0.89)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.283640+00:00",
-      "coin": "BTC",
-      "direction": "LONG",
-      "primary_wallet": "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
-      "primary_wallet_name": "None",
-      "primary_score": 1.4544,
-      "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
-      "signal_strength": "STRONG",
-      "entry_price": 63622.0,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "LONG BTC",
-      "note": "3 smart money wallets LONG BTC (avg score: 1.19)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.283735+00:00",
-      "coin": "DOGE",
-      "direction": "SHORT",
-      "primary_wallet": "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
-      "primary_wallet_name": "None",
-      "primary_score": 1.4544,
-      "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
-      "signal_strength": "STRONG",
-      "entry_price": 0.279959,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT DOGE",
-      "note": "3 smart money wallets SHORT DOGE (avg score: 1.19)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.283890+00:00",
-      "coin": "HYPE",
-      "direction": "SHORT",
-      "primary_wallet": "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
-      "primary_wallet_name": "None",
-      "primary_score": 1.4544,
-      "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
-      "signal_strength": "STRONG",
-      "entry_price": 42.8073,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT HYPE",
-      "note": "3 smart money wallets SHORT HYPE (avg score: 1.19)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284017+00:00",
-      "coin": "PUMP",
-      "direction": "SHORT",
-      "primary_wallet": "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
-      "primary_wallet_name": "None",
-      "primary_score": 1.4544,
-      "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
-      "signal_strength": "STRONG",
-      "entry_price": 0.005551,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT PUMP",
-      "note": "3 smart money wallets SHORT PUMP (avg score: 1.19)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284050+00:00",
-      "coin": "SOL",
-      "direction": "LONG",
-      "primary_wallet": "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
-      "primary_wallet_name": "None",
-      "primary_score": 1.4544,
-      "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
-      "signal_strength": "STRONG",
-      "entry_price": 83.86,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "LONG SOL",
-      "note": "3 smart money wallets LONG SOL (avg score: 1.19)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284079+00:00",
-      "coin": "BTC",
-      "direction": "LONG",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
-      "signal_strength": "STRONG",
-      "entry_price": 72038.2,
-      "leverage": 20.0,
-      "grade": "TIER_1",
-      "action": "LONG BTC",
-      "note": "3 smart money wallets LONG BTC (avg score: 1.19)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284104+00:00",
-      "coin": "DOGE",
-      "direction": "SHORT",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
-      "signal_strength": "STRONG",
-      "entry_price": 0.138885,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT DOGE",
-      "note": "3 smart money wallets SHORT DOGE (avg score: 1.19)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284321+00:00",
-      "coin": "HYPE",
-      "direction": "SHORT",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
-      "signal_strength": "STRONG",
-      "entry_price": 40.2819,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT HYPE",
-      "note": "3 smart money wallets SHORT HYPE (avg score: 1.19)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284460+00:00",
-      "coin": "PUMP",
-      "direction": "SHORT",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
-      "signal_strength": "STRONG",
-      "entry_price": 0.003389,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT PUMP",
-      "note": "3 smart money wallets SHORT PUMP (avg score: 1.19)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284483+00:00",
-      "coin": "SOL",
-      "direction": "LONG",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
-      "signal_strength": "STRONG",
-      "entry_price": 85.8346,
-      "leverage": 20.0,
-      "grade": "TIER_1",
-      "action": "LONG SOL",
-      "note": "3 smart money wallets LONG SOL (avg score: 1.19)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284550+00:00",
+      "timestamp": "2026-03-17T11:53:42.107804+00:00",
       "coin": "ETH",
       "direction": "SHORT",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
+      "primary_wallet": "0x99b1098d9d50aa076f78bd26ab22e6abd3710729",
+      "primary_wallet_name": "\u97e6\u5c0f\u5b9d.eth",
+      "primary_score": 0.7752,
       "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
+      "consensus_confidence": 0.8933,
       "signal_strength": "STRONG",
-      "entry_price": 2044.46,
-      "leverage": 15.0,
+      "entry_price": 3009.22,
+      "leverage": 3.0,
       "grade": "TIER_1",
       "action": "SHORT ETH",
-      "note": "3 smart money wallets SHORT ETH (avg score: 1.19)"
+      "note": "3 smart money wallets SHORT ETH (avg score: 0.89)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.284950+00:00",
-      "coin": "HYPE",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
-      "signal_strength": "STRONG",
-      "entry_price": 39.2213,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "SHORT HYPE",
-      "note": "3 smart money wallets SHORT HYPE (avg score: 1.19)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285072+00:00",
-      "coin": "PUMP",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
-      "signal_strength": "STRONG",
-      "entry_price": 0.002018,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "SHORT PUMP",
-      "note": "3 smart money wallets SHORT PUMP (avg score: 1.19)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285413+00:00",
-      "coin": "BTC",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
-      "signal_strength": "STRONG",
-      "entry_price": 74415.3,
-      "leverage": 20.0,
-      "grade": "TIER_1",
-      "action": "LONG BTC",
-      "note": "3 smart money wallets LONG BTC (avg score: 1.19)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285437+00:00",
-      "coin": "DOGE",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
-      "signal_strength": "STRONG",
-      "entry_price": 0.097928,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT DOGE",
-      "note": "3 smart money wallets SHORT DOGE (avg score: 1.19)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285526+00:00",
-      "coin": "SOL",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
-      "signal_strength": "STRONG",
-      "entry_price": 94.2178,
-      "leverage": 20.0,
-      "grade": "TIER_1",
-      "action": "LONG SOL",
-      "note": "3 smart money wallets LONG SOL (avg score: 1.19)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285673+00:00",
+      "timestamp": "2026-03-17T11:53:42.108047+00:00",
       "coin": "ETH",
       "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+      "primary_wallet": "0x6559e0678d8b33de20dacafc36182fb643a9d297",
       "primary_wallet_name": "None",
-      "primary_score": 0.9621,
+      "primary_score": 0.5227,
       "consensus_wallets": 3,
-      "consensus_confidence": 1.194,
+      "consensus_confidence": 0.8933,
       "signal_strength": "STRONG",
-      "entry_price": 2319.33,
-      "leverage": 15.0,
+      "entry_price": 2361.49,
+      "leverage": 9.0,
       "grade": "TIER_1",
       "action": "SHORT ETH",
-      "note": "3 smart money wallets SHORT ETH (avg score: 1.19)"
+      "note": "3 smart money wallets SHORT ETH (avg score: 0.89)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.284116+00:00",
-      "coin": "ENA",
+      "timestamp": "2026-03-17T11:53:42.107685+00:00",
+      "coin": "ETH",
       "direction": "LONG",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 1,
-      "consensus_confidence": 1.1654,
+      "primary_wallet": "0x3c363e96d22c056d748f199fb728fc80d70e461a",
+      "primary_wallet_name": "None",
+      "primary_score": 1.1358,
+      "consensus_wallets": 2,
+      "consensus_confidence": 0.8193,
       "signal_strength": "MODERATE",
-      "entry_price": 0.131656,
+      "entry_price": 2345.27,
+      "leverage": 11.0,
+      "grade": "TIER_1",
+      "action": "LONG ETH",
+      "note": "2 smart money wallets LONG ETH (avg score: 0.82)"
+    },
+    {
+      "timestamp": "2026-03-17T11:53:42.108110+00:00",
+      "coin": "ETH",
+      "direction": "LONG",
+      "primary_wallet": "0x5b673a96b3def1b660a340e700a46de71c544898",
+      "primary_wallet_name": "None",
+      "primary_score": 0.5027,
+      "consensus_wallets": 2,
+      "consensus_confidence": 0.8193,
+      "signal_strength": "MODERATE",
+      "entry_price": 2272.17,
+      "leverage": 20.0,
+      "grade": "TIER_1",
+      "action": "LONG ETH",
+      "note": "2 smart money wallets LONG ETH (avg score: 0.82)"
+    },
+    {
+      "timestamp": "2026-03-17T11:53:42.107765+00:00",
+      "coin": "HYPE",
+      "direction": "SHORT",
+      "primary_wallet": "0x99b1098d9d50aa076f78bd26ab22e6abd3710729",
+      "primary_wallet_name": "\u97e6\u5c0f\u5b9d.eth",
+      "primary_score": 0.7752,
+      "consensus_wallets": 1,
+      "consensus_confidence": 0.7752,
+      "signal_strength": "MODERATE",
+      "entry_price": 29.7238,
       "leverage": 10.0,
       "grade": "TIER_1",
-      "action": "LONG ENA",
-      "note": "1 smart money wallets LONG ENA (avg score: 1.17)"
+      "action": "SHORT HYPE",
+      "note": "1 smart money wallets SHORT HYPE (avg score: 0.78)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.284381+00:00",
-      "coin": "PENGU",
-      "direction": "LONG",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 1,
-      "consensus_confidence": 1.1654,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.028211,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "LONG PENGU",
-      "note": "1 smart money wallets LONG PENGU (avg score: 1.17)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284440+00:00",
-      "coin": "GOAT",
+      "timestamp": "2026-03-17T11:53:42.107777+00:00",
+      "coin": "ANIME",
       "direction": "SHORT",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
+      "primary_wallet": "0x99b1098d9d50aa076f78bd26ab22e6abd3710729",
+      "primary_wallet_name": "\u97e6\u5c0f\u5b9d.eth",
+      "primary_score": 0.7752,
       "consensus_wallets": 1,
-      "consensus_confidence": 1.1654,
+      "consensus_confidence": 0.7752,
       "signal_strength": "MODERATE",
-      "entry_price": 0.478596,
+      "entry_price": 0.006609,
       "leverage": 3.0,
       "grade": "TIER_1",
-      "action": "SHORT GOAT",
-      "note": "1 smart money wallets SHORT GOAT (avg score: 1.17)"
+      "action": "SHORT ANIME",
+      "note": "1 smart money wallets SHORT ANIME (avg score: 0.78)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.284583+00:00",
-      "coin": "FARTCOIN",
-      "direction": "LONG",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 1,
-      "consensus_confidence": 1.1654,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.16611,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "LONG FARTCOIN",
-      "note": "1 smart money wallets LONG FARTCOIN (avg score: 1.17)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284591+00:00",
-      "coin": "XMR",
-      "direction": "SHORT",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 1,
-      "consensus_confidence": 1.1654,
-      "signal_strength": "MODERATE",
-      "entry_price": 301.873,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT XMR",
-      "note": "1 smart money wallets SHORT XMR (avg score: 1.17)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284620+00:00",
-      "coin": "LTC",
-      "direction": "LONG",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 1,
-      "consensus_confidence": 1.1654,
-      "signal_strength": "MODERATE",
-      "entry_price": 96.343,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "LONG LTC",
-      "note": "1 smart money wallets LONG LTC (avg score: 1.17)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284626+00:00",
-      "coin": "LINEA",
-      "direction": "SHORT",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 1,
-      "consensus_confidence": 1.1654,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.027679,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "SHORT LINEA",
-      "note": "1 smart money wallets SHORT LINEA (avg score: 1.17)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284656+00:00",
-      "coin": "kPEPE",
-      "direction": "LONG",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 1,
-      "consensus_confidence": 1.1654,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.003678,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "LONG kPEPE",
-      "note": "1 smart money wallets LONG kPEPE (avg score: 1.17)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284268+00:00",
-      "coin": "WIF",
-      "direction": "SHORT",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.784313,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT WIF",
-      "note": "2 smart money wallets SHORT WIF (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284368+00:00",
-      "coin": "WLD",
-      "direction": "SHORT",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.98736,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT WLD",
-      "note": "2 smart money wallets SHORT WLD (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284405+00:00",
-      "coin": "AVAX",
-      "direction": "SHORT",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 22.8759,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT AVAX",
-      "note": "2 smart money wallets SHORT AVAX (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284506+00:00",
-      "coin": "POPCAT",
-      "direction": "SHORT",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.215958,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "SHORT POPCAT",
-      "note": "2 smart money wallets SHORT POPCAT (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284528+00:00",
-      "coin": "BNB",
-      "direction": "SHORT",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 846.489,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT BNB",
-      "note": "2 smart money wallets SHORT BNB (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284573+00:00",
-      "coin": "ASTER",
-      "direction": "SHORT",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.69794,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "SHORT ASTER",
-      "note": "2 smart money wallets SHORT ASTER (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284610+00:00",
-      "coin": "XPL",
-      "direction": "SHORT",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.159184,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT XPL",
-      "note": "2 smart money wallets SHORT XPL (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284646+00:00",
-      "coin": "ADA",
-      "direction": "SHORT",
-      "primary_wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
-      "primary_wallet_name": "BobbyBigSize",
-      "primary_score": 1.1654,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.549523,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT ADA",
-      "note": "2 smart money wallets SHORT ADA (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284698+00:00",
-      "coin": "AVAX",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 9.6488,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT AVAX",
-      "note": "2 smart money wallets SHORT AVAX (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284760+00:00",
-      "coin": "POPCAT",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.055251,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "SHORT POPCAT",
-      "note": "2 smart money wallets SHORT POPCAT (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284782+00:00",
-      "coin": "BNB",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 671.349,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT BNB",
-      "note": "2 smart money wallets SHORT BNB (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284921+00:00",
-      "coin": "WIF",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.185514,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT WIF",
-      "note": "2 smart money wallets SHORT WIF (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284980+00:00",
-      "coin": "WLD",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.39203,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT WLD",
-      "note": "2 smart money wallets SHORT WLD (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285148+00:00",
-      "coin": "ASTER",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.710032,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "SHORT ASTER",
-      "note": "2 smart money wallets SHORT ASTER (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285372+00:00",
-      "coin": "ADA",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.264645,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT ADA",
-      "note": "2 smart money wallets SHORT ADA (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285776+00:00",
-      "coin": "XPL",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 2,
-      "consensus_confidence": 1.0637,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.116334,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT XPL",
-      "note": "2 smart money wallets SHORT XPL (avg score: 1.06)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284664+00:00",
-      "coin": "ZEC",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 258.6151,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT ZEC",
-      "note": "1 smart money wallets SHORT ZEC (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284671+00:00",
-      "coin": "ONDO",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.264153,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT ONDO",
-      "note": "1 smart money wallets SHORT ONDO (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284678+00:00",
-      "coin": "STRK",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.18052,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG STRK",
-      "note": "1 smart money wallets LONG STRK (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284707+00:00",
-      "coin": "LAYER",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 1.141,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG LAYER",
-      "note": "1 smart money wallets LONG LAYER (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284714+00:00",
-      "coin": "GOAT",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.046428,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG GOAT",
-      "note": "1 smart money wallets LONG GOAT (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284720+00:00",
-      "coin": "SUI",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 1.05593,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT SUI",
-      "note": "1 smart money wallets SHORT SUI (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284727+00:00",
-      "coin": "ZRO",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 1.913,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "LONG ZRO",
-      "note": "1 smart money wallets LONG ZRO (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284734+00:00",
-      "coin": "XLM",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.30042,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT XLM",
-      "note": "1 smart money wallets SHORT XLM (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284741+00:00",
-      "coin": "TRUMP",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 3.92048,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "LONG TRUMP",
-      "note": "1 smart money wallets LONG TRUMP (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284792+00:00",
-      "coin": "kFLOKI",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.031475,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "LONG kFLOKI",
-      "note": "1 smart money wallets LONG kFLOKI (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284799+00:00",
-      "coin": "SNX",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.32176,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG SNX",
-      "note": "1 smart money wallets LONG SNX (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284831+00:00",
-      "coin": "WLFI",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.103889,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT WLFI",
-      "note": "1 smart money wallets SHORT WLFI (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284837+00:00",
-      "coin": "AAVE",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 112.4568,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT AAVE",
-      "note": "1 smart money wallets SHORT AAVE (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284844+00:00",
-      "coin": "ZORA",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.026761,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG ZORA",
-      "note": "1 smart money wallets LONG ZORA (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284850+00:00",
-      "coin": "MON",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.02386,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG MON",
-      "note": "1 smart money wallets LONG MON (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284856+00:00",
-      "coin": "MELANIA",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.1236,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG MELANIA",
-      "note": "1 smart money wallets LONG MELANIA (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284863+00:00",
-      "coin": "VIRTUAL",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.74934,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT VIRTUAL",
-      "note": "1 smart money wallets SHORT VIRTUAL (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284869+00:00",
-      "coin": "CHILLGUY",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.05289,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG CHILLGUY",
-      "note": "1 smart money wallets LONG CHILLGUY (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284875+00:00",
+      "timestamp": "2026-03-17T11:53:42.107818+00:00",
       "coin": "LTC",
       "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
+      "primary_wallet": "0x99b1098d9d50aa076f78bd26ab22e6abd3710729",
+      "primary_wallet_name": "\u97e6\u5c0f\u5b9d.eth",
+      "primary_score": 0.7752,
       "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
+      "consensus_confidence": 0.7752,
       "signal_strength": "MODERATE",
-      "entry_price": 57.3281,
+      "entry_price": 77.1053,
       "leverage": 10.0,
       "grade": "TIER_1",
       "action": "SHORT LTC",
-      "note": "1 smart money wallets SHORT LTC (avg score: 0.96)"
+      "note": "1 smart money wallets SHORT LTC (avg score: 0.78)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.284881+00:00",
-      "coin": "USUAL",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.15174,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG USUAL",
-      "note": "1 smart money wallets LONG USUAL (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284888+00:00",
-      "coin": "NEAR",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 1.40479,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT NEAR",
-      "note": "1 smart money wallets SHORT NEAR (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284894+00:00",
-      "coin": "JUP",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.168077,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "LONG JUP",
-      "note": "1 smart money wallets LONG JUP (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284900+00:00",
-      "coin": "MET",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.168099,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "SHORT MET",
-      "note": "1 smart money wallets SHORT MET (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284930+00:00",
-      "coin": "UNI",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 3.96857,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT UNI",
-      "note": "1 smart money wallets SHORT UNI (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284959+00:00",
-      "coin": "GRASS",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 1.292,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG GRASS",
-      "note": "1 smart money wallets LONG GRASS (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284989+00:00",
-      "coin": "ETHFI",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 1.1562,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "LONG ETHFI",
-      "note": "1 smart money wallets LONG ETHFI (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.284996+00:00",
-      "coin": "XRP",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 1.492724,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT XRP",
-      "note": "1 smart money wallets SHORT XRP (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285093+00:00",
-      "coin": "PNUT",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.17553,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "SHORT PNUT",
-      "note": "1 smart money wallets SHORT PNUT (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285106+00:00",
-      "coin": "CRV",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.24482,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT CRV",
-      "note": "1 smart money wallets SHORT CRV (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285117+00:00",
-      "coin": "SOPH",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.053636,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG SOPH",
-      "note": "1 smart money wallets LONG SOPH (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285159+00:00",
-      "coin": "BERA",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.65413,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT BERA",
-      "note": "1 smart money wallets SHORT BERA (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285165+00:00",
-      "coin": "PURR",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.087038,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG PURR",
-      "note": "1 smart money wallets LONG PURR (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285172+00:00",
-      "coin": "GRIFFAIN",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.007898,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "SHORT GRIFFAIN",
-      "note": "1 smart money wallets SHORT GRIFFAIN (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285178+00:00",
-      "coin": "PAXG",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 5042.631,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT PAXG",
-      "note": "1 smart money wallets SHORT PAXG (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285184+00:00",
-      "coin": "SPX",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.34108,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT SPX",
-      "note": "1 smart money wallets SHORT SPX (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285192+00:00",
-      "coin": "kBONK",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.006421,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT kBONK",
-      "note": "1 smart money wallets SHORT kBONK (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285198+00:00",
-      "coin": "LINK",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 11.2377,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT LINK",
-      "note": "1 smart money wallets SHORT LINK (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285204+00:00",
-      "coin": "ARB",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.10815,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "LONG ARB",
-      "note": "1 smart money wallets LONG ARB (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285212+00:00",
-      "coin": "0G",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 1.8125,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG 0G",
-      "note": "1 smart money wallets LONG 0G (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285236+00:00",
-      "coin": "KAITO",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.34043,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "LONG KAITO",
-      "note": "1 smart money wallets LONG KAITO (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285244+00:00",
-      "coin": "EIGEN",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.2122,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT EIGEN",
-      "note": "1 smart money wallets SHORT EIGEN (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285250+00:00",
-      "coin": "MOODENG",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.094647,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG MOODENG",
-      "note": "1 smart money wallets LONG MOODENG (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285257+00:00",
-      "coin": "AVNT",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.163403,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT AVNT",
-      "note": "1 smart money wallets SHORT AVNT (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285264+00:00",
-      "coin": "PENGU",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.007607,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT PENGU",
-      "note": "1 smart money wallets SHORT PENGU (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285270+00:00",
-      "coin": "TIA",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.37458,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT TIA",
-      "note": "1 smart money wallets SHORT TIA (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285276+00:00",
-      "coin": "YZY",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.373138,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG YZY",
-      "note": "1 smart money wallets LONG YZY (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285300+00:00",
-      "coin": "SEI",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.068665,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT SEI",
-      "note": "1 smart money wallets SHORT SEI (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285307+00:00",
-      "coin": "VVV",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 6.0167,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "SHORT VVV",
-      "note": "1 smart money wallets SHORT VVV (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285313+00:00",
-      "coin": "ME",
-      "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 1.5,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG ME",
-      "note": "1 smart money wallets LONG ME (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285319+00:00",
+      "timestamp": "2026-03-17T11:53:42.107830+00:00",
       "coin": "BCH",
       "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
+      "primary_wallet": "0x99b1098d9d50aa076f78bd26ab22e6abd3710729",
+      "primary_wallet_name": "\u97e6\u5c0f\u5b9d.eth",
+      "primary_score": 0.7752,
       "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
+      "consensus_confidence": 0.7752,
       "signal_strength": "MODERATE",
-      "entry_price": 466.29,
+      "entry_price": 580.041,
       "leverage": 10.0,
       "grade": "TIER_1",
       "action": "SHORT BCH",
-      "note": "1 smart money wallets SHORT BCH (avg score: 0.96)"
+      "note": "1 smart money wallets SHORT BCH (avg score: 0.78)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.285326+00:00",
-      "coin": "STX",
+      "timestamp": "2026-03-17T11:53:42.107841+00:00",
+      "coin": "NEAR",
       "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
+      "primary_wallet": "0x99b1098d9d50aa076f78bd26ab22e6abd3710729",
+      "primary_wallet_name": "\u97e6\u5c0f\u5b9d.eth",
+      "primary_score": 0.7752,
       "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
+      "consensus_confidence": 0.7752,
       "signal_strength": "MODERATE",
-      "entry_price": 0.6031,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT STX",
-      "note": "1 smart money wallets SHORT STX (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285334+00:00",
-      "coin": "MORPHO",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 1.84049,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT MORPHO",
-      "note": "1 smart money wallets SHORT MORPHO (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285341+00:00",
-      "coin": "TON",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 1.31635,
+      "entry_price": 1.45256,
       "leverage": 10.0,
       "grade": "TIER_1",
-      "action": "SHORT TON",
-      "note": "1 smart money wallets SHORT TON (avg score: 0.96)"
+      "action": "SHORT NEAR",
+      "note": "1 smart money wallets SHORT NEAR (avg score: 0.78)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.285383+00:00",
-      "coin": "LDO",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+      "timestamp": "2026-03-17T11:53:42.107852+00:00",
+      "coin": "TRUMP",
+      "direction": "LONG",
+      "primary_wallet": "0x352deb23bebae8b4c57d0ae341d9c1951fd8425a",
       "primary_wallet_name": "None",
-      "primary_score": 0.9621,
+      "primary_score": 0.6851,
       "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
+      "consensus_confidence": 0.6851,
       "signal_strength": "MODERATE",
-      "entry_price": 0.30086,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT LDO",
-      "note": "1 smart money wallets SHORT LDO (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285389+00:00",
-      "coin": "kPEPE",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.003699,
+      "entry_price": 3.7193,
       "leverage": 10.0,
       "grade": "TIER_1",
-      "action": "SHORT kPEPE",
-      "note": "1 smart money wallets SHORT kPEPE (avg score: 0.96)"
+      "action": "LONG TRUMP",
+      "note": "1 smart money wallets LONG TRUMP (avg score: 0.69)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.285447+00:00",
-      "coin": "ENA",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.170941,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT ENA",
-      "note": "1 smart money wallets SHORT ENA (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285453+00:00",
-      "coin": "BLAST",
+      "timestamp": "2026-03-17T11:53:42.107720+00:00",
+      "coin": "HYPE",
       "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+      "primary_wallet": "0x8a3cf3c4b300be69429cce5beb2ef14d7200b6b7",
       "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.008052,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "LONG BLAST",
-      "note": "1 smart money wallets LONG BLAST (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285460+00:00",
-      "coin": "AIXBT",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.027515,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "SHORT AIXBT",
-      "note": "1 smart money wallets SHORT AIXBT (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285466+00:00",
-      "coin": "INJ",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 7.83,
+      "primary_score": 0.9186,
+      "consensus_wallets": 4,
+      "consensus_confidence": 0.6406,
+      "signal_strength": "STRONG",
+      "entry_price": 32.5007,
       "leverage": 10.0,
       "grade": "TIER_1",
-      "action": "SHORT INJ",
-      "note": "1 smart money wallets SHORT INJ (avg score: 0.96)"
+      "action": "LONG HYPE",
+      "note": "4 smart money wallets LONG HYPE (avg score: 0.64)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.285472+00:00",
-      "coin": "PYTH",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+      "timestamp": "2026-03-17T11:53:42.107907+00:00",
+      "coin": "HYPE",
+      "direction": "LONG",
+      "primary_wallet": "0x80fb5880f38185661962e475ac1557817dc9faea",
       "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.049308,
+      "primary_score": 0.6208,
+      "consensus_wallets": 4,
+      "consensus_confidence": 0.6406,
+      "signal_strength": "STRONG",
+      "entry_price": 36.8057,
       "leverage": 5.0,
       "grade": "TIER_1",
-      "action": "SHORT PYTH",
-      "note": "1 smart money wallets SHORT PYTH (avg score: 0.96)"
+      "action": "LONG HYPE",
+      "note": "4 smart money wallets LONG HYPE (avg score: 0.64)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.285478+00:00",
-      "coin": "TURBO",
+      "timestamp": "2026-03-17T11:53:42.107946+00:00",
+      "coin": "HYPE",
       "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+      "primary_wallet": "0xfc84a4bba95d3a13f91a9c0d735c0af04a18f4d0",
       "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.002621,
-      "leverage": 3.0,
+      "primary_score": 0.5455,
+      "consensus_wallets": 4,
+      "consensus_confidence": 0.6406,
+      "signal_strength": "STRONG",
+      "entry_price": 31.7798,
+      "leverage": 2.0,
       "grade": "TIER_1",
-      "action": "LONG TURBO",
-      "note": "1 smart money wallets LONG TURBO (avg score: 0.96)"
+      "action": "LONG HYPE",
+      "note": "4 smart money wallets LONG HYPE (avg score: 0.64)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.285552+00:00",
-      "coin": "TRX",
+      "timestamp": "2026-03-17T11:53:42.108153+00:00",
+      "coin": "HYPE",
       "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.291911,
+      "primary_wallet": "0x613ead0ea5af374af0ccfc117ef116a8e8d133fe",
+      "primary_wallet_name": "Sticky",
+      "primary_score": 0.4774,
+      "consensus_wallets": 4,
+      "consensus_confidence": 0.6406,
+      "signal_strength": "STRONG",
+      "entry_price": 36.4529,
       "leverage": 10.0,
       "grade": "TIER_1",
-      "action": "LONG TRX",
-      "note": "1 smart money wallets LONG TRX (avg score: 0.96)"
+      "action": "LONG HYPE",
+      "note": "4 smart money wallets LONG HYPE (avg score: 0.64)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.285568+00:00",
-      "coin": "TAO",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+      "timestamp": "2026-03-17T11:53:42.107750+00:00",
+      "coin": "BTC",
+      "direction": "LONG",
+      "primary_wallet": "0xcb58b8f5ec6d47985f0728465c25a08ef9ad2c7b",
+      "primary_wallet_name": "cat hot wallet",
+      "primary_score": 0.7929,
+      "consensus_wallets": 4,
+      "consensus_confidence": 0.6252,
+      "signal_strength": "STRONG",
+      "entry_price": 70765.0,
+      "leverage": 31.0,
+      "grade": "TIER_1",
+      "action": "LONG BTC",
+      "note": "4 smart money wallets LONG BTC (avg score: 0.63)"
+    },
+    {
+      "timestamp": "2026-03-17T11:53:42.107878+00:00",
+      "coin": "BTC",
+      "direction": "LONG",
+      "primary_wallet": "0x352deb23bebae8b4c57d0ae341d9c1951fd8425a",
       "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 281.366,
+      "primary_score": 0.6851,
+      "consensus_wallets": 4,
+      "consensus_confidence": 0.6252,
+      "signal_strength": "STRONG",
+      "entry_price": 69164.0,
+      "leverage": 40.0,
+      "grade": "TIER_1",
+      "action": "LONG BTC",
+      "note": "4 smart money wallets LONG BTC (avg score: 0.63)"
+    },
+    {
+      "timestamp": "2026-03-17T11:53:42.107974+00:00",
+      "coin": "BTC",
+      "direction": "LONG",
+      "primary_wallet": "0xfc84a4bba95d3a13f91a9c0d735c0af04a18f4d0",
+      "primary_wallet_name": "None",
+      "primary_score": 0.5455,
+      "consensus_wallets": 4,
+      "consensus_confidence": 0.6252,
+      "signal_strength": "STRONG",
+      "entry_price": 70750.0,
       "leverage": 5.0,
       "grade": "TIER_1",
-      "action": "SHORT TAO",
-      "note": "1 smart money wallets SHORT TAO (avg score: 0.96)"
+      "action": "LONG BTC",
+      "note": "4 smart money wallets LONG BTC (avg score: 0.63)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.285602+00:00",
-      "coin": "TST",
+      "timestamp": "2026-03-17T11:53:42.108183+00:00",
+      "coin": "BTC",
       "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.074235,
-      "leverage": 3.0,
+      "primary_wallet": "0x613ead0ea5af374af0ccfc117ef116a8e8d133fe",
+      "primary_wallet_name": "Sticky",
+      "primary_score": 0.4774,
+      "consensus_wallets": 4,
+      "consensus_confidence": 0.6252,
+      "signal_strength": "STRONG",
+      "entry_price": 75597.0,
+      "leverage": 20.0,
       "grade": "TIER_1",
-      "action": "LONG TST",
-      "note": "1 smart money wallets LONG TST (avg score: 0.96)"
+      "action": "LONG BTC",
+      "note": "4 smart money wallets LONG BTC (avg score: 0.63)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.285695+00:00",
-      "coin": "APT",
+      "timestamp": "2026-03-17T11:53:42.107921+00:00",
+      "coin": "LIT",
       "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+      "primary_wallet": "0x80fb5880f38185661962e475ac1557817dc9faea",
       "primary_wallet_name": "None",
-      "primary_score": 0.9621,
+      "primary_score": 0.6208,
       "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
+      "consensus_confidence": 0.6208,
       "signal_strength": "MODERATE",
-      "entry_price": 0.9503,
-      "leverage": 10.0,
+      "entry_price": 1.170787,
+      "leverage": 4.0,
       "grade": "TIER_1",
-      "action": "LONG APT",
-      "note": "1 smart money wallets LONG APT (avg score: 0.96)"
+      "action": "LONG LIT",
+      "note": "1 smart money wallets LONG LIT (avg score: 0.62)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.285708+00:00",
-      "coin": "IP",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.8046,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "SHORT IP",
-      "note": "1 smart money wallets SHORT IP (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285796+00:00",
-      "coin": "2Z",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.079914,
-      "leverage": 3.0,
-      "grade": "TIER_1",
-      "action": "SHORT 2Z",
-      "note": "1 smart money wallets SHORT 2Z (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285828+00:00",
+      "timestamp": "2026-03-17T11:53:42.107989+00:00",
       "coin": "LIT",
       "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+      "primary_wallet": "0x99967871e6c4f9a5185abc57edede9e9540191f6",
       "primary_wallet_name": "None",
-      "primary_score": 0.9621,
+      "primary_score": 0.5445,
       "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
+      "consensus_confidence": 0.5445,
       "signal_strength": "MODERATE",
-      "entry_price": 1.134108,
-      "leverage": 3.0,
+      "entry_price": 2.089024,
+      "leverage": 2.0,
       "grade": "TIER_1",
       "action": "SHORT LIT",
-      "note": "1 smart money wallets SHORT LIT (avg score: 0.96)"
+      "note": "1 smart money wallets SHORT LIT (avg score: 0.54)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.285840+00:00",
-      "coin": "ATOM",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+      "timestamp": "2026-03-17T11:53:42.108001+00:00",
+      "coin": "ALGO",
+      "direction": "LONG",
+      "primary_wallet": "0x6559e0678d8b33de20dacafc36182fb643a9d297",
       "primary_wallet_name": "None",
-      "primary_score": 0.9621,
+      "primary_score": 0.5227,
       "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
+      "consensus_confidence": 0.5227,
       "signal_strength": "MODERATE",
-      "entry_price": 1.9481,
+      "entry_price": 0.086856,
+      "leverage": 4.0,
+      "grade": "TIER_1",
+      "action": "LONG ALGO",
+      "note": "1 smart money wallets LONG ALGO (avg score: 0.52)"
+    },
+    {
+      "timestamp": "2026-03-17T11:53:42.108011+00:00",
+      "coin": "DOGE",
+      "direction": "LONG",
+      "primary_wallet": "0x6559e0678d8b33de20dacafc36182fb643a9d297",
+      "primary_wallet_name": "None",
+      "primary_score": 0.5227,
+      "consensus_wallets": 1,
+      "consensus_confidence": 0.5227,
+      "signal_strength": "MODERATE",
+      "entry_price": 0.094274,
       "leverage": 5.0,
       "grade": "TIER_1",
-      "action": "SHORT ATOM",
-      "note": "1 smart money wallets SHORT ATOM (avg score: 0.96)"
+      "action": "LONG DOGE",
+      "note": "1 smart money wallets LONG DOGE (avg score: 0.52)"
     },
     {
-      "timestamp": "2026-03-17T11:21:38.285851+00:00",
-      "coin": "kSHIB",
-      "direction": "SHORT",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
-      "primary_wallet_name": "None",
-      "primary_score": 0.9621,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.014599,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "SHORT kSHIB",
-      "note": "1 smart money wallets SHORT kSHIB (avg score: 0.96)"
-    },
-    {
-      "timestamp": "2026-03-17T11:21:38.285862+00:00",
-      "coin": "STBL",
+      "timestamp": "2026-03-17T11:53:42.108022+00:00",
+      "coin": "DYDX",
       "direction": "LONG",
-      "primary_wallet": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+      "primary_wallet": "0x6559e0678d8b33de20dacafc36182fb643a9d297",
       "primary_wallet_name": "None",
-      "primary_score": 0.9621,
+      "primary_score": 0.5227,
       "consensus_wallets": 1,
-      "consensus_confidence": 0.9621,
+      "consensus_confidence": 0.5227,
       "signal_strength": "MODERATE",
-      "entry_price": 0.038716,
+      "entry_price": 0.0885,
       "leverage": 3.0,
       "grade": "TIER_1",
-      "action": "LONG STBL",
-      "note": "1 smart money wallets LONG STBL (avg score: 0.96)"
+      "action": "LONG DYDX",
+      "note": "1 smart money wallets LONG DYDX (avg score: 0.52)"
+    },
+    {
+      "timestamp": "2026-03-17T11:53:42.108060+00:00",
+      "coin": "ADA",
+      "direction": "LONG",
+      "primary_wallet": "0x6559e0678d8b33de20dacafc36182fb643a9d297",
+      "primary_wallet_name": "None",
+      "primary_score": 0.5227,
+      "consensus_wallets": 1,
+      "consensus_confidence": 0.5227,
+      "signal_strength": "MODERATE",
+      "entry_price": 0.26919,
+      "leverage": 5.0,
+      "grade": "TIER_1",
+      "action": "LONG ADA",
+      "note": "1 smart money wallets LONG ADA (avg score: 0.52)"
+    },
+    {
+      "timestamp": "2026-03-17T11:53:42.108071+00:00",
+      "coin": "ATOM",
+      "direction": "LONG",
+      "primary_wallet": "0x6559e0678d8b33de20dacafc36182fb643a9d297",
+      "primary_wallet_name": "None",
+      "primary_score": 0.5227,
+      "consensus_wallets": 1,
+      "consensus_confidence": 0.5227,
+      "signal_strength": "MODERATE",
+      "entry_price": 1.8228,
+      "leverage": 4.0,
+      "grade": "TIER_1",
+      "action": "LONG ATOM",
+      "note": "1 smart money wallets LONG ATOM (avg score: 0.52)"
+    },
+    {
+      "timestamp": "2026-03-17T11:53:42.108082+00:00",
+      "coin": "SOL",
+      "direction": "LONG",
+      "primary_wallet": "0x5b673a96b3def1b660a340e700a46de71c544898",
+      "primary_wallet_name": "None",
+      "primary_score": 0.5027,
+      "consensus_wallets": 1,
+      "consensus_confidence": 0.5027,
+      "signal_strength": "MODERATE",
+      "entry_price": 92.0591,
+      "leverage": 20.0,
+      "grade": "TIER_1",
+      "action": "LONG SOL",
+      "note": "1 smart money wallets LONG SOL (avg score: 0.50)"
     }
   ],
   "current_consensus": [
     {
-      "coin": "BTC",
+      "coin": "HYPE",
       "direction": "LONG",
-      "n_wallets": 3,
-      "avg_score": 1.194,
-      "max_score": 1.4544,
+      "n_wallets": 4,
+      "avg_score": 0.6406,
+      "max_score": 0.9186,
       "wallets": [
         "None",
-        "BobbyBigSize",
-        "None"
+        "None",
+        "None",
+        "Sticky"
+      ],
+      "is_consensus": true,
+      "consensus_strength": "STRONG"
+    },
+    {
+      "coin": "BTC",
+      "direction": "LONG",
+      "n_wallets": 4,
+      "avg_score": 0.6252,
+      "max_score": 0.7929,
+      "wallets": [
+        "cat hot wallet",
+        "None",
+        "None",
+        "Sticky"
       ],
       "is_consensus": true,
       "consensus_strength": "STRONG"
@@ -1925,328 +501,47 @@
       "coin": "ETH",
       "direction": "SHORT",
       "n_wallets": 3,
-      "avg_score": 1.194,
-      "max_score": 1.4544,
+      "avg_score": 0.8933,
+      "max_score": 1.3821,
       "wallets": [
-        "None",
-        "BobbyBigSize",
+        "neet to $1",
+        "\u97e6\u5c0f\u5b9d.eth",
         "None"
       ],
       "is_consensus": true,
       "consensus_strength": "STRONG"
+    },
+    {
+      "coin": "ETH",
+      "direction": "LONG",
+      "n_wallets": 2,
+      "avg_score": 0.8193,
+      "max_score": 1.1358,
+      "wallets": [
+        "None",
+        "None"
+      ],
+      "is_consensus": true,
+      "consensus_strength": "MODERATE"
     },
     {
       "coin": "SOL",
-      "direction": "LONG",
-      "n_wallets": 3,
-      "avg_score": 1.194,
-      "max_score": 1.4544,
-      "wallets": [
-        "None",
-        "BobbyBigSize",
-        "None"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "STRONG"
-    },
-    {
-      "coin": "DOGE",
       "direction": "SHORT",
-      "n_wallets": 3,
-      "avg_score": 1.194,
-      "max_score": 1.4544,
+      "n_wallets": 1,
+      "avg_score": 1.3821,
+      "max_score": 1.3821,
       "wallets": [
-        "None",
-        "BobbyBigSize",
-        "None"
+        "neet to $1"
       ],
-      "is_consensus": true,
-      "consensus_strength": "STRONG"
-    },
-    {
-      "coin": "HYPE",
-      "direction": "SHORT",
-      "n_wallets": 3,
-      "avg_score": 1.194,
-      "max_score": 1.4544,
-      "wallets": [
-        "None",
-        "BobbyBigSize",
-        "None"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "STRONG"
-    },
-    {
-      "coin": "PUMP",
-      "direction": "SHORT",
-      "n_wallets": 3,
-      "avg_score": 1.194,
-      "max_score": 1.4544,
-      "wallets": [
-        "None",
-        "BobbyBigSize",
-        "None"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "STRONG"
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
     },
     {
       "coin": "XRP",
       "direction": "LONG",
-      "n_wallets": 2,
-      "avg_score": 1.3099,
-      "max_score": 1.4544,
-      "wallets": [
-        "None",
-        "BobbyBigSize"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "FARTCOIN",
-      "direction": "SHORT",
-      "n_wallets": 2,
-      "avg_score": 1.2083,
-      "max_score": 1.4544,
-      "wallets": [
-        "None",
-        "None"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "AVAX",
-      "direction": "SHORT",
-      "n_wallets": 2,
-      "avg_score": 1.0637,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize",
-        "None"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "BNB",
-      "direction": "SHORT",
-      "n_wallets": 2,
-      "avg_score": 1.0637,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize",
-        "None"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "WLD",
-      "direction": "SHORT",
-      "n_wallets": 2,
-      "avg_score": 1.0637,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize",
-        "None"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ADA",
-      "direction": "SHORT",
-      "n_wallets": 2,
-      "avg_score": 1.0637,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize",
-        "None"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "WIF",
-      "direction": "SHORT",
-      "n_wallets": 2,
-      "avg_score": 1.0637,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize",
-        "None"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "POPCAT",
-      "direction": "SHORT",
-      "n_wallets": 2,
-      "avg_score": 1.0637,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize",
-        "None"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "XPL",
-      "direction": "SHORT",
-      "n_wallets": 2,
-      "avg_score": 1.0637,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize",
-        "None"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ASTER",
-      "direction": "SHORT",
-      "n_wallets": 2,
-      "avg_score": 1.0637,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize",
-        "None"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "WLFI",
-      "direction": "LONG",
       "n_wallets": 1,
-      "avg_score": 1.4544,
-      "max_score": 1.4544,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ASTER",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 1.4544,
-      "max_score": 1.4544,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "LTC",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 1.1654,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "kPEPE",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 1.1654,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ENA",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 1.1654,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "GOAT",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 1.1654,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "PENGU",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 1.1654,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "FARTCOIN",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 1.1654,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "LINEA",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 1.1654,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "XMR",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 1.1654,
-      "max_score": 1.1654,
-      "wallets": [
-        "BobbyBigSize"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ATOM",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
+      "avg_score": 1.1358,
+      "max_score": 1.1358,
       "wallets": [
         "None"
       ],
@@ -2257,130 +552,10 @@
       "coin": "LTC",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
+      "avg_score": 0.7752,
+      "max_score": 0.7752,
       "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ARB",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "INJ",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "SUI",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "kPEPE",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "CRV",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "LDO",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "LINK",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "STX",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "SNX",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "XRP",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
+        "\u97e6\u5c0f\u5b9d.eth"
       ],
       "is_consensus": false,
       "consensus_strength": "MODERATE"
@@ -2389,118 +564,10 @@
       "coin": "BCH",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
+      "avg_score": 0.7752,
+      "max_score": 0.7752,
       "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "APT",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "AAVE",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "TRX",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "kSHIB",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "UNI",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "SEI",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ZRO",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "TIA",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "TON",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
+        "\u97e6\u5c0f\u5b9d.eth"
       ],
       "is_consensus": false,
       "consensus_strength": "MODERATE"
@@ -2509,334 +576,34 @@
       "coin": "NEAR",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
+      "avg_score": 0.7752,
+      "max_score": 0.7752,
       "wallets": [
-        "None"
+        "\u97e6\u5c0f\u5b9d.eth"
       ],
       "is_consensus": false,
       "consensus_strength": "MODERATE"
     },
     {
-      "coin": "PYTH",
+      "coin": "HYPE",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
+      "avg_score": 0.7752,
+      "max_score": 0.7752,
       "wallets": [
-        "None"
+        "\u97e6\u5c0f\u5b9d.eth"
       ],
       "is_consensus": false,
       "consensus_strength": "MODERATE"
     },
     {
-      "coin": "kBONK",
+      "coin": "ANIME",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
+      "avg_score": 0.7752,
+      "max_score": 0.7752,
       "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "JUP",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ONDO",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "STRK",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "TAO",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "kFLOKI",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ETHFI",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ENA",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "EIGEN",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "TURBO",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "BLAST",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "GOAT",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "MOODENG",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "GRASS",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "PURR",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "PNUT",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "XLM",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "CHILLGUY",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ME",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "VIRTUAL",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "PENGU",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "USUAL",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "AIXBT",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "GRIFFAIN",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "SPX",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "MORPHO",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
+        "\u97e6\u5c0f\u5b9d.eth"
       ],
       "is_consensus": false,
       "consensus_strength": "MODERATE"
@@ -2845,8 +612,8 @@
       "coin": "TRUMP",
       "direction": "LONG",
       "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
+      "avg_score": 0.6851,
+      "max_score": 0.6851,
       "wallets": [
         "None"
       ],
@@ -2854,227 +621,11 @@
       "consensus_strength": "MODERATE"
     },
     {
-      "coin": "MELANIA",
+      "coin": "LIT",
       "direction": "LONG",
       "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "VVV",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "BERA",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "TST",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "LAYER",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "IP",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "KAITO",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "PAXG",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ZORA",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "SOPH",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "YZY",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "WLFI",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "AVNT",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "STBL",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "0G",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "2Z",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ZEC",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "MON",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
-      "wallets": [
-        "None"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "MET",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
+      "avg_score": 0.6208,
+      "max_score": 0.6208,
       "wallets": [
         "None"
       ],
@@ -3085,8 +636,80 @@
       "coin": "LIT",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.9621,
-      "max_score": 0.9621,
+      "avg_score": 0.5445,
+      "max_score": 0.5445,
+      "wallets": [
+        "None"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "ATOM",
+      "direction": "LONG",
+      "n_wallets": 1,
+      "avg_score": 0.5227,
+      "max_score": 0.5227,
+      "wallets": [
+        "None"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "DYDX",
+      "direction": "LONG",
+      "n_wallets": 1,
+      "avg_score": 0.5227,
+      "max_score": 0.5227,
+      "wallets": [
+        "None"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "DOGE",
+      "direction": "LONG",
+      "n_wallets": 1,
+      "avg_score": 0.5227,
+      "max_score": 0.5227,
+      "wallets": [
+        "None"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "ADA",
+      "direction": "LONG",
+      "n_wallets": 1,
+      "avg_score": 0.5227,
+      "max_score": 0.5227,
+      "wallets": [
+        "None"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "ALGO",
+      "direction": "LONG",
+      "n_wallets": 1,
+      "avg_score": 0.5227,
+      "max_score": 0.5227,
+      "wallets": [
+        "None"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "SOL",
+      "direction": "LONG",
+      "n_wallets": 1,
+      "avg_score": 0.5027,
+      "max_score": 0.5027,
       "wallets": [
         "None"
       ],
@@ -3094,6 +717,6 @@
       "consensus_strength": "MODERATE"
     }
   ],
-  "n_new_signals": 119,
-  "n_consensus": 16
+  "n_new_signals": 29,
+  "n_consensus": 4
 }
