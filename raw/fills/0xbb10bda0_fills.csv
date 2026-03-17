@@ -1,0 +1,4 @@
+address,coin,side,direction,price,size,value_usd,closed_pnl,fee_usd,time_ms,is_liquidation,crossed,time,is_open,is_close,is_long,is_short
+0xbb10bda01f56b1604f2f024f2d18fcaf5d2b20b0,@4,A,Spot Dust Conversion,1.07124612,0.60115,0.643979605038,0.0,0.0,1767744000119,False,True,2026-01-07 00:00:00.119000+00:00,False,False,False,False
+0xbb10bda01f56b1604f2f024f2d18fcaf5d2b20b0,@107,A,Sell,33.489,10.0,334.89,-36.14031306,0.1875384,1770389982277,False,True,2026-02-06 14:59:42.277000+00:00,False,False,False,False
+0xbb10bda01f56b1604f2f024f2d18fcaf5d2b20b0,HYPE,B,Close Short,32.895,10.1,332.2395,5.4338,0.039868,1770391386423,False,False,2026-02-06 15:23:06.423000+00:00,False,True,False,True

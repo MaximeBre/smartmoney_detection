@@ -1,0 +1,2 @@
+address,coin,side,direction,price,size,value_usd,closed_pnl,fee_usd,time_ms,is_liquidation,crossed,time,is_open,is_close,is_long,is_short
+0xaa7577a7a27aa7fcf6d0ec481b87df3ad0f6a88e,@193,A,Spot Dust Conversion,0.47578,1.57e-06,7.469746e-07,0.0,0.0,1767052800010,False,True,2025-12-30 00:00:00.010000+00:00,False,False,False,False
