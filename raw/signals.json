@@ -1,80 +1,72 @@
 {
-  "generated_at": "2026-03-18T16:56:39.673787+00:00",
+  "generated_at": "2026-03-19T05:23:33.855016+00:00",
   "new_signals": [
     {
-      "timestamp": "2026-03-18T16:56:39.673373+00:00",
-      "coin": "FARTCOIN",
+      "timestamp": "2026-03-19T05:23:33.854646+00:00",
+      "coin": "VVV",
       "direction": "LONG",
-      "primary_wallet": "0x8b61a50f7091abbc7ab292d3a24b9eeb4a29c0c2",
-      "primary_wallet_name": "nan",
-      "primary_score": 1.5,
+      "primary_wallet": "0xa6e2dc44418f5ad213c86db4dbb203a59d13c49f",
+      "primary_wallet_name": "neet to $1",
+      "primary_score": 1.3821,
       "consensus_wallets": 1,
-      "consensus_confidence": 1.5,
+      "consensus_confidence": 1.3821,
       "signal_strength": "MODERATE",
-      "entry_price": 0.19701,
-      "leverage": 5.0,
+      "entry_price": 5.8949,
+      "leverage": 3.0,
       "grade": "TIER_1",
-      "action": "LONG FARTCOIN",
-      "note": "1 smart money wallets LONG FARTCOIN (avg score: 1.50)"
+      "action": "LONG VVV",
+      "note": "1 smart money wallets LONG VVV (avg score: 1.38)"
     },
     {
-      "timestamp": "2026-03-18T16:56:39.673404+00:00",
-      "coin": "PENGU",
+      "timestamp": "2026-03-19T05:23:33.854763+00:00",
+      "coin": "HYPE",
       "direction": "LONG",
-      "primary_wallet": "0x8b61a50f7091abbc7ab292d3a24b9eeb4a29c0c2",
+      "primary_wallet": "0xb4a9964201c213af0c9c7f62af561813c9a2f1f7",
       "primary_wallet_name": "nan",
-      "primary_score": 1.5,
-      "consensus_wallets": 1,
-      "consensus_confidence": 1.5,
-      "signal_strength": "MODERATE",
-      "entry_price": 0.007511,
-      "leverage": 5.0,
+      "primary_score": 0.4172,
+      "consensus_wallets": 6,
+      "consensus_confidence": 0.6821,
+      "signal_strength": "STRONG",
+      "entry_price": 41.6157,
+      "leverage": 10.0,
       "grade": "TIER_1",
-      "action": "LONG PENGU",
-      "note": "1 smart money wallets LONG PENGU (avg score: 1.50)"
+      "action": "LONG HYPE",
+      "note": "6 smart money wallets LONG HYPE (avg score: 0.68)"
+    },
+    {
+      "timestamp": "2026-03-19T05:23:33.854801+00:00",
+      "coin": "HYPE",
+      "direction": "LONG",
+      "primary_wallet": "0x9466140c8781e253fe426c87ac17ccba500140ff",
+      "primary_wallet_name": "nan",
+      "primary_score": 0.3519,
+      "consensus_wallets": 6,
+      "consensus_confidence": 0.6821,
+      "signal_strength": "STRONG",
+      "entry_price": 32.4538,
+      "leverage": 5.0,
+      "grade": "TIER_2",
+      "action": "LONG HYPE",
+      "note": "6 smart money wallets LONG HYPE (avg score: 0.68)"
     }
   ],
   "current_consensus": [
     {
       "coin": "HYPE",
       "direction": "LONG",
-      "n_wallets": 4,
-      "avg_score": 0.8308,
+      "n_wallets": 6,
+      "avg_score": 0.6821,
       "max_score": 1.3821,
       "wallets": [
         "neet to $1",
         "nan",
         "nan",
-        "Sticky"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "STRONG"
-    },
-    {
-      "coin": "BTC",
-      "direction": "SHORT",
-      "n_wallets": 2,
-      "avg_score": 1.0398,
-      "max_score": 1.3821,
-      "wallets": [
-        "neet to $1",
+        "Sticky",
+        "nan",
         "nan"
       ],
       "is_consensus": true,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ETH",
-      "direction": "SHORT",
-      "n_wallets": 2,
-      "avg_score": 0.9074,
-      "max_score": 1.3821,
-      "wallets": [
-        "neet to $1",
-        "ibench240"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "MODERATE"
+      "consensus_strength": "STRONG"
     },
     {
       "coin": "BTC",
@@ -90,32 +82,20 @@
       "consensus_strength": "MODERATE"
     },
     {
-      "coin": "PENGU",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 1.5,
-      "max_score": 1.5,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "FARTCOIN",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 1.5,
-      "max_score": 1.5,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
       "coin": "SOL",
       "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 1.3821,
+      "max_score": 1.3821,
+      "wallets": [
+        "neet to $1"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "VVV",
+      "direction": "LONG",
       "n_wallets": 1,
       "avg_score": 1.3821,
       "max_score": 1.3821,
@@ -162,6 +142,18 @@
       "consensus_strength": "MODERATE"
     },
     {
+      "coin": "BTC",
+      "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 0.6976,
+      "max_score": 0.6976,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
       "coin": "TRUMP",
       "direction": "SHORT",
       "n_wallets": 1,
@@ -186,6 +178,6 @@
       "consensus_strength": "MODERATE"
     }
   ],
-  "n_new_signals": 2,
-  "n_consensus": 4
+  "n_new_signals": 3,
+  "n_consensus": 2
 }
