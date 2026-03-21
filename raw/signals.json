@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-21T12:34:09.312365+00:00",
+  "generated_at": "2026-03-21T16:23:12.451334+00:00",
   "new_signals": [],
   "current_consensus": [
     {
@@ -21,13 +21,13 @@
       "coin": "HYPE",
       "direction": "LONG",
       "n_wallets": 4,
-      "avg_score": 0.5907,
+      "avg_score": 0.6056,
       "max_score": 0.9166,
       "wallets": [
         "nan",
         "nan",
-        "Sticky",
-        "nan"
+        "nan",
+        "Sticky"
       ],
       "is_consensus": true,
       "consensus_strength": "STRONG"
@@ -254,8 +254,8 @@
       "coin": "WLFI",
       "direction": "LONG",
       "n_wallets": 1,
-      "avg_score": 0.4039,
-      "max_score": 0.4039,
+      "avg_score": 0.3738,
+      "max_score": 0.3738,
       "wallets": [
         "nan"
       ],
