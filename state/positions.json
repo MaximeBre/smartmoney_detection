@@ -6,7 +6,25 @@
     "display_name": "nan",
     "ic_8h": 4.3861,
     "ic_recent_8h": 4.4066,
-    "snapshot_time": "2026-03-21T20:21:20.277527+00:00"
+    "snapshot_time": "2026-03-22T01:26:21.229010+00:00"
+  },
+  "0x3c83dbcda8d9fbefb75181f40d51205648defc7d": {
+    "positions": {
+      "XRP": {
+        "size": 366529.0,
+        "side": "LONG",
+        "entry_price": 1.421012,
+        "unrealized_pnl": -3962.9395,
+        "leverage": 10.0,
+        "abs_size": 366529.0
+      }
+    },
+    "smart_money_score": 1.4835,
+    "grade": "TIER_1",
+    "display_name": "nan",
+    "ic_8h": 53.1925,
+    "ic_recent_8h": 90.5043,
+    "snapshot_time": "2026-03-22T01:26:21.462310+00:00"
   },
   "0xab961d7c42bbcd454a54b342bd191a8f090219e6": {
     "positions": {},
@@ -15,25 +33,7 @@
     "display_name": "nan",
     "ic_8h": 4.0881,
     "ic_recent_8h": 7.7315,
-    "snapshot_time": "2026-03-21T20:21:20.558220+00:00"
-  },
-  "0xcb58b8f5ec6d47985f0728465c25a08ef9ad2c7b": {
-    "positions": {
-      "BTC": {
-        "size": 65.0,
-        "side": "LONG",
-        "entry_price": 69726.2,
-        "unrealized_pnl": 43080.13428,
-        "leverage": 31.0,
-        "abs_size": 65.0
-      }
-    },
-    "smart_money_score": 1.4311,
-    "grade": "TIER_1",
-    "display_name": "cat hot wallet",
-    "ic_8h": 3.56,
-    "ic_recent_8h": 3.56,
-    "snapshot_time": "2026-03-21T20:21:20.840994+00:00"
+    "snapshot_time": "2026-03-22T01:26:21.686798+00:00"
   },
   "0x4000e1793bef8327e069c2ebc093b32ce06b6633": {
     "positions": {},
@@ -42,7 +42,25 @@
     "display_name": "nan",
     "ic_8h": 3.5568,
     "ic_recent_8h": 3.5568,
-    "snapshot_time": "2026-03-21T20:21:21.205811+00:00"
+    "snapshot_time": "2026-03-22T01:26:21.915895+00:00"
+  },
+  "0xcb58b8f5ec6d47985f0728465c25a08ef9ad2c7b": {
+    "positions": {
+      "BTC": {
+        "size": 65.0,
+        "side": "LONG",
+        "entry_price": 69726.2,
+        "unrealized_pnl": -47464.86572,
+        "leverage": 31.0,
+        "abs_size": 65.0
+      }
+    },
+    "smart_money_score": 1.3296,
+    "grade": "TIER_1",
+    "display_name": "cat hot wallet",
+    "ic_8h": 10.2813,
+    "ic_recent_8h": 10.2813,
+    "snapshot_time": "2026-03-22T01:26:22.343884+00:00"
   },
   "0xc171aca4843aa4765e88ebf2b35d0808a623815d": {
     "positions": {},
@@ -51,7 +69,7 @@
     "display_name": "SamuraiTakedown",
     "ic_8h": 1.13,
     "ic_recent_8h": 1.656,
-    "snapshot_time": "2026-03-21T20:21:21.551750+00:00"
+    "snapshot_time": "2026-03-22T01:26:22.570390+00:00"
   },
   "0x36076e4bfad9624d7feba562326fdfa2063ede23": {
     "positions": {
@@ -59,7 +77,7 @@
         "size": -40.63,
         "side": "SHORT",
         "entry_price": 40.3694,
-        "unrealized_pnl": 13.46573,
+        "unrealized_pnl": 42.96311,
         "leverage": 10.0,
         "abs_size": 40.63
       }
@@ -69,7 +87,7 @@
     "display_name": "nan",
     "ic_8h": 0.9316,
     "ic_recent_8h": 1.0057,
-    "snapshot_time": "2026-03-21T20:21:21.835963+00:00"
+    "snapshot_time": "2026-03-22T01:26:22.865843+00:00"
   },
   "0x8a3cf3c4b300be69429cce5beb2ef14d7200b6b7": {
     "positions": {
@@ -77,17 +95,17 @@
         "size": 50000.0,
         "side": "LONG",
         "entry_price": 32.5007,
-        "unrealized_pnl": 376863.314508,
+        "unrealized_pnl": 340563.314508,
         "leverage": 10.0,
         "abs_size": 50000.0
       }
     },
-    "smart_money_score": 0.9166,
+    "smart_money_score": 0.9182,
     "grade": "TIER_1",
     "display_name": "nan",
-    "ic_8h": 0.2591,
+    "ic_8h": 0.2643,
     "ic_recent_8h": 2.7594,
-    "snapshot_time": "2026-03-21T20:21:22.116283+00:00"
+    "snapshot_time": "2026-03-22T01:26:23.101110+00:00"
   },
   "0x6a9edc73adbcfd02f58ee95b3cbf742973f641c2": {
     "positions": {},
@@ -96,7 +114,25 @@
     "display_name": "nan",
     "ic_8h": 1.2456,
     "ic_recent_8h": 1.2456,
-    "snapshot_time": "2026-03-21T20:21:22.402859+00:00"
+    "snapshot_time": "2026-03-22T01:26:23.322063+00:00"
+  },
+  "0x0a7097d919b7421ecc03aed3aac68a13e7ef1f46": {
+    "positions": {
+      "LIT": {
+        "size": -92982.0,
+        "side": "SHORT",
+        "entry_price": 1.150529,
+        "unrealized_pnl": 11281.4883,
+        "leverage": 5.0,
+        "abs_size": 92982.0
+      }
+    },
+    "smart_money_score": 0.88,
+    "grade": "TIER_1",
+    "display_name": "nan",
+    "ic_8h": 0.1074,
+    "ic_recent_8h": 5.8886,
+    "snapshot_time": "2026-03-22T01:26:23.759362+00:00"
   },
   "0xcb6eeb25417d2cd5dfeb52b54f72c49f7490bea9": {
     "positions": {},
@@ -105,57 +141,116 @@
     "display_name": "vphill",
     "ic_8h": 0.3202,
     "ic_recent_8h": 23.2234,
-    "snapshot_time": "2026-03-21T20:21:22.690479+00:00"
+    "snapshot_time": "2026-03-22T01:26:24.075416+00:00"
+  },
+  "0xe0d8fd312d7bd72d7de328923d7dcf08340c0f83": {
+    "positions": {},
+    "smart_money_score": 0.7824,
+    "grade": "TIER_1",
+    "display_name": "nan",
+    "ic_8h": 0.206,
+    "ic_recent_8h": 35.0405,
+    "snapshot_time": "2026-03-22T01:26:24.307865+00:00"
+  },
+  "0x99b1098d9d50aa076f78bd26ab22e6abd3710729": {
+    "positions": {
+      "ETH": {
+        "size": -6.162,
+        "side": "SHORT",
+        "entry_price": 3009.22,
+        "unrealized_pnl": 5663.624578,
+        "leverage": 3.0,
+        "abs_size": 6.162
+      },
+      "LTC": {
+        "size": -7307.5,
+        "side": "SHORT",
+        "entry_price": 77.1053,
+        "unrealized_pnl": 163953.575,
+        "leverage": 10.0,
+        "abs_size": 7307.5
+      },
+      "BCH": {
+        "size": -760.0,
+        "side": "SHORT",
+        "entry_price": 580.041,
+        "unrealized_pnl": 91755.8378,
+        "leverage": 10.0,
+        "abs_size": 760.0
+      },
+      "FET": {
+        "size": -8.0,
+        "side": "SHORT",
+        "entry_price": 0.236643,
+        "unrealized_pnl": 0.147468,
+        "leverage": 5.0,
+        "abs_size": 8.0
+      },
+      "ETHFI": {
+        "size": -75.8,
+        "side": "SHORT",
+        "entry_price": 0.52702,
+        "unrealized_pnl": -4.510858,
+        "leverage": 5.0,
+        "abs_size": 75.8
+      },
+      "HYPE": {
+        "size": -12091.8,
+        "side": "SHORT",
+        "entry_price": 29.7269,
+        "unrealized_pnl": -115900.534065,
+        "leverage": 10.0,
+        "abs_size": 12091.8
+      }
+    },
+    "smart_money_score": 0.7752,
+    "grade": "TIER_1",
+    "display_name": "\u97e6\u5c0f\u5b9d.eth",
+    "ic_8h": 1.0573,
+    "ic_recent_8h": 1.0573,
+    "snapshot_time": "2026-03-22T01:26:24.578073+00:00"
   },
   "0xa6e2dc44418f5ad213c86db4dbb203a59d13c49f": {
     "positions": {
       "BTC": {
-        "size": -8.54727,
+        "size": -8.83763,
         "side": "SHORT",
-        "entry_price": 70394.9,
-        "unrealized_pnl": 51.22536,
+        "entry_price": 70344.5,
+        "unrealized_pnl": 11918.35612,
         "leverage": 9.0,
-        "abs_size": 8.54727
+        "abs_size": 8.83763
       },
       "ETH": {
-        "size": -281.3873,
+        "size": -286.1949,
         "side": "SHORT",
-        "entry_price": 2140.86,
-        "unrealized_pnl": -3076.44297,
+        "entry_price": 2139.83,
+        "unrealized_pnl": 14232.7506,
         "leverage": 25.0,
-        "abs_size": 281.3873
+        "abs_size": 286.1949
       },
       "SOL": {
         "size": -6768.99,
         "side": "SHORT",
         "entry_price": 89.0363,
-        "unrealized_pnl": -5439.83777,
+        "unrealized_pnl": 11218.64662,
         "leverage": 20.0,
         "abs_size": 6768.99
       },
       "HYPE": {
-        "size": -10172.69,
+        "size": -14154.14,
         "side": "SHORT",
-        "entry_price": 39.4294,
-        "unrealized_pnl": -6190.93911,
+        "entry_price": 39.3789,
+        "unrealized_pnl": 947.03282,
         "leverage": 10.0,
-        "abs_size": 10172.69
-      },
-      "VVV": {
-        "size": 14791.06,
-        "side": "LONG",
-        "entry_price": 5.8949,
-        "unrealized_pnl": 4357.827307,
-        "leverage": 3.0,
-        "abs_size": 14791.06
+        "abs_size": 14154.14
       },
       "SKY": {
-        "size": 2045883.0,
+        "size": 2674055.0,
         "side": "LONG",
-        "entry_price": 0.07418,
-        "unrealized_pnl": 7482.644349,
+        "entry_price": 0.075083,
+        "unrealized_pnl": 363.337754,
         "leverage": 3.0,
-        "abs_size": 2045883.0
+        "abs_size": 2674055.0
       }
     },
     "smart_money_score": 0.7518,
@@ -163,7 +258,7 @@
     "display_name": "neet to $1",
     "ic_8h": 1.1671,
     "ic_recent_8h": 1.1671,
-    "snapshot_time": "2026-03-21T20:21:23.642506+00:00"
+    "snapshot_time": "2026-03-22T01:26:24.797507+00:00"
   },
   "0xc6758a779bccee1ef0190dbe8292fdf44076795d": {
     "positions": {
@@ -171,7 +266,7 @@
         "size": -93.59513,
         "side": "SHORT",
         "entry_price": 72995.2,
-        "unrealized_pnl": 243935.43993,
+        "unrealized_pnl": 374313.45602,
         "leverage": 12.0,
         "abs_size": 93.59513
       },
@@ -179,7 +274,7 @@
         "size": -112364.9,
         "side": "SHORT",
         "entry_price": 3.81508,
-        "unrealized_pnl": 52978.62891,
+        "unrealized_pnl": 61304.868,
         "leverage": 10.0,
         "abs_size": 112364.9
       }
@@ -189,7 +284,7 @@
     "display_name": "nan",
     "ic_8h": 0.6357,
     "ic_recent_8h": 0.6357,
-    "snapshot_time": "2026-03-21T20:21:23.924245+00:00"
+    "snapshot_time": "2026-03-22T01:26:25.021018+00:00"
   },
   "0x30031f21e4927c7b7c8d9bdb803bc14e57388028": {
     "positions": {
@@ -197,7 +292,7 @@
         "size": 0.10395,
         "side": "LONG",
         "entry_price": 70070.7,
-        "unrealized_pnl": 33.08657,
+        "unrealized_pnl": -111.71578,
         "leverage": 20.0,
         "abs_size": 0.10395
       },
@@ -205,7 +300,7 @@
         "size": -0.8887,
         "side": "SHORT",
         "entry_price": 2272.86,
-        "unrealized_pnl": 107.591352,
+        "unrealized_pnl": 162.424142,
         "leverage": 20.0,
         "abs_size": 0.8887
       },
@@ -213,7 +308,7 @@
         "size": 117.37,
         "side": "LONG",
         "entry_price": 1.8442,
-        "unrealized_pnl": -1.901394,
+        "unrealized_pnl": -7.030463,
         "leverage": 5.0,
         "abs_size": 117.37
       },
@@ -221,7 +316,7 @@
         "size": -259.0,
         "side": "SHORT",
         "entry_price": 0.101287,
-        "unrealized_pnl": 1.86273,
+        "unrealized_pnl": 2.576793,
         "leverage": 10.0,
         "abs_size": 259.0
       },
@@ -229,7 +324,7 @@
         "size": 1.0,
         "side": "LONG",
         "entry_price": 9.8414,
-        "unrealized_pnl": -0.7619,
+        "unrealized_pnl": -0.9894,
         "leverage": 10.0,
         "abs_size": 1.0
       },
@@ -237,7 +332,7 @@
         "size": -779.0,
         "side": "SHORT",
         "entry_price": 1.439611,
-        "unrealized_pnl": 0.7101,
+        "unrealized_pnl": 22.9116,
         "leverage": 20.0,
         "abs_size": 779.0
       },
@@ -245,7 +340,7 @@
         "size": -2.193,
         "side": "SHORT",
         "entry_price": 456.478,
-        "unrealized_pnl": -23.556028,
+        "unrealized_pnl": -6.209398,
         "leverage": 10.0,
         "abs_size": 2.193
       },
@@ -253,7 +348,7 @@
         "size": 658.0,
         "side": "LONG",
         "entry_price": 1.5112,
-        "unrealized_pnl": -11.5808,
+        "unrealized_pnl": -29.8732,
         "leverage": 10.0,
         "abs_size": 658.0
       },
@@ -261,7 +356,7 @@
         "size": 3676.0,
         "side": "LONG",
         "entry_price": 0.2723,
-        "unrealized_pnl": -26.688,
+        "unrealized_pnl": -57.41936,
         "leverage": 10.0,
         "abs_size": 3676.0
       },
@@ -269,7 +364,7 @@
         "size": -151.0,
         "side": "SHORT",
         "entry_price": 0.106591,
-        "unrealized_pnl": 2.910386,
+        "unrealized_pnl": 3.219181,
         "leverage": 3.0,
         "abs_size": 151.0
       },
@@ -277,7 +372,7 @@
         "size": -2365.0,
         "side": "SHORT",
         "entry_price": 0.158271,
-        "unrealized_pnl": -16.881949,
+        "unrealized_pnl": -8.273349,
         "leverage": 5.0,
         "abs_size": 2365.0
       },
@@ -285,17 +380,17 @@
         "size": -12574.0,
         "side": "SHORT",
         "entry_price": 0.081313,
-        "unrealized_pnl": 1.80543,
+        "unrealized_pnl": 33.05182,
         "leverage": 5.0,
         "abs_size": 12574.0
       }
     },
-    "smart_money_score": 0.6038,
+    "smart_money_score": 0.5988,
     "grade": "TIER_1",
     "display_name": "nan",
-    "ic_8h": 0.5651,
-    "ic_recent_8h": 0.5651,
-    "snapshot_time": "2026-03-21T20:21:24.357957+00:00"
+    "ic_8h": 0.5607,
+    "ic_recent_8h": 0.5607,
+    "snapshot_time": "2026-03-22T01:26:25.242595+00:00"
   },
   "0x7a2dec2cf9247964f22afae48fc7d6ad5b71e137": {
     "positions": {},
@@ -304,7 +399,7 @@
     "display_name": "nan",
     "ic_8h": 0.8215,
     "ic_recent_8h": 0.8215,
-    "snapshot_time": "2026-03-21T20:21:24.646084+00:00"
+    "snapshot_time": "2026-03-22T01:26:25.470678+00:00"
   },
   "0xfc84a4bba95d3a13f91a9c0d735c0af04a18f4d0": {
     "positions": {
@@ -312,7 +407,7 @@
         "size": 1e-05,
         "side": "LONG",
         "entry_price": 70750.0,
-        "unrealized_pnl": -0.00361,
+        "unrealized_pnl": -0.01754,
         "leverage": 5.0,
         "abs_size": 1e-05
       },
@@ -320,7 +415,7 @@
         "size": 0.01,
         "side": "LONG",
         "entry_price": 31.7798,
-        "unrealized_pnl": 0.082572,
+        "unrealized_pnl": 0.075322,
         "leverage": 2.0,
         "abs_size": 0.01
       }
@@ -330,7 +425,7 @@
     "display_name": "nan",
     "ic_8h": 0.6494,
     "ic_recent_8h": 0.6494,
-    "snapshot_time": "2026-03-21T20:21:24.926186+00:00"
+    "snapshot_time": "2026-03-22T01:26:25.701676+00:00"
   },
   "0x99967871e6c4f9a5185abc57edede9e9540191f6": {
     "positions": {
@@ -338,7 +433,7 @@
         "size": -2646357.0,
         "side": "SHORT",
         "entry_price": 1.722505,
-        "unrealized_pnl": 1676745.2364,
+        "unrealized_pnl": 1834732.7493,
         "leverage": 2.0,
         "abs_size": 2646357.0
       }
@@ -348,7 +443,7 @@
     "display_name": "nan",
     "ic_8h": 0.8412,
     "ic_recent_8h": 0.8412,
-    "snapshot_time": "2026-03-21T20:21:25.318705+00:00"
+    "snapshot_time": "2026-03-22T01:26:25.934099+00:00"
   },
   "0x612ca98c658c7a2de1f239a1d2a9e18c356e724a": {
     "positions": {},
@@ -357,68 +452,6 @@
     "display_name": "nan",
     "ic_8h": 0.4684,
     "ic_recent_8h": 0.4684,
-    "snapshot_time": "2026-03-21T20:21:25.600114+00:00"
-  },
-  "0xb4a9964201c213af0c9c7f62af561813c9a2f1f7": {
-    "positions": {
-      "HYPE": {
-        "size": 23831.42,
-        "side": "LONG",
-        "entry_price": 41.1369,
-        "unrealized_pnl": -26212.205325,
-        "leverage": 10.0,
-        "abs_size": 23831.42
-      }
-    },
-    "smart_money_score": 0.483,
-    "grade": "TIER_1",
-    "display_name": "nan",
-    "ic_8h": 0.6652,
-    "ic_recent_8h": 0.6652,
-    "snapshot_time": "2026-03-21T20:21:25.882688+00:00"
-  },
-  "0x613ead0ea5af374af0ccfc117ef116a8e8d133fe": {
-    "positions": {
-      "BTC": {
-        "size": 2.0,
-        "side": "LONG",
-        "entry_price": 75597.0,
-        "unrealized_pnl": -10416.0,
-        "leverage": 20.0,
-        "abs_size": 2.0
-      },
-      "HYPE": {
-        "size": 20000.0,
-        "side": "LONG",
-        "entry_price": 36.4529,
-        "unrealized_pnl": 71681.668084,
-        "leverage": 10.0,
-        "abs_size": 20000.0
-      }
-    },
-    "smart_money_score": 0.4774,
-    "grade": "TIER_1",
-    "display_name": "Sticky",
-    "ic_8h": 0.7764,
-    "ic_recent_8h": 0.7764,
-    "snapshot_time": "2026-03-21T20:21:26.163505+00:00"
-  },
-  "0x97be9c7904f9c772a3efbf9e10286b91ba8a773e": {
-    "positions": {},
-    "smart_money_score": 0.3528,
-    "grade": "TIER_2",
-    "display_name": "nan",
-    "ic_8h": 0.449,
-    "ic_recent_8h": 0.432,
-    "snapshot_time": "2026-03-21T20:21:26.471162+00:00"
-  },
-  "0xa10ec245b3483f83e350a9165a52ae23dbab01bc": {
-    "positions": {},
-    "smart_money_score": 0.3331,
-    "grade": "TIER_2",
-    "display_name": "nan",
-    "ic_8h": 0.4648,
-    "ic_recent_8h": 0.4648,
-    "snapshot_time": "2026-03-21T20:21:26.754886+00:00"
+    "snapshot_time": "2026-03-22T01:26:26.165673+00:00"
   }
 }
