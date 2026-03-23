@@ -1,2 +1,5 @@
 timestamp,coin,direction,primary_wallet,primary_wallet_name,primary_score,consensus_wallets,consensus_confidence,signal_strength,entry_price,leverage,grade,action,note
-2026-03-22T20:21:58.921746+00:00,HYPE,LONG,0x612ca98c658c7a2de1f239a1d2a9e18c356e724a,nan,0.4351,6,0.5484,STRONG,37.967,10.0,TIER_1,LONG HYPE,6 smart money wallets LONG HYPE (avg score: 0.55)
+2026-03-23T01:27:07.419224+00:00,TAO,SHORT,0x6a9edc73adbcfd02f58ee95b3cbf742973f641c2,nan,0.8806,1,0.8806,MODERATE,263.517,5.0,TIER_1,SHORT TAO,1 smart money wallets SHORT TAO (avg score: 0.88)
+2026-03-23T01:27:07.419250+00:00,PAXG,LONG,0xa6e2dc44418f5ad213c86db4dbb203a59d13c49f,neet to $1,0.7518,1,0.7518,MODERATE,4463.22,10.0,TIER_1,LONG PAXG,1 smart money wallets LONG PAXG (avg score: 0.75)
+2026-03-23T01:27:07.419261+00:00,XMR,LONG,0xa6e2dc44418f5ad213c86db4dbb203a59d13c49f,neet to $1,0.7518,1,0.7518,MODERATE,362.775,5.0,TIER_1,LONG XMR,1 smart money wallets LONG XMR (avg score: 0.75)
+2026-03-23T01:27:07.419351+00:00,HYPE,LONG,0x547c8d938b98cd17ab7c653a0d98cca80eabb876,nan,0.5675,5,0.5979,STRONG,37.803,10.0,TIER_1,LONG HYPE,5 smart money wallets LONG HYPE (avg score: 0.60)
