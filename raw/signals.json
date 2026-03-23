@@ -1,69 +1,21 @@
 {
-  "generated_at": "2026-03-23T01:27:07.419734+00:00",
+  "generated_at": "2026-03-23T05:30:56.307619+00:00",
   "new_signals": [
     {
-      "timestamp": "2026-03-23T01:27:07.419224+00:00",
+      "timestamp": "2026-03-23T05:30:56.307258+00:00",
       "coin": "TAO",
       "direction": "SHORT",
-      "primary_wallet": "0x6a9edc73adbcfd02f58ee95b3cbf742973f641c2",
+      "primary_wallet": "0x0a7097d919b7421ecc03aed3aac68a13e7ef1f46",
       "primary_wallet_name": "nan",
-      "primary_score": 0.8806,
+      "primary_score": 0.8949,
       "consensus_wallets": 1,
-      "consensus_confidence": 0.8806,
+      "consensus_confidence": 0.8949,
       "signal_strength": "MODERATE",
-      "entry_price": 263.517,
+      "entry_price": 275.761,
       "leverage": 5.0,
       "grade": "TIER_1",
       "action": "SHORT TAO",
-      "note": "1 smart money wallets SHORT TAO (avg score: 0.88)"
-    },
-    {
-      "timestamp": "2026-03-23T01:27:07.419250+00:00",
-      "coin": "PAXG",
-      "direction": "LONG",
-      "primary_wallet": "0xa6e2dc44418f5ad213c86db4dbb203a59d13c49f",
-      "primary_wallet_name": "neet to $1",
-      "primary_score": 0.7518,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.7518,
-      "signal_strength": "MODERATE",
-      "entry_price": 4463.22,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "LONG PAXG",
-      "note": "1 smart money wallets LONG PAXG (avg score: 0.75)"
-    },
-    {
-      "timestamp": "2026-03-23T01:27:07.419261+00:00",
-      "coin": "XMR",
-      "direction": "LONG",
-      "primary_wallet": "0xa6e2dc44418f5ad213c86db4dbb203a59d13c49f",
-      "primary_wallet_name": "neet to $1",
-      "primary_score": 0.7518,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.7518,
-      "signal_strength": "MODERATE",
-      "entry_price": 362.775,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "LONG XMR",
-      "note": "1 smart money wallets LONG XMR (avg score: 0.75)"
-    },
-    {
-      "timestamp": "2026-03-23T01:27:07.419351+00:00",
-      "coin": "HYPE",
-      "direction": "LONG",
-      "primary_wallet": "0x547c8d938b98cd17ab7c653a0d98cca80eabb876",
-      "primary_wallet_name": "nan",
-      "primary_score": 0.5675,
-      "consensus_wallets": 5,
-      "consensus_confidence": 0.5979,
-      "signal_strength": "STRONG",
-      "entry_price": 37.803,
-      "leverage": 10.0,
-      "grade": "TIER_1",
-      "action": "LONG HYPE",
-      "note": "5 smart money wallets LONG HYPE (avg score: 0.60)"
+      "note": "1 smart money wallets SHORT TAO (avg score: 0.89)"
     }
   ],
   "current_consensus": [
@@ -178,8 +130,8 @@
       "coin": "TAO",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.8806,
-      "max_score": 0.8806,
+      "avg_score": 0.8949,
+      "max_score": 0.8949,
       "wallets": [
         "nan"
       ],
@@ -295,6 +247,6 @@
       "consensus_strength": "MODERATE"
     }
   ],
-  "n_new_signals": 4,
+  "n_new_signals": 1,
   "n_consensus": 6
 }
