@@ -1,37 +1,19 @@
 {
-  "generated_at": "2026-03-23T16:53:28.289350+00:00",
-  "new_signals": [
-    {
-      "timestamp": "2026-03-23T16:53:28.288914+00:00",
-      "coin": "BTC",
-      "direction": "LONG",
-      "primary_wallet": "0x36076e4bfad9624d7feba562326fdfa2063ede23",
-      "primary_wallet_name": "nan",
-      "primary_score": 1.0622,
-      "consensus_wallets": 3,
-      "consensus_confidence": 0.7115,
-      "signal_strength": "STRONG",
-      "entry_price": 70650.1,
-      "leverage": 40.0,
-      "grade": "TIER_1",
-      "action": "LONG BTC",
-      "note": "3 smart money wallets LONG BTC (avg score: 0.71)"
-    }
-  ],
+  "generated_at": "2026-03-23T20:34:31.829797+00:00",
+  "new_signals": [],
   "current_consensus": [
     {
       "coin": "HYPE",
       "direction": "LONG",
-      "n_wallets": 6,
-      "avg_score": 0.5755,
+      "n_wallets": 5,
+      "avg_score": 0.5979,
       "max_score": 0.9163,
       "wallets": [
         "nan",
         "nan",
         "nan",
         "nan",
-        "Sticky",
-        "nan"
+        "Sticky"
       ],
       "is_consensus": true,
       "consensus_strength": "STRONG"
@@ -126,18 +108,6 @@
       "consensus_strength": "MODERATE"
     },
     {
-      "coin": "SKY",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.7518,
-      "max_score": 0.7518,
-      "wallets": [
-        "neet to $1"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
       "coin": "LIT",
       "direction": "SHORT",
       "n_wallets": 1,
@@ -210,6 +180,6 @@
       "consensus_strength": "MODERATE"
     }
   ],
-  "n_new_signals": 1,
+  "n_new_signals": 0,
   "n_consensus": 5
 }
