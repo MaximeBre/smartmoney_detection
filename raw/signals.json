@@ -1,23 +1,6 @@
 {
-  "generated_at": "2026-03-23T05:30:56.307619+00:00",
-  "new_signals": [
-    {
-      "timestamp": "2026-03-23T05:30:56.307258+00:00",
-      "coin": "TAO",
-      "direction": "SHORT",
-      "primary_wallet": "0x0a7097d919b7421ecc03aed3aac68a13e7ef1f46",
-      "primary_wallet_name": "nan",
-      "primary_score": 0.8949,
-      "consensus_wallets": 1,
-      "consensus_confidence": 0.8949,
-      "signal_strength": "MODERATE",
-      "entry_price": 275.761,
-      "leverage": 5.0,
-      "grade": "TIER_1",
-      "action": "SHORT TAO",
-      "note": "1 smart money wallets SHORT TAO (avg score: 0.89)"
-    }
-  ],
+  "generated_at": "2026-03-23T08:49:06.742484+00:00",
+  "new_signals": [],
   "current_consensus": [
     {
       "coin": "HYPE",
@@ -163,30 +146,6 @@
       "consensus_strength": "MODERATE"
     },
     {
-      "coin": "FET",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.7752,
-      "max_score": 0.7752,
-      "wallets": [
-        "\u97e6\u5c0f\u5b9d.eth"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ETHFI",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.7752,
-      "max_score": 0.7752,
-      "wallets": [
-        "\u97e6\u5c0f\u5b9d.eth"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
       "coin": "PAXG",
       "direction": "LONG",
       "n_wallets": 1,
@@ -247,6 +206,6 @@
       "consensus_strength": "MODERATE"
     }
   ],
-  "n_new_signals": 1,
+  "n_new_signals": 0,
   "n_consensus": 6
 }
