@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-03-24T16:57:41.377396+00:00",
+  "generated_at": "2026-03-24T20:37:36.478736+00:00",
   "new_signals": [
     {
-      "timestamp": "2026-03-24T16:57:41.377118+00:00",
-      "coin": "BTC",
+      "timestamp": "2026-03-24T20:37:36.478346+00:00",
+      "coin": "WLD",
       "direction": "LONG",
-      "primary_wallet": "0x6f31fef250a34a025f7784a2e3a02b4921b30394",
-      "primary_wallet_name": "ibench240",
-      "primary_score": 0.4346,
-      "consensus_wallets": 3,
-      "consensus_confidence": 0.6808,
-      "signal_strength": "STRONG",
-      "entry_price": 70628.5,
-      "leverage": 40.0,
+      "primary_wallet": "0x52081a6912cfa64968999fbeb31387446a49b207",
+      "primary_wallet_name": "nan",
+      "primary_score": 0.4307,
+      "consensus_wallets": 1,
+      "consensus_confidence": 0.4307,
+      "signal_strength": "MODERATE",
+      "entry_price": 0.31776,
+      "leverage": 10.0,
       "grade": "TIER_1",
-      "action": "LONG BTC",
-      "note": "3 smart money wallets LONG BTC (avg score: 0.68)"
+      "action": "LONG WLD",
+      "note": "1 smart money wallets LONG WLD (avg score: 0.43)"
     }
   ],
   "current_consensus": [
@@ -49,27 +49,14 @@
       "consensus_strength": "STRONG"
     },
     {
-      "coin": "BTC",
-      "direction": "SHORT",
-      "n_wallets": 2,
-      "avg_score": 1.1847,
-      "max_score": 1.3821,
-      "wallets": [
-        "neet to $1",
-        "nan"
-      ],
-      "is_consensus": true,
-      "consensus_strength": "MODERATE"
-    },
-    {
       "coin": "ETH",
       "direction": "SHORT",
       "n_wallets": 2,
-      "avg_score": 1.0787,
-      "max_score": 1.3821,
+      "avg_score": 0.7635,
+      "max_score": 0.7752,
       "wallets": [
-        "neet to $1",
-        "\u97e6\u5c0f\u5b9d.eth"
+        "\u97e6\u5c0f\u5b9d.eth",
+        "neet to $1"
       ],
       "is_consensus": true,
       "consensus_strength": "MODERATE"
@@ -78,37 +65,26 @@
       "coin": "HYPE",
       "direction": "SHORT",
       "n_wallets": 2,
-      "avg_score": 1.0787,
-      "max_score": 1.3821,
+      "avg_score": 0.7635,
+      "max_score": 0.7752,
       "wallets": [
-        "neet to $1",
-        "\u97e6\u5c0f\u5b9d.eth"
+        "\u97e6\u5c0f\u5b9d.eth",
+        "neet to $1"
       ],
       "is_consensus": true,
       "consensus_strength": "MODERATE"
     },
     {
-      "coin": "SOL",
+      "coin": "BTC",
       "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 1.3821,
-      "max_score": 1.3821,
+      "n_wallets": 2,
+      "avg_score": 0.6236,
+      "max_score": 0.7518,
       "wallets": [
-        "neet to $1"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "TRUMP",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.9873,
-      "max_score": 0.9873,
-      "wallets": [
+        "neet to $1",
         "nan"
       ],
-      "is_consensus": false,
+      "is_consensus": true,
       "consensus_strength": "MODERATE"
     },
     {
@@ -160,11 +136,47 @@
       "consensus_strength": "MODERATE"
     },
     {
+      "coin": "SOL",
+      "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 0.7518,
+      "max_score": 0.7518,
+      "wallets": [
+        "neet to $1"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
       "coin": "LIT",
       "direction": "SHORT",
       "n_wallets": 1,
       "avg_score": 0.5445,
       "max_score": 0.5445,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "TRUMP",
+      "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 0.4954,
+      "max_score": 0.4954,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "WLD",
+      "direction": "LONG",
+      "n_wallets": 1,
+      "avg_score": 0.4307,
+      "max_score": 0.4307,
       "wallets": [
         "nan"
       ],

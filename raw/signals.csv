@@ -1,2 +1,2 @@
 timestamp,coin,direction,primary_wallet,primary_wallet_name,primary_score,consensus_wallets,consensus_confidence,signal_strength,entry_price,leverage,grade,action,note
-2026-03-24T16:57:41.377118+00:00,BTC,LONG,0x6f31fef250a34a025f7784a2e3a02b4921b30394,ibench240,0.4346,3,0.6808,STRONG,70628.5,40.0,TIER_1,LONG BTC,3 smart money wallets LONG BTC (avg score: 0.68)
+2026-03-24T20:37:36.478346+00:00,WLD,LONG,0x52081a6912cfa64968999fbeb31387446a49b207,nan,0.4307,1,0.4307,MODERATE,0.31776,10.0,TIER_1,LONG WLD,1 smart money wallets LONG WLD (avg score: 0.43)
