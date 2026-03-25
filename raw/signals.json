@@ -1,19 +1,18 @@
 {
-  "generated_at": "2026-03-25T08:43:33.902042+00:00",
+  "generated_at": "2026-03-25T12:51:06.815504+00:00",
   "new_signals": [],
   "current_consensus": [
     {
       "coin": "BTC",
       "direction": "LONG",
-      "n_wallets": 5,
-      "avg_score": 0.568,
+      "n_wallets": 4,
+      "avg_score": 0.6124,
       "max_score": 0.9341,
       "wallets": [
         "nan",
         "nan",
         "nan",
-        "Sticky",
-        "nan"
+        "Sticky"
       ],
       "is_consensus": true,
       "consensus_strength": "STRONG"
@@ -37,8 +36,8 @@
       "coin": "BTC",
       "direction": "SHORT",
       "n_wallets": 2,
-      "avg_score": 0.5141,
-      "max_score": 0.5327,
+      "avg_score": 0.5585,
+      "max_score": 0.6217,
       "wallets": [
         "nan",
         "nan"
@@ -71,6 +70,150 @@
       "consensus_strength": "MODERATE"
     },
     {
+      "coin": "ETH",
+      "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 0.6217,
+      "max_score": 0.6217,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "ATOM",
+      "direction": "LONG",
+      "n_wallets": 1,
+      "avg_score": 0.6217,
+      "max_score": 0.6217,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "SOL",
+      "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 0.6217,
+      "max_score": 0.6217,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "DOGE",
+      "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 0.6217,
+      "max_score": 0.6217,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "LINK",
+      "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 0.6217,
+      "max_score": 0.6217,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "XRP",
+      "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 0.6217,
+      "max_score": 0.6217,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "BCH",
+      "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 0.6217,
+      "max_score": 0.6217,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "DOT",
+      "direction": "LONG",
+      "n_wallets": 1,
+      "avg_score": 0.6217,
+      "max_score": 0.6217,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "ADA",
+      "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 0.6217,
+      "max_score": 0.6217,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "PURR",
+      "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 0.6217,
+      "max_score": 0.6217,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "XLM",
+      "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 0.6217,
+      "max_score": 0.6217,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "SAND",
+      "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 0.6217,
+      "max_score": 0.6217,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
       "coin": "LIT",
       "direction": "SHORT",
       "n_wallets": 1,
@@ -83,143 +226,11 @@
       "consensus_strength": "MODERATE"
     },
     {
-      "coin": "ETH",
+      "coin": "TRUMP",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.5327,
-      "max_score": 0.5327,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ATOM",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.5327,
-      "max_score": 0.5327,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "SOL",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.5327,
-      "max_score": 0.5327,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "DOGE",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.5327,
-      "max_score": 0.5327,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "LINK",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.5327,
-      "max_score": 0.5327,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "XRP",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.5327,
-      "max_score": 0.5327,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "BCH",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.5327,
-      "max_score": 0.5327,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "DOT",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.5327,
-      "max_score": 0.5327,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "ADA",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.5327,
-      "max_score": 0.5327,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "PURR",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.5327,
-      "max_score": 0.5327,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "XLM",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.5327,
-      "max_score": 0.5327,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "SAND",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.5327,
-      "max_score": 0.5327,
+      "avg_score": 0.4954,
+      "max_score": 0.4954,
       "wallets": [
         "nan"
       ],
@@ -230,8 +241,8 @@
       "coin": "DYDX",
       "direction": "LONG",
       "n_wallets": 1,
-      "avg_score": 0.5268,
-      "max_score": 0.5268,
+      "avg_score": 0.4928,
+      "max_score": 0.4928,
       "wallets": [
         "nan"
       ],
@@ -242,8 +253,8 @@
       "coin": "TON",
       "direction": "LONG",
       "n_wallets": 1,
-      "avg_score": 0.5268,
-      "max_score": 0.5268,
+      "avg_score": 0.4928,
+      "max_score": 0.4928,
       "wallets": [
         "nan"
       ],
@@ -254,8 +265,8 @@
       "coin": "FIL",
       "direction": "LONG",
       "n_wallets": 1,
-      "avg_score": 0.5268,
-      "max_score": 0.5268,
+      "avg_score": 0.4928,
+      "max_score": 0.4928,
       "wallets": [
         "nan"
       ],
@@ -266,20 +277,8 @@
       "coin": "ALGO",
       "direction": "LONG",
       "n_wallets": 1,
-      "avg_score": 0.5268,
-      "max_score": 0.5268,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "TRUMP",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.4954,
-      "max_score": 0.4954,
+      "avg_score": 0.4928,
+      "max_score": 0.4928,
       "wallets": [
         "nan"
       ],
