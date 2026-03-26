@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-26T08:47:53.348392+00:00",
+  "generated_at": "2026-03-26T12:58:50.215034+00:00",
   "new_signals": [],
   "current_consensus": [
     {
@@ -21,7 +21,7 @@
       "coin": "BTC",
       "direction": "SHORT",
       "n_wallets": 3,
-      "avg_score": 0.6317,
+      "avg_score": 0.6296,
       "max_score": 0.7518,
       "wallets": [
         "neet to $1",
@@ -35,7 +35,7 @@
       "coin": "ETH",
       "direction": "SHORT",
       "n_wallets": 2,
-      "avg_score": 0.6999,
+      "avg_score": 0.6966,
       "max_score": 0.7518,
       "wallets": [
         "neet to $1",
@@ -82,11 +82,23 @@
       "consensus_strength": "MODERATE"
     },
     {
+      "coin": "TAO",
+      "direction": "LONG",
+      "n_wallets": 1,
+      "avg_score": 0.679,
+      "max_score": 0.679,
+      "wallets": [
+        "nan"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
       "coin": "ATOM",
       "direction": "LONG",
       "n_wallets": 1,
-      "avg_score": 0.6479,
-      "max_score": 0.6479,
+      "avg_score": 0.6415,
+      "max_score": 0.6415,
       "wallets": [
         "nan"
       ],
@@ -97,8 +109,8 @@
       "coin": "SOL",
       "direction": "LONG",
       "n_wallets": 1,
-      "avg_score": 0.6479,
-      "max_score": 0.6479,
+      "avg_score": 0.6415,
+      "max_score": 0.6415,
       "wallets": [
         "nan"
       ],
@@ -109,8 +121,8 @@
       "coin": "DOGE",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.6479,
-      "max_score": 0.6479,
+      "avg_score": 0.6415,
+      "max_score": 0.6415,
       "wallets": [
         "nan"
       ],
@@ -121,8 +133,8 @@
       "coin": "LINK",
       "direction": "LONG",
       "n_wallets": 1,
-      "avg_score": 0.6479,
-      "max_score": 0.6479,
+      "avg_score": 0.6415,
+      "max_score": 0.6415,
       "wallets": [
         "nan"
       ],
@@ -133,8 +145,8 @@
       "coin": "XRP",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.6479,
-      "max_score": 0.6479,
+      "avg_score": 0.6415,
+      "max_score": 0.6415,
       "wallets": [
         "nan"
       ],
@@ -145,8 +157,8 @@
       "coin": "BCH",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.6479,
-      "max_score": 0.6479,
+      "avg_score": 0.6415,
+      "max_score": 0.6415,
       "wallets": [
         "nan"
       ],
@@ -157,8 +169,8 @@
       "coin": "DOT",
       "direction": "LONG",
       "n_wallets": 1,
-      "avg_score": 0.6479,
-      "max_score": 0.6479,
+      "avg_score": 0.6415,
+      "max_score": 0.6415,
       "wallets": [
         "nan"
       ],
@@ -169,8 +181,8 @@
       "coin": "ADA",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.6479,
-      "max_score": 0.6479,
+      "avg_score": 0.6415,
+      "max_score": 0.6415,
       "wallets": [
         "nan"
       ],
@@ -181,8 +193,8 @@
       "coin": "PURR",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.6479,
-      "max_score": 0.6479,
+      "avg_score": 0.6415,
+      "max_score": 0.6415,
       "wallets": [
         "nan"
       ],
@@ -193,8 +205,8 @@
       "coin": "XLM",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.6479,
-      "max_score": 0.6479,
+      "avg_score": 0.6415,
+      "max_score": 0.6415,
       "wallets": [
         "nan"
       ],
@@ -205,8 +217,8 @@
       "coin": "SAND",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.6479,
-      "max_score": 0.6479,
+      "avg_score": 0.6415,
+      "max_score": 0.6415,
       "wallets": [
         "nan"
       ],
@@ -243,18 +255,6 @@
       "n_wallets": 1,
       "avg_score": 0.4469,
       "max_score": 0.4469,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "TAO",
-      "direction": "LONG",
-      "n_wallets": 1,
-      "avg_score": 0.359,
-      "max_score": 0.359,
       "wallets": [
         "nan"
       ],
