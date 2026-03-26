@@ -1,4 +1,2 @@
 timestamp,coin,direction,primary_wallet,primary_wallet_name,primary_score,consensus_wallets,consensus_confidence,signal_strength,entry_price,leverage,grade,action,note
-2026-03-26T01:31:24.274428+00:00,LIT,SHORT,0x392027fdc620d397ca27f0c1c3dcb592f27a4dc3,nan,0.78,2,0.6623,MODERATE,0.966052,5.0,TIER_1,SHORT LIT,2 smart money wallets SHORT LIT (avg score: 0.66)
-2026-03-26T01:31:24.274500+00:00,BTC,LONG,0xa55a9a19f5f5e18cbb6b5892d1659956663a1f35,nan,0.4469,4,0.4723,STRONG,73881.9,10.0,TIER_1,LONG BTC,4 smart money wallets LONG BTC (avg score: 0.47)
-2026-03-26T01:31:24.274463+00:00,AERO,LONG,0xa55a9a19f5f5e18cbb6b5892d1659956663a1f35,nan,0.4469,1,0.4469,MODERATE,0.96157,3.0,TIER_1,LONG AERO,1 smart money wallets LONG AERO (avg score: 0.45)
+2026-03-26T05:32:28.945130+00:00,TAO,LONG,0x36076e4bfad9624d7feba562326fdfa2063ede23,nan,0.4128,1,0.4128,MODERATE,340.857,5.0,TIER_1,LONG TAO,1 smart money wallets LONG TAO (avg score: 0.41)
