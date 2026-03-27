@@ -1,29 +1,12 @@
 {
-  "generated_at": "2026-03-27T01:31:04.624858+00:00",
-  "new_signals": [
-    {
-      "timestamp": "2026-03-27T01:31:04.624413+00:00",
-      "coin": "BTC",
-      "direction": "SHORT",
-      "primary_wallet": "0xc4adc4ab67c6356ef3c3167ea9f38302aadd444a",
-      "primary_wallet_name": "nan",
-      "primary_score": 0.334,
-      "consensus_wallets": 5,
-      "consensus_confidence": 0.4387,
-      "signal_strength": "STRONG",
-      "entry_price": 71768.7,
-      "leverage": 4.0,
-      "grade": "TIER_2",
-      "action": "SHORT BTC",
-      "note": "5 smart money wallets SHORT BTC (avg score: 0.44)"
-    }
-  ],
+  "generated_at": "2026-03-27T05:33:28.649211+00:00",
+  "new_signals": [],
   "current_consensus": [
     {
       "coin": "HYPE",
       "direction": "LONG",
       "n_wallets": 5,
-      "avg_score": 0.554,
+      "avg_score": 0.5763,
       "max_score": 0.9162,
       "wallets": [
         "nan",
@@ -38,12 +21,11 @@
     {
       "coin": "BTC",
       "direction": "SHORT",
-      "n_wallets": 5,
-      "avg_score": 0.4387,
-      "max_score": 0.7518,
+      "n_wallets": 4,
+      "avg_score": 0.7539,
+      "max_score": 1.3821,
       "wallets": [
         "neet to $1",
-        "nan",
         "nan",
         "nan",
         "nan"
@@ -55,8 +37,8 @@
       "coin": "SOL",
       "direction": "SHORT",
       "n_wallets": 2,
-      "avg_score": 0.5393,
-      "max_score": 0.7518,
+      "avg_score": 0.8544,
+      "max_score": 1.3821,
       "wallets": [
         "neet to $1",
         "perpfumbler"
@@ -68,8 +50,8 @@
       "coin": "ETH",
       "direction": "SHORT",
       "n_wallets": 2,
-      "avg_score": 0.5319,
-      "max_score": 0.7518,
+      "avg_score": 0.8471,
+      "max_score": 1.3821,
       "wallets": [
         "neet to $1",
         "nan"
@@ -81,10 +63,22 @@
       "coin": "HYPE",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.7518,
-      "max_score": 0.7518,
+      "avg_score": 1.3821,
+      "max_score": 1.3821,
       "wallets": [
         "neet to $1"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "TRUMP",
+      "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 0.9873,
+      "max_score": 0.9873,
+      "wallets": [
+        "nan"
       ],
       "is_consensus": false,
       "consensus_strength": "MODERATE"
@@ -107,18 +101,6 @@
       "n_wallets": 1,
       "avg_score": 0.5445,
       "max_score": 0.5445,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "TRUMP",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.4954,
-      "max_score": 0.4954,
       "wallets": [
         "nan"
       ],
@@ -244,20 +226,8 @@
       ],
       "is_consensus": false,
       "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "SAND",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.312,
-      "max_score": 0.312,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
     }
   ],
-  "n_new_signals": 1,
+  "n_new_signals": 0,
   "n_consensus": 4
 }
