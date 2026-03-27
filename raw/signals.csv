@@ -1,7 +1,2 @@
 timestamp,coin,direction,primary_wallet,primary_wallet_name,primary_score,consensus_wallets,consensus_confidence,signal_strength,entry_price,leverage,grade,action,note
-2026-03-26T20:32:43.548369+00:00,HYPE,LONG,0x612ca98c658c7a2de1f239a1d2a9e18c356e724a,nan,0.356,5,0.5556,STRONG,38.75,10.0,TIER_2,LONG HYPE,5 smart money wallets LONG HYPE (avg score: 0.56)
-2026-03-26T20:32:43.548475+00:00,HYPE,SHORT,0x523852be2db1a76a0e088ecbff32e849544054e5,perpfumbler,0.3267,2,0.5393,MODERATE,38.5852,10.0,TIER_2,SHORT HYPE,2 smart money wallets SHORT HYPE (avg score: 0.54)
-2026-03-26T20:32:43.548555+00:00,BTC,SHORT,0x97be9c7904f9c772a3efbf9e10286b91ba8a773e,nan,0.3004,4,0.4751,STRONG,70801.0,40.0,TIER_2,SHORT BTC,4 smart money wallets SHORT BTC (avg score: 0.48)
-2026-03-26T20:32:43.548432+00:00,SOL,SHORT,0x523852be2db1a76a0e088ecbff32e849544054e5,perpfumbler,0.3267,4,0.4329,STRONG,85.9753,20.0,TIER_2,SHORT SOL,4 smart money wallets SHORT SOL (avg score: 0.43)
-2026-03-26T20:32:43.548516+00:00,SOL,SHORT,0x97be9c7904f9c772a3efbf9e10286b91ba8a773e,nan,0.3004,4,0.4329,STRONG,91.779,20.0,TIER_2,SHORT SOL,4 smart money wallets SHORT SOL (avg score: 0.43)
-2026-03-26T20:32:43.548572+00:00,VVV,SHORT,0x97be9c7904f9c772a3efbf9e10286b91ba8a773e,nan,0.3004,1,0.3004,MODERATE,7.008,3.0,TIER_2,SHORT VVV,1 smart money wallets SHORT VVV (avg score: 0.30)
+2026-03-27T01:31:04.624413+00:00,BTC,SHORT,0xc4adc4ab67c6356ef3c3167ea9f38302aadd444a,nan,0.334,5,0.4387,STRONG,71768.7,4.0,TIER_2,SHORT BTC,5 smart money wallets SHORT BTC (avg score: 0.44)
