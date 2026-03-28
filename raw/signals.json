@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-28T12:39:37.813879+00:00",
+  "generated_at": "2026-03-28T16:28:04.670432+00:00",
   "new_signals": [],
   "current_consensus": [
     {
@@ -18,11 +18,11 @@
       "consensus_strength": "STRONG"
     },
     {
-      "coin": "ETH",
+      "coin": "BTC",
       "direction": "SHORT",
       "n_wallets": 2,
-      "avg_score": 0.7106,
-      "max_score": 0.7518,
+      "avg_score": 1.1847,
+      "max_score": 1.3821,
       "wallets": [
         "neet to $1",
         "nan"
@@ -31,11 +31,11 @@
       "consensus_strength": "MODERATE"
     },
     {
-      "coin": "BTC",
+      "coin": "ETH",
       "direction": "SHORT",
       "n_wallets": 2,
-      "avg_score": 0.6236,
-      "max_score": 0.7518,
+      "avg_score": 1.0257,
+      "max_score": 1.3821,
       "wallets": [
         "neet to $1",
         "nan"
@@ -60,8 +60,8 @@
       "coin": "SOL",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.7518,
-      "max_score": 0.7518,
+      "avg_score": 1.3821,
+      "max_score": 1.3821,
       "wallets": [
         "neet to $1"
       ],
@@ -72,10 +72,22 @@
       "coin": "HYPE",
       "direction": "SHORT",
       "n_wallets": 1,
-      "avg_score": 0.7518,
-      "max_score": 0.7518,
+      "avg_score": 1.3821,
+      "max_score": 1.3821,
       "wallets": [
         "neet to $1"
+      ],
+      "is_consensus": false,
+      "consensus_strength": "MODERATE"
+    },
+    {
+      "coin": "TRUMP",
+      "direction": "SHORT",
+      "n_wallets": 1,
+      "avg_score": 0.9873,
+      "max_score": 0.9873,
+      "wallets": [
+        "nan"
       ],
       "is_consensus": false,
       "consensus_strength": "MODERATE"
@@ -206,18 +218,6 @@
       "n_wallets": 1,
       "avg_score": 0.5445,
       "max_score": 0.5445,
-      "wallets": [
-        "nan"
-      ],
-      "is_consensus": false,
-      "consensus_strength": "MODERATE"
-    },
-    {
-      "coin": "TRUMP",
-      "direction": "SHORT",
-      "n_wallets": 1,
-      "avg_score": 0.4954,
-      "max_score": 0.4954,
       "wallets": [
         "nan"
       ],
