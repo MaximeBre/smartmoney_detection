@@ -1,0 +1,2 @@
+address,coin,side,direction,price,size,value_usd,closed_pnl,fee_usd,time_ms,is_liquidation,crossed,time,is_open,is_close,is_long,is_short
+0x9a15342876e19052c3fabcef9bad8507b9623c12,NEAR,A,Close Long,1.3365,0.1,0.13365000000000002,0.006294,6e-05,1773928406006,False,True,2026-03-19 13:53:26.006000+00:00,False,True,True,False
