@@ -1,2 +1,2 @@
 timestamp,coin,direction,primary_wallet,primary_wallet_name,primary_score,consensus_wallets,consensus_confidence,signal_strength,entry_price,leverage,grade,action,note
-2026-03-29T05:44:15.934341+00:00,MON,LONG,0x36076e4bfad9624d7feba562326fdfa2063ede23,nan,0.7372,1,0.7372,MODERATE,0.023062,5.0,TIER_1,LONG MON,1 smart money wallets LONG MON (avg score: 0.74)
+2026-03-29T08:35:56.340715+00:00,HYPE,LONG,0x613ead0ea5af374af0ccfc117ef116a8e8d133fe,Sticky,0.4774,4,0.6056,STRONG,37.0345,10.0,TIER_1,LONG HYPE,4 smart money wallets LONG HYPE (avg score: 0.61)
